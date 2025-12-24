@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, MapPin, Phone, Send } from "lucide-react";
+import { RiMailLine, RiMapPinLine, RiPhoneLine, RiSendPlaneFill } from "react-icons/ri";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 import { Textarea } from "@/components/ui/Textarea";
@@ -18,16 +18,16 @@ export default function ContactPage() {
         <div className="flex flex-col min-h-screen bg-background">
 
             {/* Header */}
-            <section className="py-20 md:py-32 bg-primary/5 text-center px-4">
+            <section className="py-20 md:py-32 bg-primary text-primary-foreground text-center px-4">
                 <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5 }}
                 >
                     <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl mb-4">
-                        Let&apos;s Build the <span className="text-primary">Future</span>
+                        Let&apos;s Build the <span className="text-secondary">Future</span>
                     </h1>
-                    <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+                    <p className="text-xl text-primary-foreground/90 max-w-2xl mx-auto">
                         Whether you&apos;re a pyrolysis plant owner ready to upgrade or an industrial fuel consumer seeking consistency—we&apos;re here to help.
                     </p>
                 </motion.div>
@@ -67,7 +67,7 @@ export default function ContactPage() {
                             </div>
 
                             <Button type="submit" size="lg" className="w-full sm:w-auto">
-                                Send Message <Send className="ml-2 h-4 w-4" />
+                                Send Message <RiSendPlaneFill className="ml-2 h-4 w-4" />
                             </Button>
                         </form>
                     </motion.div>
@@ -90,12 +90,12 @@ export default function ContactPage() {
                             <Card className="bg-muted/50 border-none hover:bg-muted/80 transition-colors">
                                 <CardContent className="flex items-start gap-4 p-6">
                                     <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-                                        <Mail className="h-5 w-5 text-primary" />
+                                        <RiMailLine className="h-5 w-5 text-primary" />
                                     </div>
                                     <div>
                                         <h3 className="font-semibold text-lg">Email Us</h3>
-                                        <a href="mailto:contact@alkanalyze.com" className="text-muted-foreground hover:text-primary transition-colors">
-                                            contact@alkanalyze.com
+                                        <a href="mailto:carbonmtechnology@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
+                                            carbonmtechnology@gmail.com
                                         </a>
                                     </div>
                                 </CardContent>
@@ -104,7 +104,7 @@ export default function ContactPage() {
                             <Card className="bg-muted/50 border-none hover:bg-muted/80 transition-colors">
                                 <CardContent className="flex items-start gap-4 p-6">
                                     <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-                                        <MapPin className="h-5 w-5 text-primary" />
+                                        <RiMapPinLine className="h-5 w-5 text-primary" />
                                     </div>
                                     <div>
                                         <h3 className="font-semibold text-lg">Visit Us</h3>
@@ -120,12 +120,12 @@ export default function ContactPage() {
                             <Card className="bg-muted/50 border-none hover:bg-muted/80 transition-colors">
                                 <CardContent className="flex items-start gap-4 p-6">
                                     <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-                                        <Phone className="h-5 w-5 text-primary" />
+                                        <RiPhoneLine className="h-5 w-5 text-primary" />
                                     </div>
                                     <div>
                                         <h3 className="font-semibold text-lg">Call Us</h3>
                                         <p className="text-muted-foreground">
-                                            (Phone number to be added)
+                                            +91 9373059882 / +91 9765766430
                                         </p>
                                     </div>
                                 </CardContent>

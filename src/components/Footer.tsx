@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Mail, MapPin } from "lucide-react";
+import { RiMailLine, RiMapPinLine } from "react-icons/ri";
 
 export default function Footer() {
     return (
@@ -41,16 +41,16 @@ export default function Footer() {
                         <h4 className="font-semibold text-white">Contact Us</h4>
                         <div className="space-y-2">
                             <div className="flex items-start gap-2">
-                                <MapPin className="h-4 w-4 mt-1 text-primary" />
+                                <RiMapPinLine className="h-4 w-4 mt-1 text-primary" />
                                 <span>
                                     W-54, Rakesh Kapoor Innovation Centre,<br />
                                     Pilani, Rajasthan - 333031
                                 </span>
                             </div>
                             <div className="flex items-center gap-2">
-                                <Mail className="h-4 w-4 text-primary" />
-                                <a href="mailto:contact@alkanalyze.com" className="hover:text-white">
-                                    contact@alkanalyze.com
+                                <RiMailLine className="h-4 w-4 text-primary" />
+                                <a href="mailto:carbonmtechnology@gmail.com" className="hover:text-white">
+                                    carbonmtechnology@gmail.com
                                 </a>
                             </div>
                         </div>

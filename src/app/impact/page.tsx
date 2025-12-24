@@ -9,12 +9,12 @@ export default function ImpactPage() {
         <div className="flex flex-col min-h-screen">
 
             {/* Intro */}
-            <section className="py-20 md:py-32 bg-primary/5">
+            <section className="py-20 md:py-32 bg-primary text-primary-foreground">
                 <div className="container mx-auto px-4 md:px-6 text-center">
                     <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl mb-6">
-                        Impact Beyond <span className="text-primary">Profit</span>
+                        Impact Beyond <span className="text-secondary">Profit</span>
                     </h1>
-                    <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                    <p className="text-xl text-primary-foreground/90 max-w-3xl mx-auto">
                         We aren&apos;t just improving industrial efficiency. We&apos;re diverting reduced plastic from landfills, cleaning the air, and empowering local communities.
                     </p>
                 </div>
@@ -23,12 +23,12 @@ export default function ImpactPage() {
             {/* Metrics Grid */}
             <section className="py-12 bg-background -mt-10 relative z-10">
                 <div className="container mx-auto px-4 md:px-6">
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center bg-card border rounded-2xl p-8 shadow-lg">
+                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center bg-card border rounded-2xl p-8 shadow-lg">
                         {[
-                            { label: "Waste Diverted", value: "1000+", unit: "Tons", icon: TreePine },
-                            { label: "Emissions Reduced", value: "500+", unit: "Tons CO₂e", icon: Globe2 },
-                            { label: "Jobs Supported", value: "50+", unit: "Direct/Indirect", icon: Users },
-                            { label: "Plants Onboarded", value: "25+", unit: "Analyzed", icon: BarChart },
+                            { label: "Plant Workers Benefited", value: "20,000+", unit: "Lives Impacted", icon: Users },
+                            { label: "Cleaner Air for", value: "8M+", unit: "People near Landfills", icon: Globe2 },
+                            { label: "Industrial Air Quality", value: "5M+", unit: "People Benefited", icon: TreePine },
+                            { label: "Plants Scaled", value: "500", unit: "Target Pyrolysis Plants", icon: BarChart },
                         ].map((stat, i) => (
                             <div key={i} className="space-y-2">
                                 <div className="flex justify-center text-primary mb-2">
@@ -47,75 +47,68 @@ export default function ImpactPage() {
             <section className="py-20">
                 <div className="container mx-auto px-4 md:px-6 space-y-24">
 
-                    {/* Environmental */}
+                    {/* Worker Impact */}
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         <div className="order-2 md:order-1 relative h-[300px] bg-gradient-to-br from-green-900/20 to-emerald-900/20 rounded-2xl overflow-hidden flex items-center justify-center">
-                            <TreePine className="h-32 w-32 text-green-700/50" />
+                            <Users className="h-32 w-32 text-green-700/50" />
                         </div>
                         <div className="order-1 md:order-2 space-y-6">
                             <h2 className="text-3xl font-bold flex items-center gap-3">
-                                <Globe2 className="text-primary" /> Environmental Stewardship
+                                <Users className="text-primary" /> Empowering the Workforce
                             </h2>
                             <p className="text-lg text-muted-foreground">
-                                By optimizing pyrolysis, we ensure complete combustion and higher efficiency. This means:
+                                By scaling-up to 500 pyrolysis plants, our innovation will directly benefit an estimated <strong>15,000–20,000 workers</strong> involved in plant operations, waste collection, logistics, and fuel processing.
                             </p>
                             <ul className="space-y-2 list-disc pl-5 text-muted-foreground">
-                                <li>Thousands of tonnes of plastic diverted from landfills.</li>
-                                <li>Significant reduction in landfill fires and toxic fumes.</li>
-                                <li>Better air quality in industrial clusters.</li>
-                                <li>Lower carbon footprint for industrial fuel consumers.</li>
+                                <li>Safer working environments through automated monitoring.</li>
+                                <li>Higher skill development for plant operators.</li>
+                                <li>Stable livelihoods in the green energy sector.</li>
                             </ul>
                         </div>
                     </div>
 
-                    {/* Social */}
+                    {/* Community Impact */}
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         <div className="space-y-6">
                             <h2 className="text-3xl font-bold flex items-center gap-3">
-                                <Users className="text-accent" /> Social Empowerment
+                                <Globe2 className="text-accent" /> Healthier Communities
                             </h2>
                             <p className="text-lg text-muted-foreground">
-                                Technology should lift everyone. Our model creates:
+                                Our technology directly improves air quality, soil safety, and living conditions for the <strong>6–8 million people</strong> who reside near India’s major landfills and dumping grounds.
                             </p>
                             <ul className="space-y-2 list-disc pl-5 text-muted-foreground">
-                                <li>Improved livelihoods for MSME operators through higher margins.</li>
-                                <li>Safer living conditions for communities near landfills.</li>
-                                <li>New jobs in waste collection, logistics, and plant operations.</li>
-                                <li>Support for local green entrepreneurs.</li>
+                                <li>Reduction in toxic emissions and landfill fires.</li>
+                                <li>Prevention of groundwater contamination.</li>
+                                <li>Lower incidence of respiratory illnesses in nearby communities.</li>
                             </ul>
                         </div>
                         <div className="relative h-[300px] bg-gradient-to-br from-blue-900/20 to-indigo-900/20 rounded-2xl overflow-hidden flex items-center justify-center">
-                            <Users className="h-32 w-32 text-blue-700/50" />
+                            <Globe2 className="h-32 w-32 text-blue-700/50" />
+                        </div>
+                    </div>
+
+                    {/* Industrial Impact */}
+                    <div className="grid md:grid-cols-2 gap-12 items-center">
+                        <div className="order-2 md:order-1 relative h-[300px] bg-gradient-to-br from-orange-900/20 to-amber-900/20 rounded-2xl overflow-hidden flex items-center justify-center">
+                            <TreePine className="h-32 w-32 text-orange-700/50" />
+                        </div>
+                        <div className="order-1 md:order-2 space-y-6">
+                            <h2 className="text-3xl font-bold flex items-center gap-3">
+                                <TreePine className="text-secondary" /> Bio-energy Transition
+                            </h2>
+                            <p className="text-lg text-muted-foreground">
+                                By replacing diesel and furnace oil with cleaner pyrolysis-based fuel, we improve air quality in industrial regions, benefiting an additional <strong>3–5 million people</strong> living near manufacturing clusters.
+                            </p>
+                            <ul className="space-y-2 list-disc pl-5 text-muted-foreground">
+                                <li>Cleaner industrial emissions.</li>
+                                <li>Reduced dependence on imported fossil fuels.</li>
+                                <li>Promotion of a circular economy.</li>
+                            </ul>
                         </div>
                     </div>
 
                 </div>
             </section>
-
-            {/* Scale Goal */}
-            <section className="py-20 bg-black text-center text-white">
-                <div className="container mx-auto px-4 md:px-6 max-w-3xl">
-                    <h2 className="text-3xl font-bold mb-6">Our 2030 Vision</h2>
-                    <p className="text-xl text-gray-400 mb-12">
-                        At 500 plants, we aim to transform 10+ million lives through cleaner air, waste reduction, and economic growth.
-                    </p>
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
-                        <div className="p-6 border border-white/10 rounded-xl bg-white/5">
-                            <div className="text-4xl font-bold text-primary mb-2">15k+</div>
-                            <div className="text-sm">Jobs Created</div>
-                        </div>
-                        <div className="p-6 border border-white/10 rounded-xl bg-white/5">
-                            <div className="text-4xl font-bold text-accent mb-2">5M+</div>
-                            <div className="text-sm">People with Cleaner Air</div>
-                        </div>
-                        <div className="p-6 border border-white/10 rounded-xl bg-white/5">
-                            <div className="text-4xl font-bold text-secondary mb-2">8M+</div>
-                            <div className="text-sm">People with Less Waste</div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
         </div>
     );
 }

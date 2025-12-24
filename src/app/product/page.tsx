@@ -12,7 +12,7 @@ export default function ProductPage() {
         <div className="flex flex-col min-h-screen">
 
             {/* Intro Section */}
-            <section className="py-20 md:py-32 bg-gradient-to-b from-background to-secondary/5">
+            <section className="py-20 md:py-32 bg-primary text-primary-foreground">
                 <div className="container mx-auto px-4 md:px-6 text-center">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -21,9 +21,9 @@ export default function ProductPage() {
                         className="max-w-4xl mx-auto space-y-6"
                     >
                         <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
-                            What is <span className="text-primary">Alkanalyze?</span>
+                            What is <span className="text-secondary">Alkanalyze?</span>
                         </h1>
-                        <p className="text-xl text-muted-foreground leading-relaxed">
+                        <p className="text-xl text-primary-foreground/90 leading-relaxed">
                             Alkanalyze is a real-time combustion sensor paired with a machine learning model that measures vapor quality inside pyrolysis reactors and automatically adjusts process parameters to ensure perfection.
                         </p>
                     </motion.div>

@@ -17,17 +17,29 @@
 }
 
 :root {
-  --background: #0f172a; /* Slate 900 */
-  --foreground: #f8fafc; /* Slate 50 */
+  /* User Palette: #386641 (Deep Green), #6a994e (Medium Green), #a7c957 (Light Green), #f2e8cf (Cream), #bc4749 (Red) */
   
-  --primary: #064E3B; /* Emerald 900 */
+  --background: #f2e8cf; /* Cream */
+  --foreground: #386641; /* Deep Green Text */
+  
+  --primary: #386641; /* Deep Green */
   --primary-foreground: #ffffff;
   
-  --secondary: #10B981; /* Emerald 500 */
+  --secondary: #6a994e; /* Medium Green */
   --secondary-foreground: #ffffff;
   
-  --accent: #3B82F6; /* Blue 500 */
+  --accent: #bc4749; /* Red */
   --accent-foreground: #ffffff;
+
+  --muted: #a7c957; /* Light Green */
+  --muted-foreground: #386641; /* Deep Green for muted text too, for contrast */
+  
+  --card: #ffffff; /* White cards for contrast on cream bg */
+  --card-foreground: #386641;
+  
+  --border: #6a994e;
+  --input: #6a994e;
+  --ring: #386641;
 }
 
 body {
@@ -35,4 +47,5 @@ body {
   color: var(--foreground);
   font-family: var(--font-inter), sans-serif;
 }
+
 

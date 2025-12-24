@@ -54,37 +54,12 @@ export default function Hero() {
                         transition={{ duration: 0.8, delay: 0.2 }}
                         className="relative lg:h-[500px] flex items-center justify-center"
                     >
-                        {/* Abstract Process Visualization */}
-                        <div className="relative w-full max-w-md aspect-square bg-gradient-to-br from-white/5 to-white/10 rounded-2xl border border-white/10 backdrop-blur-sm p-8 flex flex-col justify-between">
-
-                            {/* Input Node */}
-                            <div className="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10">
-                                <div className="h-12 w-12 rounded-full bg-gray-700 flex items-center justify-center">
-                                    <Zap className="text-gray-400" />
-                                </div>
-                                <div>
-                                    <div className="h-2 w-24 bg-gray-700 rounded mb-2"></div>
-                                    <div className="h-2 w-16 bg-gray-700/50 rounded"></div>
-                                </div>
-                            </div>
-
-                            {/* Processing Animation */}
-                            <div className="flex-1 flex flex-col items-center justify-center py-4 relative">
-                                <div className="absolute inset-0 bg-primary/5 blur-xl"></div>
-                                <Activity className="h-16 w-16 text-primary animate-pulse" />
-                                <div className="mt-2 text-primary font-mono text-sm">Analyzing Vapors...</div>
-                            </div>
-
-                            {/* Output Node (Success) */}
-                            <div className="flex items-center gap-4 p-4 rounded-xl bg-emerald-900/20 border border-emerald-500/30">
-                                <div className="h-12 w-12 rounded-full bg-emerald-900/50 flex items-center justify-center">
-                                    <ShieldCheck className="text-emerald-400" />
-                                </div>
-                                <div>
-                                    <div className="text-white font-semibold">Certified Fuel</div>
-                                    <div className="text-emerald-400 text-sm">Industrial Grade</div>
-                                </div>
-                            </div>
+                        <div className="relative w-full max-w-[500px] rounded-3xl overflow-hidden border-4 border-primary/20 shadow-2xl shadow-primary/20">
+                            <img
+                                src="/oil.jpg"
+                                alt="Golden Yellow Pyrolysis Oil"
+                                className="w-full h-auto object-contain"
+                            />
                         </div>
                     </motion.div>
 
