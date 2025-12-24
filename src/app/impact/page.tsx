@@ -49,8 +49,12 @@ export default function ImpactPage() {
 
                     {/* Worker Impact */}
                     <div className="grid md:grid-cols-2 gap-12 items-center">
-                        <div className="order-2 md:order-1 relative h-[300px] bg-gradient-to-br from-green-900/20 to-emerald-900/20 rounded-2xl overflow-hidden flex items-center justify-center">
-                            <Users className="h-32 w-32 text-green-700/50" />
+                        <div className="order-2 md:order-1 relative h-[300px] rounded-2xl overflow-hidden shadow-lg border border-gray-100/20">
+                            <img
+                                src="/impact-workers.png"
+                                alt="Industrial workers in safety gear"
+                                className="w-full h-full object-cover"
+                            />
                         </div>
                         <div className="order-1 md:order-2 space-y-6">
                             <h2 className="text-3xl font-bold flex items-center gap-3">
@@ -82,15 +86,23 @@ export default function ImpactPage() {
                                 <li>Lower incidence of respiratory illnesses in nearby communities.</li>
                             </ul>
                         </div>
-                        <div className="relative h-[300px] bg-gradient-to-br from-blue-900/20 to-indigo-900/20 rounded-2xl overflow-hidden flex items-center justify-center">
-                            <Globe2 className="h-32 w-32 text-blue-700/50" />
+                        <div className="relative h-[300px] rounded-2xl overflow-hidden shadow-lg border border-gray-100/20">
+                            <img
+                                src="/impact-community.png"
+                                alt="Clean rural Indian community"
+                                className="w-full h-full object-cover"
+                            />
                         </div>
                     </div>
 
                     {/* Industrial Impact */}
                     <div className="grid md:grid-cols-2 gap-12 items-center">
-                        <div className="order-2 md:order-1 relative h-[300px] bg-gradient-to-br from-orange-900/20 to-amber-900/20 rounded-2xl overflow-hidden flex items-center justify-center">
-                            <TreePine className="h-32 w-32 text-orange-700/50" />
+                        <div className="order-2 md:order-1 relative h-[300px] rounded-2xl overflow-hidden shadow-lg border border-gray-100/20">
+                            <img
+                                src="/impact-plant.png"
+                                alt="Modern green bio-energy plant"
+                                className="w-full h-full object-cover"
+                            />
                         </div>
                         <div className="order-1 md:order-2 space-y-6">
                             <h2 className="text-3xl font-bold flex items-center gap-3">
