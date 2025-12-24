@@ -9,7 +9,7 @@ export default function Footer() {
 
                     {/* Brand */}
                     <div className="space-y-4 col-span-1 md:col-span-1">
-                        <h3 className="text-xl font-bold text-primary">Alkanalyze</h3>
+                        <h3 className="text-xl font-bold text-primary">CarbonM Fuelmax Technology Private Limited</h3>
                         <p className="leading-relaxed">
                             Transforming waste into clean, high-grade industrial fuel with smart sensor technology.
                         </p>
