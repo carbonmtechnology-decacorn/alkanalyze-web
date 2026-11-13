@@ -2,8 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
-import { ArrowDown, ArrowRight, Award, BookOpen, FlaskConical, Map, ShieldCheck, Users } from "lucide-react";
+import { ArrowRight, Award, BookOpen, FlaskConical, Map, ShieldCheck, Users } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import SectionHeader from "@/components/ui/SectionHeader";
@@ -12,14 +11,12 @@ import WhyUsHighlights from "@/components/WhyUsHighlights";
 import ProcessFlow from "@/components/ProcessFlow";
 import TechnologyCard from "@/components/TechnologyCard";
 import ApplicationShowcase from "@/components/ApplicationShowcase";
-import BlogCard from "@/components/BlogCard";
 import CTASection from "@/components/CTASection";
 import CarbonLoop from "@/components/CarbonLoop";
 import OutputCarousel from "@/components/OutputCarousel";
 import { technologies } from "@/data/technologies";
 import { applications } from "@/data/applications";
 import { labSource } from "@/data/specs";
-import { blogPosts } from "@/data/blog";
 
 const validationItems = [
   { icon: FlaskConical, title: "Product quality", status: "Lab-tested", description: "FuelMax and NovaNaph quality properties are evaluated against product-specific downstream requirements." },
@@ -33,62 +30,66 @@ const validationItems = [
 export default function Home() {
   return (
     <div className="flex flex-col">
-      <section className="relative flex min-h-[94vh] items-center justify-center overflow-hidden px-0 pb-20 pt-32 md:pt-36" id="hero">
-        <div className="absolute inset-0">
-          <Image src="/hero-landfill.jpg" alt="Real landfill-bound plastic waste representing CarbonM's input stream" fill priority sizes="100vw" className="object-cover" />
-          <div className="overlay-dark" />
+      <section
+        id="hero"
+        className="relative isolate flex min-h-[720px] items-center overflow-hidden bg-[#07110d] pb-20 pt-40 md:min-h-[88svh] md:pb-28 md:pt-40"
+      >
+        <div className="absolute inset-0 -z-10">
+          <Image
+            src="/hero-landfill.jpg"
+            alt="Mixed plastic waste awaiting recovery into useful industrial hydrocarbons"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#06130f]/95 via-[#06130f]/80 to-[#06130f]/20" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#06130f]/90 via-transparent to-[#06130f]/15" />
         </div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_10%,rgba(16,185,129,0.25),transparent_34%)]" />
-        <div className="pointer-events-none absolute inset-0 overflow-hidden">
-          {[...Array(8)].map((_, i) => (
-            <motion.span
-              key={i}
-              className="absolute h-1 w-1 rounded-full bg-emerald-300/60"
-              style={{ left: `${12 + i * 11}%`, top: `${20 + (i % 4) * 16}%` }}
-              animate={{ y: [-20, -90, -20], opacity: [0, 0.8, 0] }}
-              transition={{ duration: 4.5 + i * 0.3, repeat: Infinity, delay: i * 0.4 }}
-            />
-          ))}
-        </div>
-
-        <div className="container relative z-10 mx-auto px-4 text-center md:px-6">
-          <motion.div initial={{ opacity: 0, y: 32 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }} className="mx-auto max-w-5xl">
-            <span className="eyebrow border-white/20 bg-white/10 text-emerald-300 backdrop-blur-xl">Circular fuel from non-recyclable plastic</span>
-            <h1 className="mt-7 text-balance text-4xl font-black tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl leading-[1.02]">
-              Industrial fuels and circular feedstocks, <span className="bg-gradient-to-r from-emerald-300 to-teal-200 bg-clip-text text-transparent">engineered for performance.</span>
+        <div className="container relative z-10 mx-auto px-5 md:px-8">
+          <div className="max-w-5xl">
+            <div className="flex items-center gap-4">
+              <span className="h-px w-12 bg-emerald-300" />
+              <span className="text-xs font-black uppercase tracking-[0.28em] text-emerald-200">
+                CarbonM / Industrial circular carbon
+              </span>
+            </div>
+            <h1 className="mt-9 max-w-[980px] text-5xl font-black leading-[0.99] tracking-[-0.055em] text-white sm:text-6xl md:text-7xl lg:text-[6.5rem]">
+              Plastic waste.
+              <span className="mt-2 block text-emerald-300">Industrial value.</span>
             </h1>
-            <p className="mx-auto mt-7 max-w-3xl text-lg leading-relaxed text-slate-200 md:text-xl">
-              CarbonM develops reliable industrial fuel and circular naphtha from difficult plastic waste, powered by <strong className="text-white">Magnet</strong> and <strong className="text-white">YieldBoost</strong>.
+            <p className="mt-9 max-w-2xl text-lg leading-8 text-slate-100 md:text-xl">
+              We engineer difficult plastic streams into upgraded industrial fuel and circular
+              petrochemical feedstocks. YieldBoost optimises hydrocarbon recovery.
+              Magnet improves oil quality.
             </p>
-            <div className="relative z-20 mt-9 flex flex-col justify-center gap-4 sm:flex-row">
+            <div className="mt-9 flex flex-wrap gap-4">
               <Button size="lg" variant="secondary" asChild>
-                <Link href="/technology">
-                  Explore the Technology
-                  <ArrowRight className="h-4 w-4" />
-                </Link>
+                <Link href="/why-us">Why CarbonM? <ArrowRight className="h-4 w-4" /></Link>
               </Button>
               <Button size="lg" variant="light" asChild>
-                <Link href="/contact">Partner With Us</Link>
+                <Link href="/technology">Explore the technology</Link>
               </Button>
             </div>
-          </motion.div>
-          <motion.div className="absolute bottom-7 left-1/2 -translate-x-1/2 lg:hidden" animate={{ y: [0, 9, 0] }} transition={{ duration: 2, repeat: Infinity }}>
-            <ArrowDown className="h-5 w-5 text-white/60" />
-          </motion.div>
+            <div className="mt-14 grid max-w-3xl gap-4 border-t border-white/30 pt-6 text-sm text-slate-200 sm:grid-cols-2">
+              <p><strong className="font-black text-emerald-200">FuelMax</strong> / industrial thermal fuel</p>
+              <p><strong className="font-black text-emerald-200">NovaNaph</strong> / circular naphtha-range feedstock</p>
+            </div>
+          </div>
         </div>
       </section>
 
       <CarbonLoop />
       <WhyUsHighlights />
 
-      <section className="section-dark py-24 md:py-32" id="problem">
+      <section className="section-dark py-16 md:py-24" id="problem">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid gap-14 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
             <ScrollReveal variant="slideLeft">
               <SectionHeader
                 label="The problem"
-                title="Plastic waste is not just a disposal problem. It is carbon in the wrong place."
-                subtitle="Mixed, low-value plastic streams are often too difficult for mechanical recycling, but the embedded carbon can still be recovered into industrial pathways."
+                title="Plastic waste is not the end of the material story."
+                subtitle="Mixed, low-value plastic streams can remain difficult for mechanical recycling. CarbonM pursues value recovery into fuel and circular chemical feedstock pathways."
                 dark
                 centered={false}
               />
@@ -121,7 +122,7 @@ export default function Home() {
 
       <ScrollStory />
 
-      <section className="section-gradient-transition py-24 md:py-32" id="transformation">
+      <section className="section-gradient-transition py-16 md:py-24" id="transformation">
         <div className="container mx-auto px-4 md:px-6">
           <ScrollReveal>
             <SectionHeader
@@ -144,7 +145,7 @@ export default function Home() {
             title="YieldBoost optimises. Magnet upgrades."
             subtitle="Physics-informed yield optimisation and selective oil upgrading, designed to deliver high-value industrial and circular petrochemical hydrocarbons."
           />
-          <div className="space-y-28">
+          <div className="space-y-16 md:space-y-24">
             <TechnologyCard {...technologies.yieldboost} description={technologies.yieldboost.shortDescription} />
             <TechnologyCard {...technologies.magnet} description={technologies.magnet.shortDescription} reverse />
           </div>
@@ -204,31 +205,6 @@ export default function Home() {
                 </ScrollReveal>
               );
             })}
-          </div>
-        </div>
-      </section>
-
-      <section className="section-soft py-24 md:py-32" id="resources">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="mb-12 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-            <SectionHeader
-              label="Resources"
-              title="An editorial hub for circular fuel thinking."
-              subtitle="Technical and market notes on waste, circular fuels, Magnet, YieldBoost and industrial decarbonization."
-              centered={false}
-              className="mb-0"
-            />
-            <Button variant="outline" asChild>
-              <Link href="/resources">
-                Read all insights
-                <ArrowRight className="h-4 w-4" />
-              </Link>
-            </Button>
-          </div>
-          <div className="grid gap-6 lg:grid-cols-3">
-            {blogPosts.slice(0, 3).map((post) => (
-              <BlogCard key={post.slug} post={post} />
-            ))}
           </div>
         </div>
       </section>
