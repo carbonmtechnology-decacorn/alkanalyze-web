@@ -33,7 +33,7 @@ export default function ContactPage() {
           <div className="max-w-4xl">
             <span className="eyebrow border-emerald-300/20 bg-emerald-300/10 text-emerald-300">Partner with us</span>
             <h1 className="mt-6 text-4xl font-black tracking-tight text-white sm:text-5xl md:text-6xl leading-[1.05]">
-              Work with CarbonM to turn landfill-bound plastic into circular industrial fuel.
+              Discuss FuelMax industrial fuel, NovaNaph circular petrochemical feedstock or technology partnerships with CarbonM.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-300 md:text-xl">
               Reach out directly for waste supply, fuel trials, marine blending, research, testing or investment conversations.
