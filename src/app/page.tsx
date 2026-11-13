@@ -8,7 +8,6 @@ import ScrollReveal from "@/components/ui/ScrollReveal";
 import SectionHeader from "@/components/ui/SectionHeader";
 import ScrollStory from "@/components/ScrollStory";
 import WhyUsHighlights from "@/components/WhyUsHighlights";
-import ProcessFlow from "@/components/ProcessFlow";
 import TechnologyCard from "@/components/TechnologyCard";
 import ApplicationShowcase from "@/components/ApplicationShowcase";
 import CTASection from "@/components/CTASection";
@@ -121,22 +120,6 @@ export default function Home() {
       </section>
 
       <ScrollStory />
-
-      <section className="section-gradient-transition py-16 md:py-24" id="transformation">
-        <div className="container mx-auto px-4 md:px-6">
-          <ScrollReveal>
-            <SectionHeader
-              label="The transformation"
-              title={<>From landfill liability to <span className="text-emerald-300">industrial circularity.</span></>}
-              subtitle="The CarbonM stack is presented as a controlled sequence: feedstock preparation, conversion with YieldBoost optimisation, Magnet upgrading and application-specific validation."
-              dark
-            />
-          </ScrollReveal>
-          <ScrollReveal delay={0.1}>
-            <ProcessFlow />
-          </ScrollReveal>
-        </div>
-      </section>
 
       <section className="bg-background py-24 md:py-32" id="technology">
         <div className="container mx-auto px-4 md:px-6">
