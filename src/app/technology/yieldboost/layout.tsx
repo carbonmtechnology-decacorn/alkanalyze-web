@@ -1,0 +1,3 @@
+import type { Metadata } from "next";
+export const metadata:Metadata={title:"YieldBoost | Physics-Informed Plastic Conversion Optimisation",description:"CarbonM YieldBoost uses kinetic modelling, soft-sensor estimates and operating recommendations to maximise valuable C5-C20 hydrocarbon vapour selectivity.",alternates:{canonical:"/technology/yieldboost"}};
+export default function Layout({children}:{children:React.ReactNode}){return children;}
