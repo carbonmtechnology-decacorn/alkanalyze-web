@@ -7,4 +7,27 @@ const questions=[
 {q:"Does CarbonM fuel automatically qualify for carbon credits or EU ETS exemptions?",a:"No. Regulatory treatment depends on the applicable scheme, product classification, greenhouse-gas lifecycle accounting, traceability, certification and customer facility."}
 ];
 const faqSchema={"@context":"https://schema.org","@type":"FAQPage",mainEntity:questions.map(x=>({"@type":"Question",name:x.q,acceptedAnswer:{"@type":"Answer",text:x.a}}))};
-export default function CarbonFAQ(){return <section className="bg-[#f7f4ed] py-20" aria-label="Frequently asked questions"><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(faqSchema)}}/><div className="container mx-auto px-4 md:px-6"><p className="text-xs font-black uppercase tracking-[.2em] text-emerald-700">Frequently asked questions</p><h2 className="mt-4 max-w-3xl text-3xl font-black text-emerald-950 md:text-5xl">Industrial fuel and circular feedstock questions, answered.</h2><div className="mt-10 grid gap-5 md:grid-cols-2">{questions.map(x=><article key={x.q} className="rounded-3xl border border-emerald-900/10 bg-white p-7"><h3 className="text-xl font-black text-emerald-950">{x.q}</h3><p className="mt-4 text-sm leading-7 text-slate-600">{x.a}</p></article>)}</div></div></section>}
+export default function CarbonFAQ() {
+  return (
+    <section className="bg-[#f4f0e7] py-20 text-[#09261c]" aria-label="Frequently asked questions">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <div className="container mx-auto grid gap-10 px-5 md:px-8 lg:grid-cols-[0.35fr_0.65fr] lg:gap-20">
+        <div>
+          <p className="text-xs font-black uppercase tracking-[0.24em] text-emerald-800">Frequently asked</p>
+          <h2 className="mt-5 text-4xl font-black tracking-[-0.04em] md:text-5xl">Questions worth answering clearly.</h2>
+        </div>
+        <div className="border-t border-emerald-950/25">
+          {questions.map((item, index) => (
+            <article key={item.q} className="grid gap-4 border-b border-emerald-950/20 py-8 md:grid-cols-[3rem_1fr] md:gap-6">
+              <span className="text-xs font-black tracking-[0.18em] text-emerald-700">0{index + 1}</span>
+              <div>
+                <h3 className="text-xl font-black tracking-tight md:text-2xl">{item.q}</h3>
+                <p className="mt-3 max-w-2xl text-sm leading-7 text-[#486057] md:text-base">{item.a}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
