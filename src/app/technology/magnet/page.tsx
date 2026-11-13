@@ -90,7 +90,7 @@ export default function MagnetPage() {
 
       <CTASection
         headline="Have a difficult plastic stream that needs a better recovery route?"
-        description="CarbonM is open to waste supply, pilot validation and industrial partnership discussions."
+        description="CarbonM welcomes industrial fuel, petrochemical and feedstock qualification discussions."
         primaryCTA={{ label: "Partner With Us", href: "/contact" }}
         secondaryCTA={{ label: "Back to Technology", href: "/technology" }}
       />
