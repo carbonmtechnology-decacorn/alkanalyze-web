@@ -1,0 +1,2 @@
+import type { MetadataRoute } from "next";
+export default function manifest():MetadataRoute.Manifest{return {name:"CarbonM FuelMax Technology",short_name:"CarbonM",description:"FuelMax industrial fuel and NovaNaph circular naphtha",start_url:"/",display:"standalone",background_color:"#07110d",theme_color:"#07110d",icons:[{src:"/carbonm-logo.png",sizes:"any",type:"image/png"}]};}
