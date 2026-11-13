@@ -21,7 +21,7 @@ export default function ResourcesPage() {
               Insights on plastic waste, circular fuels and industrial decarbonization.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-300 md:text-xl">
-              A cleaner knowledge hub for CarbonM's technical updates, market thinking and validation journey.
+              A cleaner knowledge hub for CarbonM&apos;s technical updates, market thinking and validation journey.
             </p>
           </div>
         </div>
