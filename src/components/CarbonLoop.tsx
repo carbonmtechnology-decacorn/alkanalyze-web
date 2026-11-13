@@ -6,7 +6,7 @@ import { Factory, Fuel, Recycle, Ship, Trash2 } from "lucide-react";
 const loopItems = [
   { label: "Landfill-bound plastic", icon: Trash2 },
   { label: "Recovery", icon: Recycle },
-  { label: "Oleum V1", icon: Factory },
+  { label: "YieldBoost + Magnet", icon: Factory },
   { label: "FuelMax / NovaNaph", icon: Fuel },
   { label: "Ships & industry", icon: Ship },
 ];
