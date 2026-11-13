@@ -162,7 +162,7 @@ export const novaNaphDistillation: NovaNaphDistillationPoint[] = [
 
 export const outputHighlights = [
   {
-    title: "Oleum V1 efficiency",
+    title: "Magnet upgrading efficiency",
     metric: "76.2%",
     label: "chloride reduction",
     description: "From 147 mg/kg to 35 mg/kg in third-party testing shared by CarbonM.",
