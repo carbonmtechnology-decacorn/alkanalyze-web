@@ -52,7 +52,7 @@ export default function Footer() {
                   W-54, Rakesh Kapoor Innovation Centre,
                   <br /> BITS Pilani, Pilani Campus,
                   <br /> Rajasthan - 333031
-                  <span className="mt-2 block">Operations: Shamirpet, Hyderabad, Telangana, India</span>
+                  <span className="mt-2 block">Operations: <Link href="/pilot" className="text-emerald-300 hover:text-white">CarbonM Pilot, Shamirpet, Hyderabad, Telangana</Link></span>
                 </span>
               </div>
               <div className="flex items-start gap-3">
