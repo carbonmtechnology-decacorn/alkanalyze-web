@@ -1,0 +1,3 @@
+import type { Metadata } from "next";
+export const metadata:Metadata={title:"CarbonM Impact | Circular Carbon and Industrial Decarbonisation",description:"CarbonM targets the recovery of useful hydrocarbons from difficult plastic waste for industrial fuel and circular feedstocks with process traceability.",alternates:{canonical:"/impact"}};
+export default function Layout({children}:{children:React.ReactNode}){return children;}

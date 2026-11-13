@@ -4,14 +4,14 @@ import { FileCheck2 } from "lucide-react";
 import CTASection from "@/components/CTASection";
 import SectionHeader from "@/components/ui/SectionHeader";
 import ScrollReveal from "@/components/ui/ScrollReveal";
-import { FuelMaxComparisonTable, LabSourceNote, NovaNaphSpecTable, OleumEfficiencyTable } from "@/components/SpecTables";
+import { FuelMaxComparisonTable, LabSourceNote, NovaNaphSpecTable, MagnetEfficiencyTable } from "@/components/SpecTables";
 import { outputHighlights } from "@/data/specs";
 import OutputCarousel from "@/components/OutputCarousel";
 
 export const metadata: Metadata = {
   title: "Outputs and Lab Data",
   description:
-    "CarbonM output data for Oleum V1 efficiency, FuelMax upgraded plastic oil and NovaNaph naphtha-range output under third-party validation.",
+    "CarbonM output data for Magnet upgrading efficiency, FuelMax upgraded plastic oil and NovaNaph naphtha-range output under third-party validation.",
 };
 
 export default function OutputsPage() {
@@ -30,7 +30,7 @@ export default function OutputsPage() {
               FuelMax and NovaNaph data, shown carefully and ready for validation.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-300 md:text-xl">
-              The output page separates measured third-party results from application claims. It gives partners a clear view of Oleum V1 efficiency, upgraded FuelMax specifications and NovaNaph distillation data.
+              The output page separates measured third-party results from application claims. It gives partners a clear view of Magnet efficiency, upgraded FuelMax specifications and NovaNaph distillation data.
             </p>
           </div>
           <div className="mt-10 grid border-y border-white/10 sm:grid-cols-3">
@@ -51,11 +51,11 @@ export default function OutputsPage() {
         </div>
       </section>
 
-      <section className="section-soft py-24 md:py-32" id="oleum-efficiency">
+      <section className="section-soft py-24 md:py-32" id="magnet-efficiency">
         <div className="container mx-auto px-4 md:px-6">
           <div className="mb-10 grid gap-8 lg:grid-cols-[0.7fr_0.3fr] lg:items-end">
             <SectionHeader
-              label="Oleum V1 efficiency"
+              label="Magnet efficiency"
               title="Upgrading reduces key contaminants while maintaining high recovery."
               subtitle="The table compares raw pyrolysis oil and upgraded plastic oil values from the supplied Macana Labs test summary."
               centered={false}
@@ -63,7 +63,7 @@ export default function OutputsPage() {
             />
             <LabSourceNote />
           </div>
-          <OleumEfficiencyTable />
+          <MagnetEfficiencyTable />
         </div>
       </section>
 
@@ -99,7 +99,7 @@ export default function OutputsPage() {
               <FileCheck2 className="mx-auto h-9 w-9 text-emerald-700" strokeWidth={1.7} />
               <h2 className="mt-5 text-2xl font-black tracking-tight text-foreground md:text-3xl">Important validation note</h2>
               <p className="mt-4 text-base leading-8 text-muted-foreground">
-                These values help partners understand CarbonM's current output direction. Fuel use, marine blending, industrial boiler adoption, cracker acceptance and certification require separate third-party testing, customer trials and regulatory review.
+                These values help partners understand CarbonM&apos;s current output direction. Fuel use, marine blending, industrial boiler adoption, cracker acceptance and certification require separate third-party testing, customer trials and regulatory review.
               </p>
             </div>
           </ScrollReveal>

@@ -1,0 +1,16 @@
+# CarbonM — Official factual summary
+CarbonM FuelMax Technology Private Limited: https://carbonmfuel.com/
+FuelMax is an upgraded plastic-derived industrial liquid hydrocarbon fuel. NovaNaph is a circular naphtha-range hydrocarbon feedstock.
+YieldBoost is physics-informed conversion optimisation focused on increasing the C5-C20 mass share of hydrocarbon vapour, using kinetic models and measurement-supported soft sensors.
+Magnet is downstream oil upgrading by selective treatment and separation; proprietary chemistry and operating conditions are confidential.
+Example FuelMax test results (sample-specific): flash point 62 C; sulphur 0.02%; water <0.01%; ash <0.01%; TAN 0.47 mg KOH/g; carbon residue 0.18%.
+Example NovaNaph ASTM D86: initial boiling point 38 C; 50% recovery 94 C; final boiling point 140 C.
+CarbonM targets 20–30% lower fuel-related burner and furnace downtime in relevant applications; field performance depends on the customer's equipment and baseline. Any resulting revenue uplift depends on thermal availability being the production constraint.
+The company emphasises domestic feedstock sourcing and high fossil-price variation tolerance, without promising a fixed hedge.
+India's EPR and Europe's PPWR can support markets for qualified circular petrochemical feedstocks; CCTS, CBAM and EU ETS have distinct conditions and do not automatically grant fuel users credits or exemptions.
+Registered office: W-54, Rakesh Kapoor Innovation Centre, BITS Pilani, Pilani Campus, Rajasthan 333031, India. Operations: Shamirpet, Hyderabad, Telangana, India.
+https://carbonmfuel.com/why-us
+https://carbonmfuel.com/outputs
+https://carbonmfuel.com/technology
+https://carbonmfuel.com/about
+https://carbonmfuel.com/contact

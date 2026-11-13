@@ -2,93 +2,93 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
-import { ArrowDown, ArrowRight, Award, BookOpen, FlaskConical, Map, ShieldCheck, Users } from "lucide-react";
+import { ArrowRight, Award, BookOpen, FlaskConical, Map, ShieldCheck, Users } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import SectionHeader from "@/components/ui/SectionHeader";
-import AnimatedCounter from "@/components/ui/AnimatedCounter";
 import ScrollStory from "@/components/ScrollStory";
-import ProcessFlow from "@/components/ProcessFlow";
+import WhyUsHighlights from "@/components/WhyUsHighlights";
 import TechnologyCard from "@/components/TechnologyCard";
 import ApplicationShowcase from "@/components/ApplicationShowcase";
-import BlogCard from "@/components/BlogCard";
 import CTASection from "@/components/CTASection";
 import CarbonLoop from "@/components/CarbonLoop";
 import OutputCarousel from "@/components/OutputCarousel";
 import { technologies } from "@/data/technologies";
 import { applications } from "@/data/applications";
-import { impactMetrics } from "@/data/impact";
 import { labSource } from "@/data/specs";
-import { blogPosts } from "@/data/blog";
 
 const validationItems = [
-  { icon: FlaskConical, title: "Lab validation", status: "In progress", description: "Output quality, feedstock characterization and operating windows are being validated before scale-up claims are made." },
-  { icon: Map, title: "FOAK roadmap", status: "Planning", description: "Plant design, instrumentation and partner workflows are being prepared for first-of-a-kind demonstration operations." },
-  { icon: Users, title: "Pilot partners", status: "Open", description: "Waste suppliers, industrial fuel buyers, marine blenders and research partners can participate in validation." },
-  { icon: ShieldCheck, title: "Testing and compliance", status: "Under validation", description: "Specifications will be published only after third-party laboratory testing and application-specific validation." },
-  { icon: Award, title: "Grants and recognitions", status: "Ongoing", description: "CarbonM continues to pursue validation funding and institutional support for scale-up." },
-  { icon: BookOpen, title: "Certification roadmap", status: "Planned", description: "Traceability and certification pathways are being designed for future circular fuel/feedstock acceptance." },
+  { icon: FlaskConical, title: "Product quality", status: "Lab-tested", description: "FuelMax and NovaNaph quality properties are evaluated against product-specific downstream requirements." },
+  { icon: ShieldCheck, title: "Industrial qualification", status: "Application-specific", description: "Burner compatibility, handling and fuel-system suitability are assessed for each industrial application." },
+  { icon: Users, title: "Target industries", status: "Commercial focus", description: "Industrial boilers, furnaces, refineries, petrochemicals and marine blending partners." },
+  { icon: BookOpen, title: "Circular feedstock pathways", status: "Qualification", description: "Recycled-content and chain-of-custody claims depend on the applicable regulations and certification." },
+  { icon: Award, title: "Process advantage", status: "Technology", description: "YieldBoost supports hydrocarbon yield optimisation; Magnet targets lower contaminants and improved output consistency." },
+  { icon: Map, title: "Operating presence", status: "India", description: "Registered office in Pilani and operating activities in Shamirpet, Hyderabad." },
 ];
 
 export default function Home() {
   return (
     <div className="flex flex-col">
-      <section className="relative flex min-h-[94vh] items-center justify-center overflow-hidden px-0 pb-20 pt-32 md:pt-36" id="hero">
-        <div className="absolute inset-0">
-          <Image src="/hero-landfill.jpg" alt="Real landfill-bound plastic waste representing CarbonM's input stream" fill priority sizes="100vw" className="object-cover" />
-          <div className="overlay-dark" />
+      <section
+        id="hero"
+        className="relative isolate flex min-h-[720px] items-center overflow-hidden bg-[#07110d] pb-20 pt-40 md:min-h-[88svh] md:pb-28 md:pt-40"
+      >
+        <div className="absolute inset-0 -z-10">
+          <Image
+            src="/hero-landfill.jpg"
+            alt="Mixed plastic waste awaiting recovery into useful industrial hydrocarbons"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#06130f]/95 via-[#06130f]/80 to-[#06130f]/20" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#06130f]/90 via-transparent to-[#06130f]/15" />
         </div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_10%,rgba(16,185,129,0.25),transparent_34%)]" />
-        <div className="pointer-events-none absolute inset-0 overflow-hidden">
-          {[...Array(8)].map((_, i) => (
-            <motion.span
-              key={i}
-              className="absolute h-1 w-1 rounded-full bg-emerald-300/60"
-              style={{ left: `${12 + i * 11}%`, top: `${20 + (i % 4) * 16}%` }}
-              animate={{ y: [-20, -90, -20], opacity: [0, 0.8, 0] }}
-              transition={{ duration: 4.5 + i * 0.3, repeat: Infinity, delay: i * 0.4 }}
-            />
-          ))}
-        </div>
-
-        <div className="container relative z-10 mx-auto px-4 text-center md:px-6">
-          <motion.div initial={{ opacity: 0, y: 32 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }} className="mx-auto max-w-5xl">
-            <span className="eyebrow border-white/20 bg-white/10 text-emerald-300 backdrop-blur-xl">Circular fuel from non-recyclable plastic</span>
-            <h1 className="mt-7 text-balance text-4xl font-black tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl leading-[1.02]">
-              Where others see landfill-bound plastic, <span className="bg-gradient-to-r from-emerald-300 to-teal-200 bg-clip-text text-transparent">we see circular carbon.</span>
+        <div className="container relative z-10 mx-auto px-5 md:px-8">
+          <div className="max-w-5xl">
+            <div className="flex items-center gap-4">
+              <span className="h-px w-12 bg-emerald-300" />
+              <span className="text-xs font-black uppercase tracking-[0.28em] text-emerald-200">
+                CarbonM / Industrial circular carbon
+              </span>
+            </div>
+            <h1 className="mt-9 max-w-[980px] text-5xl font-black leading-[0.99] tracking-[-0.055em] text-white sm:text-6xl md:text-7xl lg:text-[6.5rem]">
+              Plastic waste.
+              <span className="mt-2 block text-emerald-300">Industrial value.</span>
             </h1>
-            <p className="mx-auto mt-7 max-w-3xl text-lg leading-relaxed text-slate-200 md:text-xl">
-              CarbonM FuelMax converts non-recyclable plastic waste into circular fuel/feedstock for ships and heavy industry using <strong className="text-white">Oleum V1</strong> and <strong className="text-white">Alkanalyze</strong>.
+            <p className="mt-9 max-w-2xl text-lg leading-8 text-slate-100 md:text-xl">
+              We engineer difficult plastic streams into upgraded industrial fuel and circular
+              petrochemical feedstocks. YieldBoost optimises hydrocarbon recovery.
+              Magnet improves oil quality.
             </p>
-            <div className="relative z-20 mt-9 flex flex-col justify-center gap-4 sm:flex-row">
+            <div className="mt-9 flex flex-wrap gap-4">
               <Button size="lg" variant="secondary" asChild>
-                <Link href="/technology">
-                  Explore the Technology
-                  <ArrowRight className="h-4 w-4" />
-                </Link>
+                <Link href="/why-us">Why CarbonM? <ArrowRight className="h-4 w-4" /></Link>
               </Button>
               <Button size="lg" variant="light" asChild>
-                <Link href="/contact">Partner With Us</Link>
+                <Link href="/technology">Explore the technology</Link>
               </Button>
             </div>
-          </motion.div>
-          <motion.div className="absolute bottom-7 left-1/2 -translate-x-1/2 lg:hidden" animate={{ y: [0, 9, 0] }} transition={{ duration: 2, repeat: Infinity }}>
-            <ArrowDown className="h-5 w-5 text-white/60" />
-          </motion.div>
+            <div className="mt-14 grid max-w-3xl gap-4 border-t border-white/30 pt-6 text-sm text-slate-200 sm:grid-cols-2">
+              <p><strong className="font-black text-emerald-200">FuelMax</strong> / industrial thermal fuel</p>
+              <p><strong className="font-black text-emerald-200">NovaNaph</strong> / circular naphtha-range feedstock</p>
+            </div>
+          </div>
         </div>
       </section>
 
       <CarbonLoop />
+      <WhyUsHighlights />
 
-      <section className="section-dark py-24 md:py-32" id="problem">
+      <section className="section-dark py-16 md:py-24" id="problem">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid gap-14 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
             <ScrollReveal variant="slideLeft">
               <SectionHeader
                 label="The problem"
-                title="Plastic waste is not just a disposal problem. It is carbon in the wrong place."
-                subtitle="Mixed, low-value plastic streams are often too difficult for mechanical recycling, but the embedded carbon can still be recovered into industrial pathways."
+                title="Plastic waste is not the end of the material story."
+                subtitle="Mixed, low-value plastic streams can remain difficult for mechanical recycling. CarbonM pursues value recovery into fuel and circular chemical feedstock pathways."
                 dark
                 centered={false}
               />
@@ -121,32 +121,16 @@ export default function Home() {
 
       <ScrollStory />
 
-      <section className="section-gradient-transition py-24 md:py-32" id="transformation">
-        <div className="container mx-auto px-4 md:px-6">
-          <ScrollReveal>
-            <SectionHeader
-              label="The transformation"
-              title={<>From landfill liability to <span className="text-emerald-300">industrial circularity.</span></>}
-              subtitle="The CarbonM stack is presented as a controlled sequence: waste mapping, Oleum V1 conversion, Alkanalyze feedback and application-specific validation."
-              dark
-            />
-          </ScrollReveal>
-          <ScrollReveal delay={0.1}>
-            <ProcessFlow />
-          </ScrollReveal>
-        </div>
-      </section>
-
       <section className="bg-background py-24 md:py-32" id="technology">
         <div className="container mx-auto px-4 md:px-6">
           <SectionHeader
             label="Our technology"
-            title="Oleum V1 converts. Alkanalyze standardizes."
-            subtitle="A conversion platform and intelligence layer designed to turn variable waste into measurable, traceable circular fuel/feedstock."
+            title="YieldBoost optimises. Magnet upgrades."
+            subtitle="Physics-informed yield optimisation and selective oil upgrading, designed to deliver high-value industrial and circular petrochemical hydrocarbons."
           />
-          <div className="space-y-28">
-            <TechnologyCard {...technologies.oleumV1} description={technologies.oleumV1.shortDescription} />
-            <TechnologyCard {...technologies.alkanalyze} description={technologies.alkanalyze.shortDescription} reverse />
+          <div className="space-y-16 md:space-y-24">
+            <TechnologyCard {...technologies.yieldboost} description={technologies.yieldboost.shortDescription} />
+            <TechnologyCard {...technologies.magnet} description={technologies.magnet.shortDescription} reverse />
           </div>
         </div>
       </section>
@@ -155,7 +139,7 @@ export default function Home() {
         <div className="container mx-auto px-4 md:px-6">
           <SectionHeader
             label="Outputs"
-            title="FuelMax and NovaNaph, shown as validation pathways."
+            title="FuelMax for industry. NovaNaph for circular petrochemicals."
             subtitle={`Selected values are based on third-party testing shared by CarbonM from ${labSource.shortName}. Final fuel approval remains partner-specific.`}
           />
           <OutputCarousel />
@@ -181,37 +165,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-dark py-24 md:py-32" id="impact">
-        <div className="container mx-auto px-4 md:px-6">
-          <SectionHeader
-            label="Impact"
-            title="Potential impact, stated carefully."
-            subtitle="Metrics are presented as potential or target figures until verified operating data is available."
-            dark
-          />
-          <div className="grid gap-0 border-y border-white/10 md:grid-cols-4">
-            {impactMetrics.map((metric, i) => (
-              <ScrollReveal key={metric.label} delay={i * 0.05}>
-                <div className="h-full border-b border-white/10 py-8 md:border-b-0 md:border-r md:px-6 md:last:border-r-0">
-                  <div className="text-5xl font-black tracking-tight text-white md:text-6xl">
-                    <AnimatedCounter end={metric.value} suffix={metric.suffix} />
-                  </div>
-                  <h3 className="mt-5 text-xs font-black uppercase tracking-[0.2em] text-emerald-300">{metric.label}</h3>
-                  <p className="mt-4 text-sm leading-7 text-slate-400">{metric.description}</p>
-                  <p className="mt-5 text-[10px] font-black uppercase tracking-[0.18em] text-slate-500">{metric.qualifier}</p>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="bg-background py-24 md:py-32" id="validation">
         <div className="container mx-auto px-4 md:px-6">
           <SectionHeader
             label="Validation and roadmap"
-            title="A credibility path, not an overclaim."
-            subtitle="Certification, compliance and fuel specifications are presented as testing and partner-validation workflows."
+            title="Quality, suitability and industrial collaboration."
+            subtitle="Product testing and application-specific engineering guide each partnership, while our technology focuses on better hydrocarbon yield and quality."
           />
           <div className="divide-y divide-emerald-900/10 border-y border-emerald-900/10">
             {validationItems.map((item, i) => {
@@ -233,34 +192,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-soft py-24 md:py-32" id="resources">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="mb-12 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-            <SectionHeader
-              label="Resources"
-              title="An editorial hub for circular fuel thinking."
-              subtitle="Technical and market notes on waste, circular fuels, Oleum V1, Alkanalyze and industrial decarbonization."
-              centered={false}
-              className="mb-0"
-            />
-            <Button variant="outline" asChild>
-              <Link href="/resources">
-                Read all insights
-                <ArrowRight className="h-4 w-4" />
-              </Link>
-            </Button>
-          </div>
-          <div className="grid gap-6 lg:grid-cols-3">
-            {blogPosts.slice(0, 3).map((post) => (
-              <BlogCard key={post.slug} post={post} />
-            ))}
-          </div>
-        </div>
-      </section>
-
       <CTASection
-        headline="Work with us to turn landfill-bound plastic into circular industrial fuel."
-        description="Whether you are a waste supplier, industrial fuel buyer, marine operator, refinery/blending partner, research partner or investor, we would like to explore the right pilot pathway."
+        headline="Discuss industrial FuelMax and circular NovaNaph solutions with CarbonM."
+        description="Whether you are an industrial fuel buyer, petrochemical partner, waste supplier, or marine blender, we welcome applications-focused technical discussions."
         primaryCTA={{ label: "Partner With Us", href: "/contact" }}
         secondaryCTA={{ label: "Explore the Technology", href: "/technology" }}
       />

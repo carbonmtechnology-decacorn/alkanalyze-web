@@ -1,0 +1,3 @@
+import type { Metadata } from "next";
+export const metadata:Metadata={title:"Industrial Fuel & Circular Hydrocarbon Applications",description:"Explore CarbonM FuelMax industrial boiler and furnace fuels, NovaNaph circular petrochemical feedstocks, marine blending and industrial thermal applications.",alternates:{canonical:"/applications"}};
+export default function Layout({children}:{children:React.ReactNode}){return children;}

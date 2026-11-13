@@ -1,0 +1,3 @@
+import type { Metadata } from "next";
+export const metadata:Metadata={title:"Contact CarbonM | Industrial Fuel & Circular Naphtha Partnerships",description:"Contact CarbonM to discuss industrial FuelMax supply, NovaNaph petrochemical feedstock, waste feedstock supply and technology partnerships. Operations in Shamirpet, Hyderabad.",alternates:{canonical:"/contact"}};
+export default function Layout({children}:{children:React.ReactNode}){return children;}

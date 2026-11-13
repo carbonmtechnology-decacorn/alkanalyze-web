@@ -5,12 +5,13 @@ import { Mail, MapPin, Phone } from "lucide-react";
 const footerLinks = {
   technology: [
     { name: "Technology Overview", href: "/technology" },
-    { name: "Oleum V1", href: "/technology/oleum-v1" },
-    { name: "Alkanalyze", href: "/technology/alkanalyze" },
+    { name: "Magnet", href: "/technology/magnet" },
+    { name: "YieldBoost", href: "/technology/yieldboost" },
     { name: "Outputs and Lab Data", href: "/outputs" },
   ],
   company: [
     { name: "Applications", href: "/applications" },
+    { name: "Why CarbonM?", href: "/why-us" },
     { name: "Impact", href: "/impact" },
     { name: "Resources", href: "/resources" },
     { name: "About", href: "/about" },
@@ -34,7 +35,7 @@ export default function Footer() {
           <div className="space-y-5 lg:col-span-2">
             <Link href="/" className="inline-flex items-center gap-3">
               <span className="relative flex h-12 w-12 overflow-hidden rounded-2xl bg-white ring-1 ring-white/20">
-                <Image src="/carbonm-logo.png" alt="CarbonM FuelMax Technology logo" fill sizes="48px" className="object-contain p-1" />
+                <Image src="/carbonm-logo.png" alt="CarbonM FuelMax Technology logo" fill sizes="48px" className="object-contain scale-110" />
               </span>
               <span className="leading-tight">
                 <span className="block text-lg font-black text-white">CarbonM</span>
@@ -42,7 +43,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="max-w-sm leading-relaxed">
-              Converting non-recyclable plastic waste into circular fuel/feedstock for ships and heavy industry through Oleum V1 and Alkanalyze.
+              Delivering upgraded industrial fuel and circular naphtha from difficult plastics through YieldBoost and Magnet.
             </p>
             <div className="space-y-3 pt-2">
               <div className="flex items-start gap-3">
@@ -51,6 +52,7 @@ export default function Footer() {
                   W-54, Rakesh Kapoor Innovation Centre,
                   <br /> BITS Pilani, Pilani Campus,
                   <br /> Rajasthan - 333031
+                  <span className="mt-2 block">Operations: <Link href="/pilot" className="text-emerald-300 hover:text-white">CarbonM Pilot, Shamirpet, Hyderabad, Telangana</Link></span>
                 </span>
               </div>
               <div className="flex items-start gap-3">

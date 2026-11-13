@@ -5,14 +5,14 @@ export const labSource = {
   note: "Selected results are based on third-party testing shared by CarbonM. Application approval still requires partner-specific validation, blending trials and regulatory review.",
 };
 
-export interface OleumEfficiencyRow {
+export interface MagnetEfficiencyRow {
   parameter: string;
   raw: string;
   upgraded: string;
   improvement: string;
 }
 
-export const oleumEfficiencyRows: OleumEfficiencyRow[] = [
+export const magnetEfficiencyRows: MagnetEfficiencyRow[] = [
   {
     parameter: "Colour",
     raw: "Dark brown / black",
@@ -162,7 +162,7 @@ export const novaNaphDistillation: NovaNaphDistillationPoint[] = [
 
 export const outputHighlights = [
   {
-    title: "Oleum V1 efficiency",
+    title: "Magnet upgrading efficiency",
     metric: "76.2%",
     label: "chloride reduction",
     description: "From 147 mg/kg to 35 mg/kg in third-party testing shared by CarbonM.",
