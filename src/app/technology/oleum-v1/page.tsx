@@ -8,8 +8,8 @@ import { Button } from "@/components/ui/Button";
 import { technologies } from "@/data/technologies";
 import { LabSourceNote, OleumEfficiencyTable } from "@/components/SpecTables";
 
-export default function OleumV1Page() {
-  const technology = technologies.oleumV1;
+export default function MagnetPage() {
+  const technology = technologies.magnet;
 
   return (
     <div className="flex flex-col">
@@ -21,20 +21,20 @@ export default function OleumV1Page() {
         <div className="absolute inset-0 subtle-grid" />
         <div className="container relative z-10 mx-auto grid min-h-[72vh] gap-12 px-4 py-24 md:px-6 lg:grid-cols-[1.08fr_0.92fr] lg:items-end">
           <div>
-            <span className="eyebrow border-emerald-300/20 bg-emerald-300/10 text-emerald-300">Oleum V1</span>
+            <span className="eyebrow border-emerald-300/20 bg-emerald-300/10 text-emerald-300">Magnet</span>
             <h1 className="mt-6 max-w-4xl text-4xl font-black tracking-tight text-white sm:text-5xl md:text-7xl leading-[1.02]">
-              Continuous conversion for difficult mixed plastic streams.
+              Selective oil upgrading for demanding industrial fuel and petrochemical applications.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300 md:text-xl">{technology.fullDescription}</p>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <Button size="lg" variant="secondary" asChild>
                 <Link href="/contact">
-                  Discuss a pilot
+                  Discuss Magnet
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </Button>
               <Button size="lg" variant="light" asChild>
-                <Link href="/technology/alkanalyze">See Alkanalyze</Link>
+                <Link href="/technology/yieldboost">See YieldBoost</Link>
               </Button>
             </div>
           </div>
@@ -56,8 +56,8 @@ export default function OleumV1Page() {
         <div className="container mx-auto px-4 md:px-6">
           <SectionHeader
             label="Designed for real waste"
-            title="Not clean lab feedstock. Real, variable, landfill-bound plastic."
-            subtitle="Oleum V1 is being built around the operational problem that makes waste-to-fuel hard: mixed feedstock variability."
+            title="Cleaner hydrocarbon products from complex plastic-derived oils."
+            subtitle="Magnet improves consistency by removing selected contaminants from oil after conversion."
           />
           <div className="divide-y divide-emerald-900/10 border-y border-emerald-900/10">
             {technology.features.map((feature, i) => (
@@ -76,7 +76,7 @@ export default function OleumV1Page() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="mb-10 grid gap-8 lg:grid-cols-[0.7fr_0.3fr] lg:items-end">
             <SectionHeader
-              label="Oleum V1 efficiency"
+              label="Magnet efficiency"
               title="Cleaner output while maintaining high liquid recovery."
               subtitle="The supplied lab summary shows reductions in chloride, sulphur, micro carbon residue and acidity after upgrading."
               centered={false}
