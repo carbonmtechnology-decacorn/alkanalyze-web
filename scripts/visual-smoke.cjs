@@ -26,11 +26,11 @@ const { chromium } = require("playwright");
 
     // Test the actual user-reported failure: images must change as one scrolls.
     const fifthChapter = page.locator("#process-story article").nth(4);
-    await fifthChapter.scrollIntoViewIfNeeded({ timeout: 20000 });
+    await fifthChapter.evaluate((element) => element.scrollIntoView({ block: "center", behavior: "auto" }));
     await page.waitForFunction(() => {
       const current = document.querySelector('#process-story button[aria-current="step"]');
       return current?.getAttribute("aria-label")?.includes("05");
-    }, { timeout: 15000 });
+    }, null, { timeout: 15000 });
     const active = await page.locator('#process-story button[aria-current="step"]').getAttribute("aria-label");
     assert(active?.includes("05"), "Gallery did not advance to chapter 05");
     const imageAlt = await page.locator("#process-story .sticky img").getAttribute("alt");
