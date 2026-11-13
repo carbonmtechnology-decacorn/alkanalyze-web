@@ -11,7 +11,7 @@ import OutputCarousel from "@/components/OutputCarousel";
 export const metadata: Metadata = {
   title: "Outputs and Lab Data",
   description:
-    "CarbonM output data for Oleum V1 efficiency, FuelMax upgraded plastic oil and NovaNaph naphtha-range output under third-party validation.",
+    "CarbonM output data for Magnet upgrading efficiency, FuelMax upgraded plastic oil and NovaNaph naphtha-range output under third-party validation.",
 };
 
 export default function OutputsPage() {
@@ -30,7 +30,7 @@ export default function OutputsPage() {
               FuelMax and NovaNaph data, shown carefully and ready for validation.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-300 md:text-xl">
-              The output page separates measured third-party results from application claims. It gives partners a clear view of Oleum V1 efficiency, upgraded FuelMax specifications and NovaNaph distillation data.
+              The output page separates measured third-party results from application claims. It gives partners a clear view of Magnet efficiency, upgraded FuelMax specifications and NovaNaph distillation data.
             </p>
           </div>
           <div className="mt-10 grid border-y border-white/10 sm:grid-cols-3">
@@ -55,7 +55,7 @@ export default function OutputsPage() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="mb-10 grid gap-8 lg:grid-cols-[0.7fr_0.3fr] lg:items-end">
             <SectionHeader
-              label="Oleum V1 efficiency"
+              label="Magnet efficiency"
               title="Upgrading reduces key contaminants while maintaining high recovery."
               subtitle="The table compares raw pyrolysis oil and upgraded plastic oil values from the supplied Macana Labs test summary."
               centered={false}
