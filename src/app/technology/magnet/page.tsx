@@ -6,7 +6,7 @@ import SectionHeader from "@/components/ui/SectionHeader";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import { Button } from "@/components/ui/Button";
 import { technologies } from "@/data/technologies";
-import { LabSourceNote, OleumEfficiencyTable } from "@/components/SpecTables";
+import { LabSourceNote, MagnetEfficiencyTable } from "@/components/SpecTables";
 
 export default function MagnetPage() {
   const technology = technologies.magnet;
@@ -84,7 +84,7 @@ export default function MagnetPage() {
             />
             <LabSourceNote />
           </div>
-          <OleumEfficiencyTable />
+          <MagnetEfficiencyTable />
         </div>
       </section>
 
