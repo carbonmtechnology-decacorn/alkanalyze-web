@@ -45,7 +45,7 @@ Ships, boilers, furnaces and heavy industrial systems still need dense liquid en
 
 ## CarbonM's approach
 
-CarbonM combines Magnet conversion with YieldBoost process intelligence. The goal is not only to make a fuel-like output, but to make the process measurable, traceable and repeatable enough for industrial partners.` ,
+CarbonM combines YieldBoost process optimisation with Magnet downstream oil upgrading. The goal is not only to make a fuel-like output, but to make the process measurable, traceable and repeatable enough for industrial partners.` ,
   },
   {
     slug: "circular-fuel-marine-industrial-decarbonization",
