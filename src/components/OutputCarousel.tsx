@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 
 const slides = [
   {
-    title: "Oleum V1 efficiency",
+    title: "Magnet efficiency",
     kicker: "Before / after upgrading",
     metric: "76.2%",
     unit: "chloride reduction",
