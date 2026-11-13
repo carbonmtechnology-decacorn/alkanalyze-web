@@ -7,7 +7,6 @@ import { ArrowDown, ArrowRight, Award, BookOpen, FlaskConical, Map, ShieldCheck,
 import { Button } from "@/components/ui/Button";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import SectionHeader from "@/components/ui/SectionHeader";
-import AnimatedCounter from "@/components/ui/AnimatedCounter";
 import ScrollStory from "@/components/ScrollStory";
 import WhyUsHighlights from "@/components/WhyUsHighlights";
 import ProcessFlow from "@/components/ProcessFlow";
@@ -19,17 +18,16 @@ import CarbonLoop from "@/components/CarbonLoop";
 import OutputCarousel from "@/components/OutputCarousel";
 import { technologies } from "@/data/technologies";
 import { applications } from "@/data/applications";
-import { impactMetrics } from "@/data/impact";
 import { labSource } from "@/data/specs";
 import { blogPosts } from "@/data/blog";
 
 const validationItems = [
-  { icon: FlaskConical, title: "Lab validation", status: "In progress", description: "Output quality, feedstock characterization and operating windows are being validated before scale-up claims are made." },
-  { icon: Map, title: "FOAK roadmap", status: "Planning", description: "Plant design, instrumentation and partner workflows are being prepared for first-of-a-kind demonstration operations." },
-  { icon: Users, title: "Pilot partners", status: "Open", description: "Waste suppliers, industrial fuel buyers, marine blenders and research partners can participate in validation." },
-  { icon: ShieldCheck, title: "Testing and compliance", status: "Under validation", description: "Specifications will be published only after third-party laboratory testing and application-specific validation." },
-  { icon: Award, title: "Grants and recognitions", status: "Ongoing", description: "CarbonM continues to pursue validation funding and institutional support for scale-up." },
-  { icon: BookOpen, title: "Certification roadmap", status: "Planned", description: "Traceability and certification pathways are being designed for future circular fuel/feedstock acceptance." },
+  { icon: FlaskConical, title: "Product quality", status: "Lab-tested", description: "FuelMax and NovaNaph quality properties are evaluated against product-specific downstream requirements." },
+  { icon: ShieldCheck, title: "Industrial qualification", status: "Application-specific", description: "Burner compatibility, handling and fuel-system suitability are assessed for each industrial application." },
+  { icon: Users, title: "Target industries", status: "Commercial focus", description: "Industrial boilers, furnaces, refineries, petrochemicals and marine blending partners." },
+  { icon: BookOpen, title: "Circular feedstock pathways", status: "Qualification", description: "Recycled-content and chain-of-custody claims depend on the applicable regulations and certification." },
+  { icon: Award, title: "Process advantage", status: "Technology", description: "YieldBoost supports hydrocarbon yield optimisation; Magnet targets lower contaminants and improved output consistency." },
+  { icon: Map, title: "Operating presence", status: "India", description: "Registered office in Pilani and operating activities in Shamirpet, Hyderabad." },
 ];
 
 export default function Home() {
@@ -57,7 +55,7 @@ export default function Home() {
           <motion.div initial={{ opacity: 0, y: 32 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }} className="mx-auto max-w-5xl">
             <span className="eyebrow border-white/20 bg-white/10 text-emerald-300 backdrop-blur-xl">Circular fuel from non-recyclable plastic</span>
             <h1 className="mt-7 text-balance text-4xl font-black tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl leading-[1.02]">
-              Where others see landfill-bound plastic, <span className="bg-gradient-to-r from-emerald-300 to-teal-200 bg-clip-text text-transparent">we see circular carbon.</span>
+              Industrial fuels and circular feedstocks, <span className="bg-gradient-to-r from-emerald-300 to-teal-200 bg-clip-text text-transparent">engineered for performance.</span>
             </h1>
             <p className="mx-auto mt-7 max-w-3xl text-lg leading-relaxed text-slate-200 md:text-xl">
               CarbonM develops reliable industrial fuel and circular naphtha from difficult plastic waste, powered by <strong className="text-white">Magnet</strong> and <strong className="text-white">YieldBoost</strong>.
@@ -183,37 +181,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-dark py-24 md:py-32" id="impact">
-        <div className="container mx-auto px-4 md:px-6">
-          <SectionHeader
-            label="Impact"
-            title="Potential impact, stated carefully."
-            subtitle="Metrics are presented as potential or target figures until verified operating data is available."
-            dark
-          />
-          <div className="grid gap-0 border-y border-white/10 md:grid-cols-4">
-            {impactMetrics.map((metric, i) => (
-              <ScrollReveal key={metric.label} delay={i * 0.05}>
-                <div className="h-full border-b border-white/10 py-8 md:border-b-0 md:border-r md:px-6 md:last:border-r-0">
-                  <div className="text-5xl font-black tracking-tight text-white md:text-6xl">
-                    <AnimatedCounter end={metric.value} suffix={metric.suffix} />
-                  </div>
-                  <h3 className="mt-5 text-xs font-black uppercase tracking-[0.2em] text-emerald-300">{metric.label}</h3>
-                  <p className="mt-4 text-sm leading-7 text-slate-400">{metric.description}</p>
-                  <p className="mt-5 text-[10px] font-black uppercase tracking-[0.18em] text-slate-500">{metric.qualifier}</p>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="bg-background py-24 md:py-32" id="validation">
         <div className="container mx-auto px-4 md:px-6">
           <SectionHeader
             label="Validation and roadmap"
-            title="A credibility path, not an overclaim."
-            subtitle="Certification, compliance and fuel specifications are presented as testing and partner-validation workflows."
+            title="Quality, suitability and industrial collaboration."
+            subtitle="Product testing and application-specific engineering guide each partnership, while our technology focuses on better hydrocarbon yield and quality."
           />
           <div className="divide-y divide-emerald-900/10 border-y border-emerald-900/10">
             {validationItems.map((item, i) => {
