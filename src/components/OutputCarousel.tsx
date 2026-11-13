@@ -88,7 +88,7 @@ export default function OutputCarousel() {
             <motion.div
               key={slide.title}
               className="absolute inset-0"
-              initial={{ opacity: 0, scale: 1.04 }}
+              initial={false}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.98 }}
               transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
@@ -102,7 +102,7 @@ export default function OutputCarousel() {
             <AnimatePresence mode="wait">
               <motion.div
                 key={slide.title}
-                initial={{ opacity: 0, y: 18 }}
+                initial={false}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.35 }}
