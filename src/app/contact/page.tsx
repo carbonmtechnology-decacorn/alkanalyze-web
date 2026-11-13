@@ -85,7 +85,7 @@ export default function ContactPage() {
                     <span className="text-xs font-black uppercase tracking-[0.2em]">Address</span>
                   </div>
                   <p className="mt-5 text-base leading-7 text-slate-200">
-                    W-54, Rakesh Kapoor Innovation Centre,<br />BITS Pilani, Pilani Campus,<br />Rajasthan - 333031
+                    W-54, Rakesh Kapoor Innovation Centre,<br />BITS Pilani, Pilani Campus,<br />Rajasthan - 333031<br /><span className="mt-2 block">Operations: Shamirpet, Hyderabad, Telangana, India</span>
                   </p>
                 </div>
               </div>
