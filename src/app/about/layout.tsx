@@ -1,0 +1,3 @@
+import type { Metadata } from "next";
+export const metadata:Metadata={title:"About CarbonM | Founders, Engineers and Advisors",description:"Meet CarbonM FuelMax Technology's team developing FuelMax, NovaNaph, YieldBoost and Magnet for industrial and circular petrochemical markets.",alternates:{canonical:"/about"}};
+export default function Layout({children}:{children:React.ReactNode}){return children;}
