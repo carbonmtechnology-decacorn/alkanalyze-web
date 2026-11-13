@@ -1,0 +1,3 @@
+import type { Metadata } from "next";
+export const metadata:Metadata={title:"Magnet | Plastic Pyrolysis Oil Upgrading & Contaminant Removal",description:"CarbonM Magnet is a proprietary downstream upgrading platform that reduces contaminants in plastic-derived oil for FuelMax and NovaNaph applications.",alternates:{canonical:"/technology/magnet"}};
+export default function Layout({children}:{children:React.ReactNode}){return children;}
