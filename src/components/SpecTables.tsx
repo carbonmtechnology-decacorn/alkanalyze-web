@@ -1,5 +1,5 @@
 import ScrollReveal from "@/components/ui/ScrollReveal";
-import { fuelMaxComparisonRows, labSource, novaNaphDistillation, novaNaphHighlights, oleumEfficiencyRows } from "@/data/specs";
+import { fuelMaxComparisonRows, labSource, novaNaphDistillation, novaNaphHighlights, magnetEfficiencyRows } from "@/data/specs";
 
 export function LabSourceNote({ dark = false }: { dark?: boolean }) {
   return (
@@ -12,7 +12,7 @@ export function LabSourceNote({ dark = false }: { dark?: boolean }) {
   );
 }
 
-export function OleumEfficiencyTable() {
+export function MagnetEfficiencyTable() {
   return (
     <ScrollReveal>
       <div className="overflow-hidden rounded-[1.75rem] border border-emerald-900/10 bg-white shadow-sm">
@@ -23,7 +23,7 @@ export function OleumEfficiencyTable() {
             </div>
           ))}
         </div>
-        {oleumEfficiencyRows.map((row) => (
+        {magnetEfficiencyRows.map((row) => (
           <div key={row.parameter} className="grid grid-cols-1 border-b border-emerald-900/10 last:border-b-0 md:grid-cols-[1.05fr_1fr_1fr_1fr]">
             <div className="bg-emerald-50/70 px-5 py-4 text-sm font-black text-emerald-950">{row.parameter}</div>
             <div className="px-5 py-4 text-sm leading-relaxed text-foreground/80">{row.raw}</div>
