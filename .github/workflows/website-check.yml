@@ -13,7 +13,7 @@ permissions:
   contents: read
 jobs:
   validate:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -30,3 +30,22 @@ jobs:
         run: npm run lint
       - name: Production build
         run: npm run build
+      - name: Install Chromium browser smoke-test tooling
+        run: |
+          npm install --no-save --ignore-scripts --no-audit --no-fund playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Browser visual smoke test
+        run: |
+          npm run start -- --hostname 127.0.0.1 --port 3000 > /tmp/carbonm-next.log 2>&1 &
+          for i in $(seq 1 40); do
+            if curl -fsS http://127.0.0.1:3000/ > /dev/null; then break; fi
+            sleep 2
+          done
+          node scripts/visual-smoke.cjs
+      - name: Upload homepage and carousel screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: website-visual-smoke
+          path: artifacts/
+          if-no-files-found: ignore
