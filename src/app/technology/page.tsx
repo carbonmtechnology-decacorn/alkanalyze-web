@@ -17,7 +17,7 @@ export default function TechnologyPage() {
     <div className="flex flex-col">
       <section className="relative flex min-h-[80vh] items-center overflow-hidden pt-28 section-dark">
         <div className="absolute inset-0">
-          <Image src="/clean-reactor.jpg" alt="Real industrial processing equipment representing Oleum V1" fill priority sizes="100vw" className="object-cover opacity-45" />
+          <Image src="/clean-reactor.jpg" alt="Real industrial processing equipment representing Magnet" fill priority sizes="100vw" className="object-cover opacity-45" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#07110d] via-[#07110d]/90 to-[#07110d]/20" />
         </div>
         <div className="absolute inset-0 subtle-grid" />
@@ -25,20 +25,20 @@ export default function TechnologyPage() {
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="max-w-5xl">
             <span className="eyebrow border-emerald-300/20 bg-emerald-300/10 text-emerald-300">Technology</span>
             <h1 className="mt-6 max-w-4xl text-4xl font-black tracking-tight text-white sm:text-5xl md:text-7xl leading-[1.02]">
-              Oleum V1 converts. Alkanalyze standardizes.
+              YieldBoost optimises. Magnet upgrades.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300 md:text-xl">
-              A conversion platform and intelligence layer designed to turn variable landfill-bound plastic into measurable, traceable circular fuel/feedstock.
+              Physics-informed process optimisation and selective downstream oil upgrading for circular industrial and petrochemical hydrocarbons.
             </p>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <Button size="lg" variant="secondary" asChild>
-                <Link href="/technology/oleum-v1">
-                  Oleum V1
+                <Link href="/technology/yieldboost">
+                  YieldBoost
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </Button>
               <Button size="lg" variant="light" asChild>
-                <Link href="/technology/alkanalyze">Alkanalyze</Link>
+                <Link href="/technology/magnet">Magnet</Link>
               </Button>
             </div>
           </motion.div>
@@ -50,7 +50,7 @@ export default function TechnologyPage() {
           <SectionHeader
             label="How it works"
             title="From landfill-bound plastic to circular industrial fuel."
-            subtitle="A six-stage integrated process powered by Oleum V1 and Alkanalyze."
+            subtitle="A six-stage integrated process powered by Magnet and YieldBoost."
           />
           <ProcessFlow />
         </div>
@@ -58,8 +58,8 @@ export default function TechnologyPage() {
 
       <section className="bg-background py-24 md:py-32">
         <div className="container mx-auto space-y-28 px-4 md:px-6">
-          <TechnologyCard {...technologies.oleumV1} description={technologies.oleumV1.fullDescription} />
-          <TechnologyCard {...technologies.alkanalyze} description={technologies.alkanalyze.fullDescription} reverse />
+          <TechnologyCard {...technologies.yieldboost} description={technologies.yieldboost.fullDescription} />
+          <TechnologyCard {...technologies.magnet} description={technologies.magnet.fullDescription} reverse />
         </div>
       </section>
 
