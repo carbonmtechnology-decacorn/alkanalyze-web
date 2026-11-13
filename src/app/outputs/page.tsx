@@ -99,7 +99,7 @@ export default function OutputsPage() {
               <FileCheck2 className="mx-auto h-9 w-9 text-emerald-700" strokeWidth={1.7} />
               <h2 className="mt-5 text-2xl font-black tracking-tight text-foreground md:text-3xl">Important validation note</h2>
               <p className="mt-4 text-base leading-8 text-muted-foreground">
-                These values help partners understand CarbonM's current output direction. Fuel use, marine blending, industrial boiler adoption, cracker acceptance and certification require separate third-party testing, customer trials and regulatory review.
+                These values help partners understand CarbonM&apos;s current output direction. Fuel use, marine blending, industrial boiler adoption, cracker acceptance and certification require separate third-party testing, customer trials and regulatory review.
               </p>
             </div>
           </ScrollReveal>
