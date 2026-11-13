@@ -9,6 +9,7 @@ import ScrollReveal from "@/components/ui/ScrollReveal";
 import SectionHeader from "@/components/ui/SectionHeader";
 import AnimatedCounter from "@/components/ui/AnimatedCounter";
 import ScrollStory from "@/components/ScrollStory";
+import WhyUsHighlights from "@/components/WhyUsHighlights";
 import ProcessFlow from "@/components/ProcessFlow";
 import TechnologyCard from "@/components/TechnologyCard";
 import ApplicationShowcase from "@/components/ApplicationShowcase";
@@ -59,7 +60,7 @@ export default function Home() {
               Where others see landfill-bound plastic, <span className="bg-gradient-to-r from-emerald-300 to-teal-200 bg-clip-text text-transparent">we see circular carbon.</span>
             </h1>
             <p className="mx-auto mt-7 max-w-3xl text-lg leading-relaxed text-slate-200 md:text-xl">
-              CarbonM FuelMax converts non-recyclable plastic waste into circular fuel/feedstock for ships and heavy industry using <strong className="text-white">Oleum V1</strong> and <strong className="text-white">Alkanalyze</strong>.
+              CarbonM develops reliable industrial fuel and circular naphtha from difficult plastic waste, powered by <strong className="text-white">Magnet</strong> and <strong className="text-white">YieldBoost</strong>.
             </p>
             <div className="relative z-20 mt-9 flex flex-col justify-center gap-4 sm:flex-row">
               <Button size="lg" variant="secondary" asChild>
@@ -80,6 +81,7 @@ export default function Home() {
       </section>
 
       <CarbonLoop />
+      <WhyUsHighlights />
 
       <section className="section-dark py-24 md:py-32" id="problem">
         <div className="container mx-auto px-4 md:px-6">
@@ -127,7 +129,7 @@ export default function Home() {
             <SectionHeader
               label="The transformation"
               title={<>From landfill liability to <span className="text-emerald-300">industrial circularity.</span></>}
-              subtitle="The CarbonM stack is presented as a controlled sequence: waste mapping, Oleum V1 conversion, Alkanalyze feedback and application-specific validation."
+              subtitle="The CarbonM stack is presented as a controlled sequence: waste mapping, Magnet conversion, YieldBoost feedback and application-specific validation."
               dark
             />
           </ScrollReveal>
@@ -141,12 +143,12 @@ export default function Home() {
         <div className="container mx-auto px-4 md:px-6">
           <SectionHeader
             label="Our technology"
-            title="Oleum V1 converts. Alkanalyze standardizes."
-            subtitle="A conversion platform and intelligence layer designed to turn variable waste into measurable, traceable circular fuel/feedstock."
+            title="YieldBoost optimises. Magnet upgrades."
+            subtitle="Physics-informed yield optimisation and selective oil upgrading, designed to deliver high-value industrial and circular petrochemical hydrocarbons."
           />
           <div className="space-y-28">
-            <TechnologyCard {...technologies.oleumV1} description={technologies.oleumV1.shortDescription} />
-            <TechnologyCard {...technologies.alkanalyze} description={technologies.alkanalyze.shortDescription} reverse />
+            <TechnologyCard {...technologies.yieldboost} description={technologies.yieldboost.shortDescription} />
+            <TechnologyCard {...technologies.magnet} description={technologies.magnet.shortDescription} reverse />
           </div>
         </div>
       </section>
@@ -155,7 +157,7 @@ export default function Home() {
         <div className="container mx-auto px-4 md:px-6">
           <SectionHeader
             label="Outputs"
-            title="FuelMax and NovaNaph, shown as validation pathways."
+            title="FuelMax for industry. NovaNaph for circular petrochemicals."
             subtitle={`Selected values are based on third-party testing shared by CarbonM from ${labSource.shortName}. Final fuel approval remains partner-specific.`}
           />
           <OutputCarousel />
@@ -239,7 +241,7 @@ export default function Home() {
             <SectionHeader
               label="Resources"
               title="An editorial hub for circular fuel thinking."
-              subtitle="Technical and market notes on waste, circular fuels, Oleum V1, Alkanalyze and industrial decarbonization."
+              subtitle="Technical and market notes on waste, circular fuels, Magnet, YieldBoost and industrial decarbonization."
               centered={false}
               className="mb-0"
             />
