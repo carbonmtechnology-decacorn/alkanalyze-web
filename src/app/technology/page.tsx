@@ -92,7 +92,7 @@ export default function TechnologyPage() {
 
       <CTASection
         headline="Ready to validate CarbonM's technology with your waste or fuel system?"
-        description="Whether you are sourcing circular fuel, supplying landfill-bound plastic, or evaluating investment, we can define a validation pathway."
+        description="Whether you are an industrial fuel buyer, refinery, petrochemical user or waste supplier, we can discuss an application-specific pathway."
         primaryCTA={{ label: "Partner With Us", href: "/contact" }}
         secondaryCTA={{ label: "See Applications", href: "/applications" }}
       />
