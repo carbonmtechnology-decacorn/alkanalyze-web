@@ -6,8 +6,8 @@ import { Factory, Fuel, Gauge, Recycle, ScanLine, Ship, Trash2 } from "lucide-re
 const steps = [
   { icon: Trash2, title: "Landfill-bound waste", description: "Mixed plastic streams that mechanical recycling cannot economically absorb." },
   { icon: ScanLine, title: "Quality mapping", description: "Input quality is assessed, logged and prepared for controlled conversion." },
-  { icon: Factory, title: "Oleum V1", description: "Continuous conversion recovers hydrocarbon value from non-recyclable plastics." },
-  { icon: Gauge, title: "Alkanalyze", description: "Process data is used to predict, monitor and improve output consistency." },
+  { icon: Factory, title: "Magnet", description: "Continuous conversion recovers hydrocarbon value from non-recyclable plastics." },
+  { icon: Gauge, title: "YieldBoost", description: "Process data is used to predict, monitor and improve output consistency." },
   { icon: Fuel, title: "FuelMax / NovaNaph", description: "Outputs move into third-party testing and application-specific validation." },
   { icon: Ship, title: "Ships & industry", description: "Hard-to-abate users gain a circular carbon pathway after partner qualification." },
 ];
