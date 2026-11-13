@@ -4,7 +4,7 @@ import { FileCheck2 } from "lucide-react";
 import CTASection from "@/components/CTASection";
 import SectionHeader from "@/components/ui/SectionHeader";
 import ScrollReveal from "@/components/ui/ScrollReveal";
-import { FuelMaxComparisonTable, LabSourceNote, NovaNaphSpecTable, OleumEfficiencyTable } from "@/components/SpecTables";
+import { FuelMaxComparisonTable, LabSourceNote, NovaNaphSpecTable, MagnetEfficiencyTable } from "@/components/SpecTables";
 import { outputHighlights } from "@/data/specs";
 import OutputCarousel from "@/components/OutputCarousel";
 
@@ -51,7 +51,7 @@ export default function OutputsPage() {
         </div>
       </section>
 
-      <section className="section-soft py-24 md:py-32" id="oleum-efficiency">
+      <section className="section-soft py-24 md:py-32" id="magnet-efficiency">
         <div className="container mx-auto px-4 md:px-6">
           <div className="mb-10 grid gap-8 lg:grid-cols-[0.7fr_0.3fr] lg:items-end">
             <SectionHeader
@@ -63,7 +63,7 @@ export default function OutputsPage() {
             />
             <LabSourceNote />
           </div>
-          <OleumEfficiencyTable />
+          <MagnetEfficiencyTable />
         </div>
       </section>
 
