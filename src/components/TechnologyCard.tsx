@@ -33,7 +33,7 @@ export default function TechnologyCard({
   reverse = false,
   href,
 }: TechnologyCardProps) {
-  const linkHref = href ?? (name.toLowerCase().includes("oleum") ? "/technology/oleum-v1" : "/technology/alkanalyze");
+  const linkHref = href ?? (name.toLowerCase().includes("magnet") ? "/technology/magnet" : "/technology/yieldboost");
 
   return (
     <ScrollReveal>
