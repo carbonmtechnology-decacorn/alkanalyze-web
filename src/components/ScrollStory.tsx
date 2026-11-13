@@ -121,7 +121,7 @@ export default function ScrollStory() {
     <section
       ref={sectionRef}
       id="process-story"
-      className="relative overflow-clip bg-[#081b15] text-white"
+      className="relative bg-[#081b15] text-white"
       aria-label="CarbonM scroll-driven conversion story"
     >
       <div className="pointer-events-none absolute inset-0 subtle-grid opacity-40" />
