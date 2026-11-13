@@ -77,45 +77,47 @@ export const team: TeamMember[] = [
 
 export const advisors: TeamMember[] = [
   {
-    name: "Dr. Satyapaul Singh",
-    role: "Advisor — Process Control & Chemical Engineering",
-    education: "BITS Pilani, Hyderabad Campus",
-    bio: "Dr. Satyapaul Singh advises CarbonM on chemical engineering, process control, reaction systems, simulation and scale-up thinking. His guidance supports CarbonM's efforts to build reliable operating windows, improve reactor consistency and translate process chemistry into controlled industrial operation.",
-    shortBio:
-      "Advises CarbonM on process control, chemical engineering, kinetics and scale-up.",
-    image: "/team/satyapaul-singh-profile.jpg",
-    linkedin: "https://www.linkedin.com/in/satyapaul-singh-b4583343/",
+    name:"Dr. Satyapaul Singh",role:"Advisor — Chemical Engineering & Process Control",
+    education:"BITS Pilani, Hyderabad Campus",
+    bio:"Advises CarbonM on chemical engineering, reaction systems, process control and the scientific foundations of reactor optimisation.",
+    shortBio:"Guidance on process control, reaction engineering and modelling.",
+    image:"/team/satyapaul-singh-profile.jpg",linkedin:"https://www.linkedin.com/in/satyapaul-singh-b4583343/"
   },
   {
-    name: "Dr. Gaurav Gupta",
-    role: "Advisor — Ionic Liquids & Chemistry",
-    education: "North Maharashtra University",
-    bio: "Dr. Gaurav Gupta advises CarbonM on chemistry, ionic liquids, green chemistry and chemical-treatment pathways. His academic background supports CarbonM's work on upgrading complex hydrocarbon streams and developing cleaner, more controlled routes for waste-derived fuel/feedstock quality improvement.",
-    shortBio:
-      "Advises CarbonM on chemistry, ionic liquids, green chemistry and chemical-treatment pathways.",
-    image: "/team/gaurav-gupta-profile.jpg",
-    linkedin: "https://www.linkedin.com/in/dr-gaurav-gupta-022a4963/",
+    name:"Dr. B. V. Venugopal",role:"Advisor — Petrochemicals & Polymers",
+    education:"IIT Madras",
+    bio:"Advises CarbonM on petrochemical processing, polymer-derived feedstocks and downstream hydrocarbon quality requirements.",
+    shortBio:"Technical guidance on petrochemical feedstocks, polymers and hydrocarbon processing.",
+    image:"/team/venugopal-profile.jpg",linkedin:"https://www.linkedin.com/in/bvve1234nu/"
   },
   {
-    name: "Dr. Sandeep Raut",
-    role: "Advisor — Business Development",
-    education: "COO, FinGlobe",
-    bio: "Dr. Sandeep Raut advises CarbonM on business development, market access, institutional partnerships and commercial strategy. His experience helps CarbonM shape customer conversations, build partner networks and move from technical validation toward bankable industrial deployment.",
-    shortBio:
-      "Advises CarbonM on business development, commercial strategy, partnerships and market access.",
-    image: "/team/sandeep-raut-profile.jpg",
-    linkedin: "https://www.linkedin.com/in/sandeepraut/",
+    name:"Sagar Girase",role:"Advisor",
+    education:"Industry advisory",
+    bio:"Supports CarbonM's development through strategic and technical advisory discussions.",
+    shortBio:"Strategic and technical advisor.",
+    image:"/carbonm-logo.png"
   },
   {
-    name: "Dr. B. V. Venugopal",
-    role: "Advisor — Petrochemicals & Polymers",
-    education: "IIT Madras",
-    bio: "Dr. B. V. Venugopal advises CarbonM on petrochemicals, polymers, olefins and hydrocarbon-processing pathways. His industry and technical background helps CarbonM align its circular fuel/feedstock development with the quality expectations of petrochemical, refining and industrial fuel markets.",
-    shortBio:
-      "Advises CarbonM on petrochemical feedstocks, polymer chemistry and hydrocarbon-processing pathways.",
-    image: "/team/venugopal-profile.jpg",
-    linkedin: "https://www.linkedin.com/in/bvve1234nu/",
+    name:"Christoph Gahn",role:"Advisor",
+    education:"Industry advisory",
+    bio:"Supports CarbonM through specialist advisory discussions as its technology and market strategy develop.",
+    shortBio:"Technology and industry advisor.",
+    image:"/carbonm-logo.png"
   },
+  {
+    name:"Abhishek Deo",role:"Advisor",
+    education:"Industry advisory",
+    bio:"Supports CarbonM's technical and commercial development through advisory discussions.",
+    shortBio:"Technical and commercial advisor.",
+    image:"/carbonm-logo.png"
+  },
+  {
+    name:"Dr. Sandeep Patil",role:"Advisor",
+    education:"Technical advisory",
+    bio:"Supports CarbonM's development through technical and strategic advisory discussions.",
+    shortBio:"Technical and strategic advisor.",
+    image:"/carbonm-logo.png"
+  }
 ];
 
 export const imageFileMap = [
