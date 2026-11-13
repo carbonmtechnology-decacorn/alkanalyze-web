@@ -22,7 +22,7 @@ export default function TechnologyPage() {
         </div>
         <div className="absolute inset-0 subtle-grid" />
         <div className="container relative z-10 mx-auto px-4 py-24 md:px-6">
-          <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="max-w-5xl">
+          <motion.div initial={false} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="max-w-5xl">
             <span className="eyebrow border-emerald-300/20 bg-emerald-300/10 text-emerald-300">Technology</span>
             <h1 className="mt-6 max-w-4xl text-4xl font-black tracking-tight text-white sm:text-5xl md:text-7xl leading-[1.02]">
               YieldBoost optimises. Magnet upgrades.
