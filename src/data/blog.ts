@@ -16,8 +16,8 @@ export const blogCategories = [
   "Circular Fuels",
   "Marine Decarbonization",
   "Industrial Fuel Transition",
-  "Oleum V1 Updates",
-  "Alkanalyze / ML",
+  "Magnet Updates",
+  "YieldBoost / ML",
   "Policy & Compliance",
   "Company News",
 ];
@@ -45,7 +45,7 @@ Ships, boilers, furnaces and heavy industrial systems still need dense liquid en
 
 ## CarbonM's approach
 
-CarbonM combines Oleum V1 conversion with Alkanalyze process intelligence. The goal is not only to make a fuel-like output, but to make the process measurable, traceable and repeatable enough for industrial partners.` ,
+CarbonM combines Magnet conversion with YieldBoost process intelligence. The goal is not only to make a fuel-like output, but to make the process measurable, traceable and repeatable enough for industrial partners.` ,
   },
   {
     slug: "circular-fuel-marine-industrial-decarbonization",
@@ -73,8 +73,8 @@ CarbonM is building a controlled route from landfill-bound plastic to circular f
     slug: "consistency-missing-layer-waste-to-fuel",
     title: "Why consistency is the missing layer in waste-to-fuel systems",
     excerpt:
-      "The technology problem is not only conversion. It is variability. Alkanalyze is built around that gap.",
-    category: "Alkanalyze / ML",
+      "The technology problem is not only conversion. It is variability. YieldBoost is built around that gap.",
+    category: "YieldBoost / ML",
     date: "2026-08-10",
     readTime: "4 min read",
     image: "/intelligence-ml.jpg",
@@ -87,8 +87,8 @@ Plastic waste does not arrive as a clean, uniform chemical feedstock. It varies 
 
 A process-data layer can help operators move from reactive operation to measured control. Feedstock data, reactor conditions, condenser behaviour and output tests should not sit in separate notebooks. They should form one feedback loop.
 
-## Alkanalyze's role
+## YieldBoost's role
 
-Alkanalyze is CarbonM's process intelligence layer. It is designed to help characterize feedstock, monitor key variables, predict output properties and standardize operating response over time.` ,
+YieldBoost is CarbonM's process intelligence layer. It is designed to help characterize feedstock, monitor key variables, predict output properties and standardize operating response over time.` ,
   },
 ];
