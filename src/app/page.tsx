@@ -127,7 +127,7 @@ export default function Home() {
             <SectionHeader
               label="The transformation"
               title={<>From landfill liability to <span className="text-emerald-300">industrial circularity.</span></>}
-              subtitle="The CarbonM stack is presented as a controlled sequence: waste mapping, Magnet conversion, YieldBoost feedback and application-specific validation."
+              subtitle="The CarbonM stack is presented as a controlled sequence: feedstock preparation, conversion with YieldBoost optimisation, Magnet upgrading and application-specific validation."
               dark
             />
           </ScrollReveal>
@@ -234,8 +234,8 @@ export default function Home() {
       </section>
 
       <CTASection
-        headline="Work with us to turn landfill-bound plastic into circular industrial fuel."
-        description="Whether you are a waste supplier, industrial fuel buyer, marine operator, refinery/blending partner, research partner or investor, we would like to explore the right pilot pathway."
+        headline="Discuss industrial FuelMax and circular NovaNaph solutions with CarbonM."
+        description="Whether you are an industrial fuel buyer, petrochemical partner, waste supplier, or marine blender, we welcome applications-focused technical discussions."
         primaryCTA={{ label: "Partner With Us", href: "/contact" }}
         secondaryCTA={{ label: "Explore the Technology", href: "/technology" }}
       />
