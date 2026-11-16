@@ -1,0 +1,810 @@
+{
+  "date": "2026-11-16T14:31:18.006Z",
+  "base": "http://127.0.0.1:3000",
+  "checks": [
+    {
+      "name": "HTTP /",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "name": "Visible first-screen desktop hero",
+      "pass": true,
+      "detail": {
+        "top": 267,
+        "width": 641.578125,
+        "height": 343.71875,
+        "opacity": "1"
+      }
+    },
+    {
+      "name": "No overflow desktop home",
+      "pass": true,
+      "detail": {
+        "width": 1440,
+        "scroll": 1440,
+        "overflowing": []
+      }
+    },
+    {
+      "name": "Homepage WCAG A/AA automated audit",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "Hero pathway anchor",
+      "pass": true
+    },
+    {
+      "name": "Pathway selected p2p",
+      "pass": true
+    },
+    {
+      "name": "Pathway panel p2p",
+      "pass": true
+    },
+    {
+      "name": "Pathway route p2p",
+      "pass": true
+    },
+    {
+      "name": "Pathway begins at heading p2p",
+      "pass": true
+    },
+    {
+      "name": "No overflow p2p",
+      "pass": true,
+      "detail": {
+        "width": 1440,
+        "scroll": 1440,
+        "overflowing": []
+      }
+    },
+    {
+      "name": "Functional mail CTA p2p",
+      "pass": true
+    },
+    {
+      "name": "HTTP /#pathways",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "name": "Pathway selected p2jet",
+      "pass": true
+    },
+    {
+      "name": "Pathway panel p2jet",
+      "pass": true
+    },
+    {
+      "name": "Pathway route p2jet",
+      "pass": true
+    },
+    {
+      "name": "Pathway begins at heading p2jet",
+      "pass": true
+    },
+    {
+      "name": "No overflow p2jet",
+      "pass": true,
+      "detail": {
+        "width": 1440,
+        "scroll": 1440,
+        "overflowing": []
+      }
+    },
+    {
+      "name": "Functional mail CTA p2jet",
+      "pass": true
+    },
+    {
+      "name": "HTTP /#pathways",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "name": "Pathway selected p2marine",
+      "pass": true
+    },
+    {
+      "name": "Pathway panel p2marine",
+      "pass": true
+    },
+    {
+      "name": "Pathway route p2marine",
+      "pass": true
+    },
+    {
+      "name": "Pathway begins at heading p2marine",
+      "pass": true
+    },
+    {
+      "name": "No overflow p2marine",
+      "pass": true,
+      "detail": {
+        "width": 1440,
+        "scroll": 1440,
+        "overflowing": []
+      }
+    },
+    {
+      "name": "Functional mail CTA p2marine",
+      "pass": true
+    },
+    {
+      "name": "HTTP /#pathways",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "name": "Pathway selected p2naphtha",
+      "pass": true
+    },
+    {
+      "name": "Pathway panel p2naphtha",
+      "pass": true
+    },
+    {
+      "name": "Pathway route p2naphtha",
+      "pass": true
+    },
+    {
+      "name": "Pathway begins at heading p2naphtha",
+      "pass": true
+    },
+    {
+      "name": "No overflow p2naphtha",
+      "pass": true,
+      "detail": {
+        "width": 1440,
+        "scroll": 1440,
+        "overflowing": []
+      }
+    },
+    {
+      "name": "Functional mail CTA p2naphtha",
+      "pass": true
+    },
+    {
+      "name": "HTTP /#pathways",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "name": "Pathway keyboard arrow",
+      "pass": true
+    },
+    {
+      "name": "Pathway keyboard End",
+      "pass": true
+    },
+    {
+      "name": "Chapter scroll 1",
+      "pass": true
+    },
+    {
+      "name": "Chapter image 1",
+      "pass": true
+    },
+    {
+      "name": "Chapter scroll 3",
+      "pass": true
+    },
+    {
+      "name": "Chapter image 3",
+      "pass": true
+    },
+    {
+      "name": "Chapter scroll 5",
+      "pass": true
+    },
+    {
+      "name": "Chapter image 5",
+      "pass": true
+    },
+    {
+      "name": "Chapter scroll 6",
+      "pass": true
+    },
+    {
+      "name": "Chapter image 6",
+      "pass": true
+    },
+    {
+      "name": "Chapter scroll 1",
+      "pass": true
+    },
+    {
+      "name": "Chapter image 1",
+      "pass": true
+    },
+    {
+      "name": "YieldBoost control Kinetics",
+      "pass": true
+    },
+    {
+      "name": "YieldBoost control Measurements",
+      "pass": true
+    },
+    {
+      "name": "YieldBoost control Recommendations",
+      "pass": true
+    },
+    {
+      "name": "Magnet inspect Inspect untreated",
+      "pass": true
+    },
+    {
+      "name": "Magnet inspect Inspect upgraded",
+      "pass": true
+    },
+    {
+      "name": "Magnet inspect Compare both",
+      "pass": true
+    },
+    {
+      "name": "HTTP /",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "name": "Technology keyboard submenu",
+      "pass": true
+    },
+    {
+      "name": "HTTP /technology",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "name": "One h1 /technology",
+      "pass": true
+    },
+    {
+      "name": "Canonical /technology",
+      "pass": true
+    },
+    {
+      "name": "No overflow /technology",
+      "pass": true,
+      "detail": {
+        "width": 1440,
+        "scroll": 1440,
+        "overflowing": []
+      }
+    },
+    {
+      "name": "HTTP /technology/yieldboost",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "name": "One h1 /technology/yieldboost",
+      "pass": true
+    },
+    {
+      "name": "Canonical /technology/yieldboost",
+      "pass": true
+    },
+    {
+      "name": "No overflow /technology/yieldboost",
+      "pass": true,
+      "detail": {
+        "width": 1440,
+        "scroll": 1440,
+        "overflowing": []
+      }
+    },
+    {
+      "name": "HTTP /technology/magnet",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "name": "One h1 /technology/magnet",
+      "pass": true
+    },
+    {
+      "name": "Canonical /technology/magnet",
+      "pass": true
+    },
+    {
+      "name": "No overflow /technology/magnet",
+      "pass": true,
+      "detail": {
+        "width": 1440,
+        "scroll": 1440,
+        "overflowing": []
+      }
+    },
+    {
+      "name": "HTTP /outputs",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "name": "One h1 /outputs",
+      "pass": true
+    },
+    {
+      "name": "Canonical /outputs",
+      "pass": true
+    },
+    {
+      "name": "No overflow /outputs",
+      "pass": true,
+      "detail": {
+        "width": 1440,
+        "scroll": 1440,
+        "overflowing": []
+      }
+    },
+    {
+      "name": "Output evidence selector 0",
+      "pass": true
+    },
+    {
+      "name": "Output evidence selector 1",
+      "pass": true
+    },
+    {
+      "name": "Output evidence selector 2",
+      "pass": true
+    },
+    {
+      "name": "Output evidence selector 3",
+      "pass": true
+    },
+    {
+      "name": "Output evidence selector 4",
+      "pass": true
+    },
+    {
+      "name": "HTTP /why-us",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "name": "One h1 /why-us",
+      "pass": true
+    },
+    {
+      "name": "Canonical /why-us",
+      "pass": true
+    },
+    {
+      "name": "No overflow /why-us",
+      "pass": true,
+      "detail": {
+        "width": 1440,
+        "scroll": 1440,
+        "overflowing": [
+          {
+            "tag": "DIV",
+            "class": "pointer-events-none absolute -right-12 top-28 h-[430px] w-[430px] rounded-full border border-emerald-300/15 md:h-[700px] md:w-[700px]",
+            "text": "",
+            "right": 1488
+          },
+          {
+            "tag": "DIV",
+            "class": "pointer-events-none absolute -right-12 top-28 h-[430px] w-[430px] rounded-full border-[70px] border-emerald-300/5 md:h-[700px] md:w-[700px]",
+            "text": "",
+            "right": 1488
+          }
+        ]
+      }
+    },
+    {
+      "name": "HTTP /applications",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "name": "One h1 /applications",
+      "pass": true
+    },
+    {
+      "name": "Canonical /applications",
+      "pass": true
+    },
+    {
+      "name": "No overflow /applications",
+      "pass": true,
+      "detail": {
+        "width": 1440,
+        "scroll": 1440,
+        "overflowing": []
+      }
+    },
+    {
+      "name": "HTTP /about",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "name": "One h1 /about",
+      "pass": true
+    },
+    {
+      "name": "Canonical /about",
+      "pass": true
+    },
+    {
+      "name": "No overflow /about",
+      "pass": true,
+      "detail": {
+        "width": 1440,
+        "scroll": 1440,
+        "overflowing": []
+      }
+    },
+    {
+      "name": "HTTP /pilot",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "name": "One h1 /pilot",
+      "pass": true
+    },
+    {
+      "name": "Canonical /pilot",
+      "pass": true
+    },
+    {
+      "name": "No overflow /pilot",
+      "pass": true,
+      "detail": {
+        "width": 1440,
+        "scroll": 1440,
+        "overflowing": []
+      }
+    },
+    {
+      "name": "HTTP /contact",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "name": "One h1 /contact",
+      "pass": true
+    },
+    {
+      "name": "Canonical /contact",
+      "pass": true
+    },
+    {
+      "name": "No overflow /contact",
+      "pass": true,
+      "detail": {
+        "width": 1440,
+        "scroll": 1440,
+        "overflowing": []
+      }
+    },
+    {
+      "name": "HTTP /",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "name": "No overflow 1024 home",
+      "pass": true,
+      "detail": {
+        "width": 1024,
+        "scroll": 1024,
+        "overflowing": []
+      }
+    },
+    {
+      "name": "HTTP /",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "name": "No overflow 768 home",
+      "pass": true,
+      "detail": {
+        "width": 768,
+        "scroll": 768,
+        "overflowing": []
+      }
+    },
+    {
+      "name": "HTTP /",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "name": "No overflow 390 home",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "scroll": 390,
+        "overflowing": []
+      }
+    },
+    {
+      "name": "Mobile menu expanded",
+      "pass": true
+    },
+    {
+      "name": "Escape closes menu",
+      "pass": true
+    },
+    {
+      "name": "Mobile pathway p2p",
+      "pass": true
+    },
+    {
+      "name": "Mobile pathway p2jet",
+      "pass": true
+    },
+    {
+      "name": "Mobile pathway p2marine",
+      "pass": true
+    },
+    {
+      "name": "Mobile pathway p2naphtha",
+      "pass": true
+    },
+    {
+      "name": "HTTP /why-us",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "name": "No overflow mobile /why-us",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "scroll": 390,
+        "overflowing": [
+          {
+            "tag": "DIV",
+            "class": "pointer-events-none absolute -right-12 top-28 h-[430px] w-[430px] rounded-full border border-emerald-300/15 md:h-[700px] md:w-[700px]",
+            "text": "",
+            "right": 438
+          },
+          {
+            "tag": "DIV",
+            "class": "pointer-events-none absolute -right-12 top-28 h-[430px] w-[430px] rounded-full border-[70px] border-emerald-300/5 md:h-[700px] md:w-[700px]",
+            "text": "",
+            "right": 438
+          }
+        ]
+      }
+    },
+    {
+      "name": "HTTP /technology/yieldboost",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "name": "No overflow mobile /technology/yieldboost",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "scroll": 390,
+        "overflowing": [
+          {
+            "tag": "DIV",
+            "class": "absolute left-1/2 top-0 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-emerald-400/10 blur-[120px]",
+            "text": "",
+            "right": 455
+          }
+        ]
+      }
+    },
+    {
+      "name": "HTTP /technology/magnet",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "name": "No overflow mobile /technology/magnet",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "scroll": 390,
+        "overflowing": [
+          {
+            "tag": "DIV",
+            "class": "absolute left-1/2 top-0 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-emerald-400/10 blur-[120px]",
+            "text": "",
+            "right": 455
+          }
+        ]
+      }
+    },
+    {
+      "name": "HTTP /pilot",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "name": "No overflow mobile /pilot",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "scroll": 390,
+        "overflowing": []
+      }
+    },
+    {
+      "name": "HTTP /pathways/p2jet",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "name": "No overflow mobile /pathways/p2jet",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "scroll": 390,
+        "overflowing": []
+      }
+    },
+    {
+      "name": "HTTP /",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "name": "No overflow 320 home",
+      "pass": true,
+      "detail": {
+        "width": 320,
+        "scroll": 320,
+        "overflowing": []
+      }
+    },
+    {
+      "name": "HTTP /",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "name": "Reduced motion CSS",
+      "pass": true
+    },
+    {
+      "name": "Reduced motion pathway",
+      "pass": true
+    },
+    {
+      "name": "No-JS visible hero",
+      "pass": true
+    },
+    {
+      "name": "No-JS crawlable pathway links",
+      "pass": true
+    },
+    {
+      "name": "Internal link /",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "name": "Internal link /technology",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "name": "Internal link /technology/yieldboost",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "name": "Internal link /technology/magnet",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "name": "Internal link /applications",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "name": "Internal link /outputs",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "name": "Internal link /why-us",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "name": "Internal link /about",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "name": "Internal link /contact",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "name": "Internal link /pathways/p2p",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "name": "Internal link /pathways/p2jet",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "name": "Internal link /pathways/p2marine",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "name": "Internal link /pathways/p2naphtha",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "name": "Internal link /pilot",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "name": "Internal link /impact",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "name": "Internal link /resources",
+      "pass": true,
+      "detail": 200
+    },
+    {
+      "name": "Permanent redirect /technology/alkanalyze",
+      "pass": true,
+      "detail": "/technology/yieldboost"
+    },
+    {
+      "name": "Permanent redirect /technology/oleum-v1",
+      "pass": true,
+      "detail": "/technology/magnet"
+    },
+    {
+      "name": "Four pathway sitemap entries",
+      "pass": true
+    },
+    {
+      "name": "No browser runtime errors",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "No failed requests",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "No console errors",
+      "pass": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "console": [],
+  "responses": [],
+  "metrics": [
+    {
+      "view": "desktop-home",
+      "cls": 0,
+      "lcp": 880
+    }
+  ],
+  "accessibility": [
+    {
+      "route": "/",
+      "violations": []
+    }
+  ]
+}
