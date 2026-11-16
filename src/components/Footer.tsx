@@ -18,7 +18,10 @@ const footerLinks = {
   ],
   partners: [
     { name: "Partner With Us", href: "/contact" },
-    { name: "Waste Suppliers", href: "/contact" },
+    { name: "P2P / Plastic to Plastic", href: "/pathways/p2p" },
+    { name: "P2Jet / Plastic to Jet", href: "/pathways/p2jet" },
+    { name: "P2Marine / Plastic to Marine", href: "/pathways/p2marine" },
+    { name: "P2Naphtha / Plastic to Naphtha", href: "/pathways/p2naphtha" },
     { name: "Marine & Industrial", href: "/contact" },
     { name: "Investors", href: "/contact" },
   ],
@@ -43,7 +46,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="max-w-sm leading-relaxed">
-              Delivering upgraded industrial fuel and circular naphtha from difficult plastics through YieldBoost and Magnet.
+              Developing upgraded industrial fuel and circular naphtha from difficult plastics through YieldBoost and Magnet.
             </p>
             <div className="space-y-3 pt-2">
               <div className="flex items-start gap-3">

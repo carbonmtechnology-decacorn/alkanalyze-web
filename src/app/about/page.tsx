@@ -50,7 +50,7 @@ export default function AboutPage() {
     <div className="flex flex-col">
       <section className="relative overflow-hidden pt-28 section-dark">
         <div className="absolute inset-0">
-          <Image src="/impact-workers.jpg" alt="Real waste recovery and sorting operation" fill priority sizes="100vw" className="object-cover opacity-32" />
+          <Image src="/carbonm-pilot.webp" alt="Original CarbonM pilot facility photograph" fill priority sizes="100vw" className="object-cover opacity-32" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#07110d] via-[#07110d]/90 to-[#07110d]/30" />
         </div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_22%,rgba(16,185,129,0.18),transparent_34%)]" />

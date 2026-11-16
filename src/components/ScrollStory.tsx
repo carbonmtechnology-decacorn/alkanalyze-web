@@ -26,8 +26,8 @@ const chapters = [
     icon: Factory,
     kicker: "02 / Convert",
     title: "Recover the hydrocarbon value.",
-    description: "Thermal conversion transforms prepared plastics into hydrocarbon vapours and other recoverable fractions.",
-    image: "/clean-reactor.jpg",
+    description: "Thermal conversion produces hydrocarbon vapours and other fractions. Photograph: CarbonM pilot facility; commercial operating status is not asserted.",
+    image: "/carbonm-pilot.webp",
   },
   {
     icon: BrainCircuit,
@@ -41,7 +41,7 @@ const chapters = [
     kicker: "04 / Upgrade",
     title: "Magnet sharpens product quality.",
     description: "Our downstream upgrading layer selectively removes problematic contaminants and improves product consistency.",
-    image: "/clean-reactor.jpg",
+    image: "/magnet-comparison.webp",
   },
   {
     icon: Fuel,
@@ -125,7 +125,7 @@ export default function ScrollStory() {
       aria-label="CarbonM scroll-driven conversion story"
     >
       <div className="pointer-events-none absolute inset-0 subtle-grid opacity-40" />
-      <div className="container relative mx-auto px-5 py-20 md:px-8 lg:py-28">
+      <div className="container relative mx-auto px-5 py-20 md:px-8 lg:py-20">
         <div className="mb-12 flex items-end justify-between gap-6 border-b border-white/20 pb-7">
           <div>
             <p className="text-xs font-black uppercase tracking-[0.28em] text-emerald-300">The CarbonM process</p>
@@ -138,7 +138,7 @@ export default function ScrollStory() {
           </div>
         </div>
 
-        <div className="grid gap-8 lg:grid-cols-[1.04fr_0.96fr] lg:gap-16">
+        <div className="grid gap-8 lg:grid-cols-[1.04fr_0.96fr] lg:gap-14">
           <div className="hidden lg:block lg:self-stretch">
             <div className="sticky top-28">
               <div className="relative h-[min(65vh,610px)] min-h-[440px] overflow-hidden bg-[#163a2e]">
@@ -172,8 +172,8 @@ export default function ScrollStory() {
                     aria-label={`Go to ${chapter.kicker}: ${chapter.title}`}
                     aria-current={active === index ? "step" : undefined}
                     onClick={() => jumpTo(index)}
-                    className={`h-1.5 flex-1 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-emerald-300 ${active === index ? "bg-emerald-300" : "bg-white/20 hover:bg-white/45"}`}
-                  />
+                    className={`h-11 flex-1 border-b-2 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-emerald-300 ${active === index ? "border-emerald-300 bg-emerald-300/15" : "border-white/20 bg-white/5 hover:bg-white/15"}`}
+                  >{String(index + 1).padStart(2, "0")}</button>
                 ))}
               </div>
             </div>
@@ -186,7 +186,7 @@ export default function ScrollStory() {
                 <article
                   key={chapter.kicker}
                   ref={node => { chapterRefs.current[index] = node; }}
-                  className="relative border-b border-white/20 py-10 lg:flex lg:min-h-[340px] lg:flex-col lg:justify-center lg:py-14"
+                  className="relative border-b border-white/20 py-10 lg:flex lg:min-h-[290px] lg:flex-col lg:justify-center lg:py-10"
                 >
                   <div className="relative mb-6 aspect-[16/10] overflow-hidden bg-[#163a2e] lg:hidden">
                     <Image src={chapter.image} alt="" fill sizes="100vw" loading="lazy" className="object-cover" />

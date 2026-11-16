@@ -2,10 +2,11 @@ name: Website checks
 on:
   push:
     branches:
-      - website/nov2026-positioning-performance
+      - "website/**"
   pull_request:
     branches:
       - main
+      - website/nov2026-positioning-performance
 concurrency:
   group: website-check-${{ github.ref }}
   cancel-in-progress: true
@@ -22,9 +23,6 @@ jobs:
         with:
           node-version: '22'
           cache: npm
-      # Temporary until package-lock.json is regenerated and committed with npm 10.
-      - name: Reconcile legacy lockfile metadata
-        run: npm install --package-lock-only --ignore-scripts --no-audit --no-fund
       - name: Install dependencies
         run: npm ci
       - name: Typecheck
@@ -33,9 +31,14 @@ jobs:
         run: npm run lint
       - name: Production build
         run: npm run build
+      - name: Record dependency advisories
+        run: |
+          mkdir -p artifacts
+          npm audit --json > artifacts/dependency-audit.json || true
+          npm audit --omit=dev --audit-level=high --json > artifacts/production-audit.json
       - name: Install Chromium browser smoke-test tooling
         run: |
-          npm install --no-save --ignore-scripts --no-audit --no-fund playwright@1.56.1
+          npm install --no-save --ignore-scripts --no-audit --no-fund playwright@1.56.1 @axe-core/playwright@4.10.2
           npx playwright install --with-deps chromium
       - name: Browser visual smoke test
         run: |

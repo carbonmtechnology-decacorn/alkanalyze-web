@@ -10,6 +10,7 @@ import OutputCarousel from "@/components/OutputCarousel";
 
 export const metadata: Metadata = {
   title: "Outputs and Lab Data",
+  alternates: { canonical: "/outputs" },
   description:
     "CarbonM output data for Magnet upgrading efficiency, FuelMax upgraded plastic oil and NovaNaph naphtha-range output under third-party validation.",
 };
@@ -30,7 +31,7 @@ export default function OutputsPage() {
               FuelMax and NovaNaph data, shown carefully and ready for validation.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-300 md:text-xl">
-              This page separates YieldBoost's process-optimisation objective from Magnet's measured upgrading results, FuelMax specifications and NovaNaph distillation data.
+              This page separates YieldBoost’s process-optimisation objective from Magnet’s measured upgrading results, FuelMax specifications and NovaNaph distillation data.
             </p>
           </div>
           <div className="mt-10 grid border-y border-white/10 sm:grid-cols-2 lg:grid-cols-4">
@@ -86,7 +87,7 @@ export default function OutputsPage() {
             />
             <LabSourceNote />
           </div>
-          <MagnetEfficiencyTable />
+          <div id="magnet-results"><MagnetEfficiencyTable /></div>
         </div>
       </section>
 
