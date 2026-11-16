@@ -5,3 +5,8 @@ dist
 .env*.local
 .DS_Store
 *.log
+
+artifacts/
+AGENTS.md
+CLAUDE.md
+*.tsbuildinfo
