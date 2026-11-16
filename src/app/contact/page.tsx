@@ -6,9 +6,9 @@ import ScrollReveal from "@/components/ui/ScrollReveal";
 const partnerTypes = [
   { icon: Trash2, title: "Waste suppliers", description: "Plastic-rich streams, MRF rejects, industrial plastic waste and aggregator partnerships." },
   { icon: Fuel, title: "Industrial fuel buyers", description: "Boilers, furnaces and fuel users evaluating circular liquid fuel/feedstock pathways." },
-  { icon: Ship, title: "Marine and blending partners", description: "Shipping, bunker fuel, terminal and fuel blending validation discussions." },
+  { icon: Ship, title: "Marine fuel partners", description: "Shipping, bunker fuel, terminal and marine-fuel qualification discussions." },
   { icon: Factory, title: "Cement and heavy industry", description: "High-heat industrial sites interested in dense circular carbon alternatives." },
-  { icon: Building2, title: "Refinery and petrochemical partners", description: "Future upgrading, blending and circular feedstock collaboration pathways." },
+  { icon: Building2, title: "Refinery and petrochemical partners", description: "Coprocessing, downstream upgrading and circular feedstock collaboration pathways." },
   { icon: FlaskConical, title: "Testing and research partners", description: "Labs, universities and validation partners for fuel/feedstock characterization." },
   { icon: Users, title: "Investors", description: "Climate-tech, deep-tech, circular economy and industrial decarbonization investors." },
 ];
@@ -36,7 +36,7 @@ export default function ContactPage() {
               Discuss FuelMax industrial fuel, NovaNaph circular petrochemical feedstock or technology partnerships with CarbonM.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-300 md:text-xl">
-              Reach out directly for waste supply, fuel trials, marine blending, research, testing or investment conversations.
+              Reach out directly for waste supply, fuel trials, marine applications, refinery coprocessing, research, testing or investment conversations.
             </p>
           </div>
         </div>

@@ -50,7 +50,7 @@ export default function TechnologyPage() {
           <SectionHeader
             label="How it works"
             title="From landfill-bound plastic to circular industrial fuel."
-            subtitle="A six-stage integrated process powered by Magnet and YieldBoost."
+            subtitle="A six-stage conversion and upgrading process supported by YieldBoost and Magnet."
           />
           <ProcessFlow />
         </div>

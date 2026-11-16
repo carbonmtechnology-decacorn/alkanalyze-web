@@ -89,7 +89,7 @@ export const fuelSpecs = [
   {
     label: "Ash",
     value: "<0.01%",
-    note: "Low ash content supports industrial blending discussions after validation.",
+    note: "Low ash content supports industrial fuel-system qualification after validation.",
   },
   {
     label: "Acidity / TAN",

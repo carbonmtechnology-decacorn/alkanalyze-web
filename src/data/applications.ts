@@ -12,12 +12,12 @@ export interface ApplicationData {
 export const applications: ApplicationData[] = [
   {
     iconName: "ship",
-    title: "Marine fuel blending",
+    title: "Marine fuel applications",
     description:
-      "Circular fuel/feedstock pathway designed for validation with marine fuel blenders and operators seeking lower-fossil blends.",
-    status: "Blending pathway under validation",
+      "Circular fuel pathway for qualification with marine fuel suppliers and vessel operators seeking lower-fossil alternatives.",
+    status: "Marine fuel qualification",
     image: "/ship-marine.jpg",
-    imageAlt: "Real commercial ship representing marine fuel blending applications",
+    imageAlt: "Commercial ship representing marine fuel applications",
   },
   {
     iconName: "flame",
@@ -39,9 +39,9 @@ export const applications: ApplicationData[] = [
   },
   {
     iconName: "fuel",
-    title: "Refinery and blending partners",
+    title: "Refinery coprocessing partners",
     description:
-      "A circular hydrocarbon stream designed for future blending, upgrading and specification validation with downstream partners.",
+      "A circular hydrocarbon stream for refinery coprocessing studies, downstream upgrading and product-specification qualification.",
     status: "Under technical validation",
     image: "/clean-reactor.jpg",
     imageAlt: "Real refinery or fuel storage terminal",

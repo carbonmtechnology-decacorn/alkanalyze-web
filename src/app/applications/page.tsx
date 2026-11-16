@@ -31,7 +31,7 @@ export default function ApplicationsPage() {
           <SectionHeader
             label="Use cases"
             title="Not generic demand. Specific industrial pathways."
-            subtitle="Each use case has its own fuel specification, safety requirement, blending rule and validation sequence. The website presents these as pathways, not approvals."
+            subtitle="Each use case has its own fuel specification, safety requirements and qualification sequence. Refinery coprocessing and marine-fuel use must each be evaluated under the relevant technical rules."
           />
           <ApplicationShowcase applications={applications} />
         </div>
@@ -39,7 +39,7 @@ export default function ApplicationsPage() {
 
       <CTASection
         headline="Have an industrial or marine fuel pathway to validate?"
-        description="We are looking for partners across fuel blending, heavy industry, waste supply, testing and investment."
+        description="We are looking for partners in industrial thermal fuel, refinery coprocessing, marine fuel, waste supply, testing and investment."
         primaryCTA={{ label: "Partner With Us", href: "/contact" }}
         secondaryCTA={{ label: "Explore Technology", href: "/technology" }}
       />
