@@ -46,7 +46,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="max-w-sm leading-relaxed">
-              Delivering upgraded industrial fuel and circular naphtha from difficult plastics through YieldBoost and Magnet.
+              Developing upgraded industrial fuel and circular naphtha from difficult plastics through YieldBoost and Magnet.
             </p>
             <div className="space-y-3 pt-2">
               <div className="flex items-start gap-3">

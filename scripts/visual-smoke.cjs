@@ -123,6 +123,8 @@ const check = (name, value, detail) => {
         await page.locator("#pathway-panel-" + slug).isVisible(),
       );
       await page.locator("#pathway-panel-" + slug + " .field-link").click();
+      await page.waitForURL(base + "/pathways/" + slug);
+      await page.waitForLoadState("networkidle");
       check("Pathway route " + slug, page.url().endsWith("/pathways/" + slug));
       await shot("desktop-" + slug);
       await noOverflow(slug);
