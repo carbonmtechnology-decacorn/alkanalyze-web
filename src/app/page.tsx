@@ -1,167 +1,352 @@
-"use client";
-
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/Button";
-import ScrollReveal from "@/components/ui/ScrollReveal";
-import SectionHeader from "@/components/ui/SectionHeader";
+import { ArrowDown, ArrowUpRight } from "lucide-react";
 import ScrollStory from "@/components/ScrollStory";
-import WhyUsHighlights from "@/components/WhyUsHighlights";
-import TechnologyCard from "@/components/TechnologyCard";
-import ApplicationShowcase from "@/components/ApplicationShowcase";
-import CTASection from "@/components/CTASection";
-import CarbonLoop from "@/components/CarbonLoop";
-import OutputCarousel from "@/components/OutputCarousel";
-import { technologies } from "@/data/technologies";
-import { applications } from "@/data/applications";
-import { labSource } from "@/data/specs";
-
+import PathwayExplorer from "@/components/PathwayExplorer";
+import YieldConsole from "@/components/YieldConsole";
+import MagnetEvidence from "@/components/MagnetEvidence";
+import { team } from "@/data/team";
+export const metadata: Metadata = {
+  title: { absolute: "CarbonM | Engineering the Next Life of Carbon" },
+  description:
+    "CarbonM develops FuelMax industrial fuel and NovaNaph circular feedstocks from difficult plastics. Explore YieldBoost, Magnet and four qualification pathways.",
+  alternates: { canonical: "/" },
+};
+const entities = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://carbonmfuel.com/#website",
+      url: "https://carbonmfuel.com",
+      name: "CarbonM",
+      publisher: { "@id": "https://carbonmfuel.com/#organization" },
+    },
+    ...[
+      {
+        name: "YieldBoost",
+        description:
+          "Physics-informed conversion optimisation targeting C5–C20 hydrocarbon vapour selectivity.",
+        url: "/technology/yieldboost",
+      },
+      {
+        name: "Magnet",
+        description:
+          "Proprietary downstream pyrolysis-oil upgrading for contaminant reduction and consistent product quality.",
+        url: "/technology/magnet",
+      },
+      {
+        name: "FuelMax",
+        description:
+          "Plastic-derived industrial liquid fuel candidate, subject to equipment and site qualification.",
+        url: "/outputs",
+      },
+      {
+        name: "NovaNaph",
+        description:
+          "Naphtha-range hydrocarbon feedstock candidate for petrochemical qualification and refinery coprocessing.",
+        url: "/pathways/p2naphtha",
+      },
+    ].map((p) => ({
+      "@type": "DefinedTerm",
+      name: p.name,
+      description: p.description,
+      url: "https://carbonmfuel.com" + p.url,
+      inDefinedTermSet: "https://carbonmfuel.com/technology",
+    })),
+  ],
+};
 export default function Home() {
   return (
-    <div className="flex flex-col">
-      <section
-        id="hero"
-        className="relative isolate flex min-h-[720px] items-center overflow-hidden bg-[#07110d] pb-20 pt-40 md:min-h-[88svh] md:pb-28 md:pt-40"
-      >
-        <div className="absolute inset-0 -z-10">
-          <Image
-            src="/hero-landfill.jpg"
-            alt="Mixed plastic waste awaiting recovery into useful industrial hydrocarbons"
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover object-center"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#06130f]/95 via-[#06130f]/80 to-[#06130f]/20" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#06130f]/90 via-transparent to-[#06130f]/15" />
-        </div>
-        <div className="container relative z-10 mx-auto px-5 md:px-8">
-          <div className="max-w-5xl">
-            <div className="flex items-center gap-4">
-              <span className="h-px w-12 bg-emerald-300" />
-              <span className="text-xs font-black uppercase tracking-[0.28em] text-emerald-200">
-                CarbonM / Industrial circular carbon
-              </span>
-            </div>
-            <h1 className="mt-9 max-w-[980px] text-5xl font-black leading-[0.99] tracking-[-0.055em] text-white sm:text-6xl md:text-7xl lg:text-[6.5rem]">
-              Plastic waste.
-              <span className="mt-2 block text-emerald-300">Industrial value.</span>
-            </h1>
-            <p className="mt-9 max-w-2xl text-lg leading-8 text-slate-100 md:text-xl">
-              We engineer difficult plastic streams into upgraded industrial fuel and circular
-              petrochemical feedstocks. YieldBoost optimises hydrocarbon recovery.
-              Magnet improves oil quality.
-            </p>
-            <div className="mt-9 flex flex-wrap gap-4">
-              <Button size="lg" variant="secondary" asChild>
-                <Link href="/why-us">Why CarbonM? <ArrowRight className="h-4 w-4" /></Link>
-              </Button>
-              <Button size="lg" variant="light" asChild>
-                <Link href="/technology">Explore the technology</Link>
-              </Button>
-            </div>
-            <div className="mt-14 grid max-w-3xl gap-4 border-t border-white/30 pt-6 text-sm text-slate-200 sm:grid-cols-2">
-              <p><strong className="font-black text-emerald-200">FuelMax</strong> / industrial thermal fuel</p>
-              <p><strong className="font-black text-emerald-200">NovaNaph</strong> / circular naphtha-range feedstock</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <CarbonLoop />
-      <WhyUsHighlights />
-
-      <section className="section-dark py-16 md:py-24" id="problem">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="grid gap-14 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
-            <ScrollReveal variant="slideLeft">
-              <SectionHeader
-                label="The problem"
-                title="Plastic waste is not the end of the material story."
-                subtitle="Mixed, low-value plastic streams can remain difficult for mechanical recycling. CarbonM pursues value recovery into fuel and circular chemical feedstock pathways."
-                dark
-                centered={false}
-              />
-              <div className="mt-10 border-y border-white/10 py-7">
-                <div className="grid gap-8 md:grid-cols-2">
-                  <div>
-                    <div className="text-5xl font-black tracking-tight text-white">350M+</div>
-                    <p className="mt-3 max-w-xs text-sm leading-7 text-slate-400">Tonnes of plastic produced annually globally.</p>
-                  </div>
-                  <div>
-                    <div className="text-5xl font-black tracking-tight text-white">&lt;10%</div>
-                    <p className="mt-3 max-w-xs text-sm leading-7 text-slate-400">Effectively recycled through conventional routes.</p>
-                  </div>
-                </div>
-              </div>
-            </ScrollReveal>
-            <ScrollReveal variant="slideRight" delay={0.12}>
-              <div className="relative min-h-[470px] overflow-hidden rounded-[2.5rem] shadow-2xl shadow-black/30">
-                <Image src="/plastic-bales.jpg" alt="Real bales of mixed plastic waste" fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                <div className="absolute bottom-6 left-6 right-6 border-l border-emerald-300/70 pl-5 text-left">
-                  <p className="text-sm font-black uppercase tracking-[0.2em] text-emerald-200">Carbon recovery opportunity</p>
-                  <p className="mt-3 max-w-xl text-base leading-7 text-slate-100">Recovering value from plastic streams that the current recycling system leaves behind.</p>
-                </div>
-              </div>
-            </ScrollReveal>
-          </div>
-        </div>
-      </section>
-
-      <ScrollStory />
-
-      <section className="bg-background py-24 md:py-32" id="technology">
-        <div className="container mx-auto px-4 md:px-6">
-          <SectionHeader
-            label="Our technology"
-            title="YieldBoost optimises. Magnet upgrades."
-            subtitle="Physics-informed yield optimisation and selective oil upgrading, designed to deliver high-value industrial and circular petrochemical hydrocarbons."
-          />
-          <div className="space-y-16 md:space-y-24">
-            <TechnologyCard {...technologies.yieldboost} description={technologies.yieldboost.shortDescription} />
-            <TechnologyCard {...technologies.magnet} description={technologies.magnet.shortDescription} reverse />
-          </div>
-        </div>
-      </section>
-
-      <section className="section-cream py-24 md:py-32" id="outputs-preview">
-        <div className="container mx-auto px-4 md:px-6">
-          <SectionHeader
-            label="Outputs"
-            title="FuelMax for industry. NovaNaph for circular petrochemicals."
-            subtitle={`Selected values are based on third-party testing shared by CarbonM from ${labSource.shortName}. Final fuel approval remains partner-specific.`}
-          />
-          <OutputCarousel />
-        </div>
-      </section>
-
-      <section className="bg-background py-24 md:py-32" id="applications">
-        <div className="container mx-auto px-4 md:px-6">
-          <SectionHeader
-            label="Applications"
-            title="Built for hard-to-abate sectors, not generic green claims."
-            subtitle="Ships, industrial boilers, furnaces, cement, refineries and petrochemical feedstock routes each need their own validation pathway."
-          />
-          <ApplicationShowcase applications={applications.slice(0, 4)} />
-          <div className="mt-10 flex justify-center">
-            <Button variant="outline" asChild>
-              <Link href="/applications">
-                View all applications
-                <ArrowRight className="h-4 w-4" />
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      <CTASection
-        headline="Discuss industrial FuelMax and circular NovaNaph solutions with CarbonM."
-        description="Whether you are an industrial fuel buyer, petrochemical partner, waste supplier, or marine fuel partner, we welcome applications-focused technical discussions."
-        primaryCTA={{ label: "Partner With Us", href: "/contact" }}
-        secondaryCTA={{ label: "Explore the Technology", href: "/technology" }}
+    <div className="cinematic-home">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(entities) }}
       />
+      <section id="hero" className="field-hero">
+        <div className="hero-meta field-wrap">
+          <span>CarbonM / FuelMax Technology</span>
+          <span>Industrial circular carbon · India</span>
+        </div>
+        <div className="hero-layout field-wrap">
+          <div className="hero-copy">
+            <p className="technical-label">
+              Engineering the next life of carbon
+            </p>
+            <h1>
+              Carbon.
+              <br />
+              Back in
+              <br />
+              <em>circulation.</em>
+            </h1>
+            <p className="hero-intro">
+              Difficult plastics. Valuable hydrocarbons.
+              <br />
+              Built around chemistry. Refined for industry.
+            </p>
+            <a className="field-button" href="#pathways">
+              Choose your pathway <ArrowDown aria-hidden="true" />
+            </a>
+          </div>
+          <figure className="hero-photo">
+            <Image
+              src="/carbonm-pilot.webp"
+              alt="Original photograph of CarbonM's branded container pilot facility outdoors"
+              fill
+              priority
+              sizes="(min-width:1024px) 50vw, 100vw"
+              className="object-cover"
+            />
+            <div className="photo-cross cross-top" aria-hidden="true">
+              +
+            </div>
+            <div className="photo-cross cross-bottom" aria-hidden="true">
+              +
+            </div>
+            <figcaption>
+              <span>
+                From chemistry
+                <br />
+                to the plant floor.
+              </span>
+              <span>
+                CarbonM pilot facility
+                <br />
+                Development & validation
+              </span>
+            </figcaption>
+          </figure>
+        </div>
+        <div className="hero-footer field-wrap">
+          <span>01 — Recover</span>
+          <span>02 — Optimise</span>
+          <span>03 — Upgrade</span>
+          <span>04 — Qualify</span>
+          <a href="#problem" aria-label="Explore the carbon problem">
+            <ArrowDown aria-hidden="true" />
+          </a>
+        </div>
+      </section>
+      <section id="problem" className="problem-section field-wrap">
+        <div className="section-topline">
+          <span>01 / Carbon in the wrong place</span>
+          <span>The starting point</span>
+        </div>
+        <div className="problem-layout">
+          <h2>
+            The end of a product.
+            <br />
+            <em>Not the end of carbon.</em>
+          </h2>
+          <div>
+            <p className="section-lead">
+              Mixed, low-value plastics are difficult to recycle mechanically.
+              Their chemistry still holds value.
+            </p>
+            <p>
+              CarbonM works on suitable polymer-rich streams to recover
+              hydrocarbons for industrial fuel and circular chemical-feedstock
+              routes. Feedstock selection, product testing and the final use
+              determine the pathway.
+            </p>
+            <Link href="/technology" className="field-link">
+              Follow the carbon <ArrowUpRight aria-hidden="true" />
+            </Link>
+          </div>
+        </div>
+        <div className="feedstock-strip">
+          <span>Complex inputs</span>
+          <span>PE / PP / PS-rich streams</span>
+          <span>Characterisation before conversion</span>
+          <span>Application-specific outputs ↗</span>
+        </div>
+      </section>
+      <ScrollStory />
+      <YieldConsole />
+      <MagnetEvidence />
+      <PathwayExplorer />
+      <section className="value-section field-wrap" id="industrial-value">
+        <div className="section-topline">
+          <span>05 / Why CarbonM</span>
+          <Link href="/why-us">The industrial case ↗</Link>
+        </div>
+        <div className="value-layout">
+          <h2>
+            Quality is an
+            <br />
+            <em>operating advantage.</em>
+          </h2>
+          <div className="target-callout">
+            <strong>
+              20–30<span>%</span>
+            </strong>
+            <p>
+              Target reduction in fuel-related burner/furnace downtime.
+              <br />
+              <b>Pending customer-specific validation.</b>
+            </p>
+          </div>
+        </div>
+        <div className="value-lines">
+          {[
+            {
+              title: "More available hours.",
+              body: "When fuel-related downtime limits production, improved equipment availability may support additional output and sales.",
+            },
+            {
+              title: "Economics that can adapt.",
+              body: "Domestic feedstock sourcing and process efficiency aim to improve resilience to fossil-price variation. Delivered economics remain site-specific.",
+            },
+            {
+              title: "A route that fits the rules.",
+              body: "EPR, packaging regulation and carbon policy create different qualification questions for fuel and chemical-feedstock routes.",
+            },
+          ].map((v, i) => (
+            <article key={v.title}>
+              <span>0{i + 1}</span>
+              <h3>{v.title}</h3>
+              <p>{v.body}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+      <section className="industrial-focus">
+        <div className="field-wrap">
+          <div className="section-topline">
+            <span>06 / Intended applications</span>
+            <span>Technical qualification comes first</span>
+          </div>
+          <div className="focus-layout">
+            <div className="focus-photo">
+              <Image
+                src="/heavy-industry.jpg"
+                alt="Illustrative industrial processing site, not a CarbonM installation or customer"
+                fill
+                sizes="(min-width:1024px) 45vw, 100vw"
+                className="object-cover"
+              />
+              <span>Industry context / illustrative photograph</span>
+            </div>
+            <div>
+              <h2>
+                Built for the
+                <br />
+                <em>industrial world.</em>
+              </h2>
+              <div className="focus-list">
+                {[
+                  [
+                    "Industrial heat",
+                    "FuelMax / boilers, furnaces & thermal equipment",
+                  ],
+                  [
+                    "Marine supply chains",
+                    "Blend compatibility & fuel qualification",
+                  ],
+                  [
+                    "Refineries & petrochemicals",
+                    "NovaNaph / receiving-unit specifications",
+                  ],
+                  [
+                    "Aviation research",
+                    "Precursors / further processing & approval",
+                  ],
+                ].map(([t, d]) => (
+                  <div key={t}>
+                    <h3>{t}</h3>
+                    <p>{d}</p>
+                  </div>
+                ))}
+              </div>
+              <Link href="/applications" className="field-link">
+                Explore applications <ArrowUpRight aria-hidden="true" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="facility-section field-wrap" id="facility">
+        <div className="section-topline">
+          <span>07 / People behind the process</span>
+          <span>CarbonM / India</span>
+        </div>
+        <div className="facility-title">
+          <h2>
+            Real chemistry.
+            <br />
+            <em>Real people.</em>
+          </h2>
+          <p>
+            From laboratory samples to pilot engineering, our work is grounded
+            in experiments, measurement and industrial qualification.
+          </p>
+        </div>
+        <div className="facility-layout">
+          <figure>
+            <div className="facility-photo">
+              <Image
+                src="/carbonm-pilot.webp"
+                alt="CarbonM-branded shipping-container pilot facility, photographed outdoors"
+                fill
+                sizes="(min-width:1024px) 65vw, 100vw"
+                className="object-cover"
+              />
+            </div>
+            <figcaption>
+              CarbonM pilot facility / development and validation. Commercial
+              operating status is not asserted.
+            </figcaption>
+            <Link href="/pilot" className="field-link">
+              Facility & appointments <ArrowUpRight aria-hidden="true" />
+            </Link>
+          </figure>
+          <div className="people-list">
+            {team.slice(0, 3).map((person) => (
+              <div key={person.name}>
+                <Image
+                  src={person.image}
+                  alt={person.name}
+                  width={64}
+                  height={76}
+                />
+                <div>
+                  <h3>{person.name}</h3>
+                  <p>{person.role}</p>
+                </div>
+              </div>
+            ))}
+            <Link href="/about" className="field-link">
+              Meet the team & advisors <ArrowUpRight aria-hidden="true" />
+            </Link>
+          </div>
+        </div>
+      </section>
+      <section className="contact-finale">
+        <div className="field-wrap">
+          <div className="section-topline">
+            <span>The next conversation</span>
+            <span>Fuel · Feedstock · Technology</span>
+          </div>
+          <h2>
+            Where does
+            <br />
+            your carbon
+            <br />
+            <em>go next?</em>
+          </h2>
+          <div className="contact-finale-bottom">
+            <Link href="/contact" className="field-button">
+              Build a qualification pathway <ArrowUpRight aria-hidden="true" />
+            </Link>
+            <a href="mailto:shashwatsharma@carbonmfuel.com">
+              shashwatsharma@carbonmfuel.com{" "}
+              <ArrowUpRight size={18} aria-hidden="true" />
+            </a>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import PolicyContext from "@/components/PolicyContext";
 import CarbonFAQ from "@/components/CarbonFAQ";
 import { ArrowUpRight, Factory, Gauge, Recycle, ShieldCheck, TrendingDown } from "lucide-react";
 
@@ -46,15 +47,15 @@ const benefits = [
     icon: ShieldCheck,
     subtitle: "Policy-linked demand",
     title: "Regulatory exposure changes buying decisions.",
-    body: "India's CCTS, EU CBAM and EU ETS each influence specific facilities and markets under different rules. CarbonM's indicative 350,000 tonnes of LDO/MHO demand exposed to relevant CCTS/CBAM-linked industrial supply chains represents an addressable-market scenario, corresponding to about ₹2,450 crore at ₹70/kg. It is not a direct mandate on each tonne of fuel. Recycled-carbon fuel treatment and carbon-cost savings require lifecycle accounting and scheme-specific qualification.",
-    metric: "350kt",
-    metricLabel: "illustrative exposed LDO/MHO market, not mandated consumption",
+    body: "India's CCTS, EU CBAM and EU ETS apply to different entities, goods and accounting boundaries. A potential buyer must establish its own regulatory exposure and the treatment of any proposed fuel. Lifecycle savings, traceability and recognised methodology determine eligibility; no automatic carbon-credit or tax exemption is asserted.",
+    metric: "SITE",
+    metricLabel: "facility-specific emissions and qualification review",
   },
 ];
 
 export default function WhyUsPage() {
   return (
-    <main>
+    <div>
       <section className="relative overflow-hidden bg-[#071b13] px-5 pb-24 pt-44 text-white md:px-8 md:pb-32">
         <div className="pointer-events-none absolute -right-12 top-28 h-[430px] w-[430px] rounded-full border border-emerald-300/15 md:h-[700px] md:w-[700px]" />
         <div className="pointer-events-none absolute -right-12 top-28 h-[430px] w-[430px] rounded-full border-[70px] border-emerald-300/5 md:h-[700px] md:w-[700px]" />
@@ -131,7 +132,8 @@ export default function WhyUsPage() {
           </div>
         </div>
       </section>
+      <PolicyContext />
       <CarbonFAQ />
-    </main>
+    </div>
   );
 }

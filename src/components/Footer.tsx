@@ -18,7 +18,10 @@ const footerLinks = {
   ],
   partners: [
     { name: "Partner With Us", href: "/contact" },
-    { name: "Waste Suppliers", href: "/contact" },
+    { name: "P2P / Plastic to Plastic", href: "/pathways/p2p" },
+    { name: "P2Jet / Plastic to Jet", href: "/pathways/p2jet" },
+    { name: "P2Marine / Plastic to Marine", href: "/pathways/p2marine" },
+    { name: "P2Naphtha / Plastic to Naphtha", href: "/pathways/p2naphtha" },
     { name: "Marine & Industrial", href: "/contact" },
     { name: "Investors", href: "/contact" },
   ],

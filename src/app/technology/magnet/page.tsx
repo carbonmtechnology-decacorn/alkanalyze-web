@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
+import MagnetEvidence from "@/components/MagnetEvidence";
 import CTASection from "@/components/CTASection";
 import SectionHeader from "@/components/ui/SectionHeader";
 import ScrollReveal from "@/components/ui/ScrollReveal";
@@ -52,6 +53,7 @@ export default function MagnetPage() {
         </div>
       </section>
 
+      <MagnetEvidence />
       <section className="section-cream py-24 md:py-32">
         <div className="container mx-auto px-4 md:px-6">
           <SectionHeader

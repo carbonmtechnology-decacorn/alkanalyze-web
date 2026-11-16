@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { Beaker, BrainCircuit, Fuel, ShieldCheck, Sparkles } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -24,7 +24,7 @@ const slides = [
     unit: "chloride reduction",
     description: "Raw pyrolysis oil is upgraded toward a cleaner, lower-contaminant fuel/feedstock stream while maintaining high liquid recovery.",
     icon: Beaker,
-    image: "/clean-reactor.jpg",
+    image: "/magnet-comparison.webp",
     bullets: ["147 mg/kg -> 35 mg/kg chloride", "0.028 wt% -> 0.016 wt% sulphur", "98 vol% -> 95 vol% oil recovery"],
   },
   {
@@ -60,6 +60,7 @@ const slides = [
 ];
 
 export default function OutputCarousel() {
+  const reduced = useReducedMotion();
   const [active, setActive] = useState(0);
   const slide = slides[active];
   const Icon = slide.icon;
@@ -70,13 +71,15 @@ export default function OutputCarousel() {
       <div className="grid min-h-[620px] lg:grid-cols-[0.42fr_0.58fr]">
         <div className="relative z-10 flex flex-col justify-between border-b border-white/10 p-6 md:p-9 lg:border-b-0 lg:border-r">
           <div>
-            <span className="eyebrow border-emerald-300/20 bg-emerald-300/10 text-emerald-300">Output selector</span>
-            <h2 className="mt-6 text-3xl font-black tracking-tight md:text-5xl">Choose the pathway. Read the evidence.</h2>
+            <span className="eyebrow border-emerald-300/20 bg-emerald-300/10 text-emerald-300">Evidence selector</span>
+            <h2 className="mt-6 text-3xl font-black tracking-tight md:text-5xl">Explore the product evidence.</h2>
           </div>
           <div className="mt-10 grid gap-2">
             {slides.map((item, index) => (
               <button
                 key={item.title}
+                aria-pressed={index === active}
+                type="button"
                 onClick={() => setActive(index)}
                 className={cn(
                   "group flex items-center justify-between gap-4 border-t border-white/10 py-5 text-left transition-colors",
@@ -101,7 +104,7 @@ export default function OutputCarousel() {
               initial={false}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.98 }}
-              transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: reduced ? 0 : 0.35, ease: [0.22, 1, 0.36, 1] }}
             >
               <Image src={slide.image} alt={slide.title} fill sizes="(min-width: 1024px) 58vw, 100vw" className="object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#07110d] via-[#07110d]/50 to-[#07110d]/20" />
@@ -115,7 +118,7 @@ export default function OutputCarousel() {
                 initial={false}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
-                transition={{ duration: 0.35 }}
+                transition={{ duration: reduced ? 0 : 0.25 }}
                 className="max-w-3xl"
               >
                 <div className="flex h-14 w-14 items-center justify-center rounded-full border border-emerald-300/25 bg-emerald-300/10 text-emerald-200 backdrop-blur-xl">

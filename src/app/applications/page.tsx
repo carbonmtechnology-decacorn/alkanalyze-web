@@ -1,3 +1,5 @@
+import Link from "next/link";
+import { pathways } from "@/data/pathways";
 import Image from "next/image";
 import ApplicationShowcase from "@/components/ApplicationShowcase";
 import CTASection from "@/components/CTASection";
@@ -37,6 +39,7 @@ export default function ApplicationsPage() {
         </div>
       </section>
 
+      <section className="field-wrap py-16"><h2 className="text-4xl font-semibold tracking-tight">Four carbon pathways</h2><div className="route-links">{pathways.map(p=><Link key={p.slug} href={`/pathways/${p.slug}`} className="field-link">{p.code} — {p.name} ↗</Link>)}</div></section>
       <CTASection
         headline="Have an industrial or marine fuel pathway to validate?"
         description="We are looking for partners in industrial thermal fuel, refinery coprocessing, marine fuel, waste supply, testing and investment."
