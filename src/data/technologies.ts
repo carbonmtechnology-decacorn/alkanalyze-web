@@ -1,111 +1,16 @@
 import type { LucideIcon } from "lucide-react";
-import { Activity, BrainCircuit, Gauge, Layers3, ScanLine, ShieldCheck, SlidersHorizontal, Workflow, Zap } from "lucide-react";
-
-export interface TechnologySpec {
-  label: string;
-  value: string;
-}
-
-export interface TechnologyData {
-  icon: LucideIcon;
-  name: string;
-  tagline: string;
-  shortDescription: string;
-  fullDescription: string;
-  features: string[];
-  specs: TechnologySpec[];
-  image: string;
-  imageAlt: string;
-}
-
-export const technologies: Record<"oleumV1" | "alkanalyze", TechnologyData> = {
-  oleumV1: {
-    icon: Workflow,
-    name: "Oleum V1",
-    tagline: "Continuous conversion for difficult mixed plastic streams.",
-    shortDescription:
-      "Oleum V1 is CarbonM's continuous conversion platform for transforming landfill-bound, non-recyclable plastics into circular fuel/feedstock with industrial reliability.",
-    fullDescription:
-      "Oleum V1 is designed around the practical reality of Indian and global waste streams: mixed, variable, contaminated and low-value. The platform combines feed preparation, controlled thermal conversion, vapour management and output conditioning so that landfill-bound plastic can be recovered as a usable circular industrial resource.",
-    features: [
-      "Designed for mixed PE, PP and plastic-rich non-recyclable waste streams",
-      "Continuous operating architecture for scale-up beyond lab batches",
-      "Integrated vapour handling and pre-condensation control",
-      "Built for future third-party validation of fuel/feedstock quality",
-      "Modular roadmap from pilot to FOAK commercial operation",
-    ],
-    specs: [
-      { label: "Operating mode", value: "Continuous platform under validation" },
-      { label: "Input", value: "Landfill-bound mixed plastic waste" },
-      { label: "Output", value: "Circular fuel/feedstock under testing" },
-      { label: "Scale roadmap", value: "Pilot -> FOAK -> replicated plants" },
-    ],
-    image: "/clean-reactor.jpg",
-    imageAlt:
-      "Real industrial reactor or pilot processing equipment representing Oleum V1 conversion platform",
-  },
-  alkanalyze: {
-    icon: BrainCircuit,
-    name: "Alkanalyze",
-    tagline: "Process intelligence for consistency, traceability and quality control.",
-    shortDescription:
-      "Alkanalyze is the intelligence layer that analyzes feedstock, monitors reactor conditions, predicts output quality and helps operators standardize waste-derived production.",
-    fullDescription:
-      "Alkanalyze turns process variability into measured control. It links feedstock characterization, sensor data, operating conditions and output testing into a digital feedback loop. The goal is to move waste-to-fuel production from reactive operation toward predictive, auditable and increasingly automated control.",
-    features: [
-      "Feedstock quality mapping and input variability tracking",
-      "Sensor-driven monitoring of critical process parameters",
-      "Output property prediction and quality-control workflow",
-      "Batch and run traceability for partner reporting",
-      "Control recommendations for reactor and condensation optimization",
-    ],
-    specs: [
-      { label: "System layer", value: "Analytics + process intelligence" },
-      { label: "Inputs", value: "Feedstock, reactor, condenser and output data" },
-      { label: "Purpose", value: "Consistency and traceability" },
-      { label: "Status", value: "Under active development" },
-    ],
-    image: "/intelligence-ml.jpg",
-    imageAlt:
-      "Real industrial monitoring dashboard and sensor data representing Alkanalyze process intelligence",
-  },
+import { BrainCircuit, Workflow, Gauge, ShieldCheck, ScanLine, SlidersHorizontal, Layers3, Zap } from "lucide-react";
+export interface TechnologySpec {label:string;value:string}
+export interface TechnologyData {icon:LucideIcon;name:string;tagline:string;shortDescription:string;fullDescription:string;features:string[];specs:TechnologySpec[];image:string;imageAlt:string;}
+export const technologies: Record<"yieldboost"|"magnet",TechnologyData> = {
+yieldboost:{icon:BrainCircuit,name:"YieldBoost",tagline:"Physics-informed process intelligence for improved hydrocarbon recovery.",shortDescription:"YieldBoost combines kinetic modelling, sensor data and operating recommendations to optimise the C5–C20 hydrocarbon vapour fraction from plastic conversion.",fullDescription:"YieldBoost is CarbonM's physics-informed process intelligence system. It combines reaction kinetics, temperature and residence-time measurements, soft-sensor estimates and direct analytical validation to recommend operating windows that favour valuable hydrocarbon fractions. Supervisory closed-loop optimisation is a development pathway, not a claim of fully autonomous commercial operation.",features:["Physics-informed reaction-kinetic and product-distribution modelling","Data-driven heater setpoint and residence-time recommendations","Soft sensor for hydrocarbon distribution, with direct analytical validation","Optimisation of C5–C20 vapour selectivity","Process monitoring and repeatability"],specs:[{label:"Target",value:"C5–C20 share of hydrocarbon vapour"},{label:"Approach",value:"Kinetics + sensors + optimisation"},{label:"Function",value:"Operating recommendations and process insight"},{label:"Objective",value:"Better hydrocarbon recovery"}],image:"/intelligence-ml.jpg",imageAlt:"Industrial process instrumentation representing YieldBoost intelligence"},
+magnet:{icon:Workflow,name:"Magnet",tagline:"Selective downstream oil upgrading for fuel and petrochemical quality.",shortDescription:"Magnet upgrades plastic-derived oils by reducing undesirable contaminants and improving consistency for industrial fuel and circular feedstock applications.",fullDescription:"Magnet is CarbonM's proprietary downstream oil upgrading platform. It brings together selective chemical treatment, effective liquid-solid mass transfer, separation and finishing operations to reduce contaminants while retaining useful hydrocarbon value. Proprietary chemicals and operating conditions are not disclosed. Product quality is verified through analytical testing.",features:["Selective upgrading of variable plastic-derived hydrocarbon streams","Contaminant reduction including acidity and carbon residue precursors","High-contact treatment and effective separations","Independent analytical verification of upgraded oil quality","Product-specific finishing for FuelMax and NovaNaph"],specs:[{label:"Process",value:"Downstream hydrocarbon upgrading"},{label:"Target",value:"Lower contaminants and consistent output"},{label:"Evidence",value:"Third-party laboratory results"},{label:"Applications",value:"Industrial fuel and circular naphtha"}],image:"/clean-reactor.jpg",imageAlt:"Industrial liquid processing equipment representing Magnet upgrading"}
 };
-
-export const integrationPillars = [
-  {
-    icon: ScanLine,
-    title: "Read the feedstock",
-    description:
-      "Map material variability before it becomes a process problem.",
-  },
-  {
-    icon: Gauge,
-    title: "Control the process",
-    description:
-      "Track temperature, pressure, vapour movement and condensation windows.",
-  },
-  {
-    icon: SlidersHorizontal,
-    title: "Tune the output",
-    description:
-      "Use measured data to improve consistency across runs and feed batches.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Build trust",
-    description:
-      "Create an auditable data layer from plastic waste to fuel/feedstock output.",
-  },
-  {
-    icon: Layers3,
-    title: "Scale repeatably",
-    description:
-      "Standardize operating learnings before moving from pilot to FOAK plants.",
-  },
-  {
-    icon: Zap,
-    title: "Serve hard sectors",
-    description:
-      "Target industrial and marine fuel/feedstock pathways under validation.",
-  },
+export const integrationPillars=[
+{icon:ScanLine,title:"Characterise",description:"Assess variability in feedstock before conversion."},
+{icon:Gauge,title:"Optimise with YieldBoost",description:"Use kinetic insight and process data to favour valuable hydrocarbons."},
+{icon:SlidersHorizontal,title:"Upgrade with Magnet",description:"Reduce contaminants and improve product consistency downstream."},
+{icon:ShieldCheck,title:"Verify",description:"Validate fuel and feedstock quality with analytical testing."},
+{icon:Layers3,title:"Repeat",description:"Convert experimental process insights into robust operating workflows."},
+{icon:Zap,title:"Supply",description:"Serve industrial thermal users and circular petrochemical feedstock markets."}
 ];

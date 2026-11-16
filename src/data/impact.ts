@@ -61,7 +61,7 @@ export const impactStatements = [
   {
     title: "Traceable operations",
     description:
-      "Oleum V1 and Alkanalyze are being built as an integrated hardware-data system so partners can understand feedstock, process and output quality.",
+      "Magnet and YieldBoost are being built as an integrated hardware-data system so partners can understand feedstock, process and output quality.",
   },
   {
     title: "Waste-sector value creation",
@@ -89,7 +89,7 @@ export const fuelSpecs = [
   {
     label: "Ash",
     value: "<0.01%",
-    note: "Low ash content supports industrial blending discussions after validation.",
+    note: "Low ash content supports industrial fuel-system qualification after validation.",
   },
   {
     label: "Acidity / TAN",

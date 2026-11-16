@@ -15,13 +15,13 @@ const navItems = [
     href: "/technology",
     children: [
       { name: "Overview", href: "/technology" },
-      { name: "Oleum V1", href: "/technology/oleum-v1" },
-      { name: "Alkanalyze", href: "/technology/alkanalyze" },
+      { name: "YieldBoost", href: "/technology/yieldboost" },
+      { name: "Magnet", href: "/technology/magnet" },
     ],
   },
   { name: "Applications", href: "/applications" },
   { name: "Outputs", href: "/outputs" },
-  { name: "Impact", href: "/impact" },
+  { name: "Why CarbonM?", href: "/why-us" },
   { name: "Resources", href: "/resources" },
   { name: "About", href: "/about" },
 ];
@@ -48,7 +48,7 @@ export default function Navbar() {
       >
         <Link href="/" className="group flex min-w-0 items-center gap-3" onClick={() => setOpen(false)}>
           <span className="relative flex h-11 w-11 shrink-0 overflow-hidden rounded-full bg-white ring-1 ring-emerald-900/10 transition-transform group-hover:scale-105">
-            <Image src="/carbonm-logo.png" alt="CarbonM FuelMax Technology logo" fill sizes="44px" className="object-contain p-1" priority />
+            <Image src="/carbonm-logo.png" alt="CarbonM FuelMax Technology logo" fill sizes="44px" className="object-contain scale-110" priority />
           </span>
           <span className="min-w-0 leading-tight">
             <span className="block truncate text-base font-black tracking-tight text-emerald-950">CarbonM</span>

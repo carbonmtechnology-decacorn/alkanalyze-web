@@ -6,9 +6,9 @@ import ScrollReveal from "@/components/ui/ScrollReveal";
 const partnerTypes = [
   { icon: Trash2, title: "Waste suppliers", description: "Plastic-rich streams, MRF rejects, industrial plastic waste and aggregator partnerships." },
   { icon: Fuel, title: "Industrial fuel buyers", description: "Boilers, furnaces and fuel users evaluating circular liquid fuel/feedstock pathways." },
-  { icon: Ship, title: "Marine and blending partners", description: "Shipping, bunker fuel, terminal and fuel blending validation discussions." },
+  { icon: Ship, title: "Marine fuel partners", description: "Shipping, bunker fuel, terminal and marine-fuel qualification discussions." },
   { icon: Factory, title: "Cement and heavy industry", description: "High-heat industrial sites interested in dense circular carbon alternatives." },
-  { icon: Building2, title: "Refinery and petrochemical partners", description: "Future upgrading, blending and circular feedstock collaboration pathways." },
+  { icon: Building2, title: "Refinery and petrochemical partners", description: "Coprocessing, downstream upgrading and circular feedstock collaboration pathways." },
   { icon: FlaskConical, title: "Testing and research partners", description: "Labs, universities and validation partners for fuel/feedstock characterization." },
   { icon: Users, title: "Investors", description: "Climate-tech, deep-tech, circular economy and industrial decarbonization investors." },
 ];
@@ -33,10 +33,10 @@ export default function ContactPage() {
           <div className="max-w-4xl">
             <span className="eyebrow border-emerald-300/20 bg-emerald-300/10 text-emerald-300">Partner with us</span>
             <h1 className="mt-6 text-4xl font-black tracking-tight text-white sm:text-5xl md:text-6xl leading-[1.05]">
-              Work with CarbonM to turn landfill-bound plastic into circular industrial fuel.
+              Discuss FuelMax industrial fuel, NovaNaph circular petrochemical feedstock or technology partnerships with CarbonM.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-300 md:text-xl">
-              Reach out directly for waste supply, fuel trials, marine blending, research, testing or investment conversations.
+              Reach out directly for waste supply, fuel trials, marine applications, refinery coprocessing, research, testing or investment conversations.
             </p>
           </div>
         </div>
@@ -85,7 +85,7 @@ export default function ContactPage() {
                     <span className="text-xs font-black uppercase tracking-[0.2em]">Address</span>
                   </div>
                   <p className="mt-5 text-base leading-7 text-slate-200">
-                    W-54, Rakesh Kapoor Innovation Centre,<br />BITS Pilani, Pilani Campus,<br />Rajasthan - 333031
+                    W-54, Rakesh Kapoor Innovation Centre,<br />BITS Pilani, Pilani Campus,<br />Rajasthan - 333031<br /><span className="mt-2 block">Operations: <a href="/pilot" className="text-emerald-300 underline underline-offset-4">CarbonM Pilot, Shamirpet, Hyderabad, Telangana</a></span>
                   </p>
                 </div>
               </div>

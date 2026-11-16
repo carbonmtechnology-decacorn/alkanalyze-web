@@ -2,17 +2,17 @@ export const labSource = {
   shortName: "Macana Labs",
   legalName: "Macana Analytical Laboratory Private Limited",
   accreditation: "NABL accredited laboratory",
-  note: "Selected results are based on third-party testing shared by CarbonM. Application approval still requires partner-specific validation, blending trials and regulatory review.",
+  note: "Selected results are based on third-party testing shared by CarbonM. Application approval still requires partner-specific validation, refinery coprocessing studies where relevant and regulatory review.",
 };
 
-export interface OleumEfficiencyRow {
+export interface MagnetEfficiencyRow {
   parameter: string;
   raw: string;
   upgraded: string;
   improvement: string;
 }
 
-export const oleumEfficiencyRows: OleumEfficiencyRow[] = [
+export const magnetEfficiencyRows: MagnetEfficiencyRow[] = [
   {
     parameter: "Colour",
     raw: "Dark brown / black",
@@ -162,7 +162,13 @@ export const novaNaphDistillation: NovaNaphDistillationPoint[] = [
 
 export const outputHighlights = [
   {
-    title: "Oleum V1 efficiency",
+    title: "YieldBoost optimisation objective",
+    metric: "C5–C20",
+    label: "target vapour fraction",
+    description: "Physics-informed conversion selectivity objective; not a measured performance increase.",
+  },
+  {
+    title: "Magnet upgrading efficiency",
     metric: "76.2%",
     label: "chloride reduction",
     description: "From 147 mg/kg to 35 mg/kg in third-party testing shared by CarbonM.",

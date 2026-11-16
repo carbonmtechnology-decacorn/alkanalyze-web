@@ -26,6 +26,7 @@ function ProfileCard({ member, compact = false, delay = 0 }: { member: TeamMembe
         </div>
         <div className="p-5 md:p-6">
           <p className="text-xs font-bold uppercase tracking-[0.18em] text-emerald-700">{member.education}</p>
+          {member.advisoryFocus && <p className="mt-3 text-xs font-semibold leading-6 text-emerald-800">Focus: {member.advisoryFocus}</p>}
           <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{compact ? member.shortBio : member.bio}</p>
           {member.linkedin && (
             <Link
@@ -79,7 +80,7 @@ export default function AboutPage() {
                   <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-50 text-emerald-700">
                     <Sparkles className="h-5 w-5" strokeWidth={1.7} />
                   </div>
-                  <p className="text-sm font-semibold text-foreground">Oleum V1 + Alkanalyze turns variability into measured control.</p>
+                  <p className="text-sm font-semibold text-foreground">Magnet + YieldBoost turns variability into measured control.</p>
                 </div>
               </div>
             </div>
@@ -88,15 +89,15 @@ export default function AboutPage() {
             <SectionHeader
               label="Our story"
               title="From plastic waste problem to circular industrial platform."
-              subtitle="CarbonM is focused on converting landfill-bound, non-recyclable plastic waste into circular fuel/feedstock through Oleum V1 and Alkanalyze."
+              subtitle="CarbonM develops industrial fuels and circular petrochemical feedstocks using YieldBoost process intelligence and Magnet oil upgrading."
               centered={false}
             />
             <div className="space-y-5 text-base leading-8 text-muted-foreground">
               <p>
-                The company started with a practical observation: small-scale pyrolysis operators can produce oil, but the market struggles with variable feedstock, inconsistent output and lack of traceable process control.
+                The company started with a practical observation: plastic conversion can recover oil, but the market struggles with variable feedstock, inconsistent output and lack of traceable process control.
               </p>
               <p>
-                CarbonM&apos;s current direction is to solve that reliability problem through an integrated hardware and data stack. Oleum V1 handles the continuous conversion pathway. Alkanalyze creates the intelligence layer for feedstock mapping, monitoring, prediction and quality control.
+                CarbonM&apos;s current direction is to solve that reliability problem through an integrated hardware and data stack. YieldBoost supplies physics-informed process intelligence to improve useful hydrocarbon recovery. Magnet upgrades the recovered oil, targeting lower contaminants and more consistent fuel and feedstock quality.
               </p>
               <p>
                 The mission is to turn the plastic waste that the world has given up on into circular carbon for ships, industry and future petrochemical feedstock pathways.
@@ -138,7 +139,7 @@ export default function AboutPage() {
 
       <CTASection
         headline="Help us build the circular carbon infrastructure layer."
-        description="CarbonM is open to partners across waste supply, industrial fuel demand, marine blending, testing and investment."
+        description="CarbonM is open to partners across waste supply, industrial fuel demand, marine fuel qualification, testing and investment."
         primaryCTA={{ label: "Partner With Us", href: "/contact" }}
         secondaryCTA={{ label: "Explore Technology", href: "/technology" }}
       />

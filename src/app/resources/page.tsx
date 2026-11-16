@@ -21,7 +21,7 @@ export default function ResourcesPage() {
               Insights on plastic waste, circular fuels and industrial decarbonization.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-300 md:text-xl">
-              A cleaner knowledge hub for CarbonM's technical updates, market thinking and validation journey.
+              A cleaner knowledge hub for CarbonM&apos;s technical updates, market thinking and validation journey.
             </p>
           </div>
         </div>
@@ -59,7 +59,7 @@ export default function ResourcesPage() {
 
       <CTASection
         headline="Have a technical question or partnership idea?"
-        description="Reach out to discuss waste streams, testing, blending pathways or investment."
+        description="Reach out to discuss waste streams, testing, refinery coprocessing pathways or investment."
         primaryCTA={{ label: "Partner With Us", href: "/contact" }}
         secondaryCTA={{ label: "Explore Technology", href: "/technology" }}
       />

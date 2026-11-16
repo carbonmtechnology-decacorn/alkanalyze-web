@@ -7,8 +7,8 @@ import ScrollReveal from "@/components/ui/ScrollReveal";
 import { Button } from "@/components/ui/Button";
 import { technologies } from "@/data/technologies";
 
-export default function AlkanalyzePage() {
-  const technology = technologies.alkanalyze;
+export default function YieldBoostPage() {
+  const technology = technologies.yieldboost;
 
   return (
     <div className="flex flex-col">
@@ -20,7 +20,7 @@ export default function AlkanalyzePage() {
         <div className="absolute inset-0 subtle-grid" />
         <div className="container relative z-10 mx-auto grid min-h-[72vh] gap-12 px-4 py-24 md:px-6 lg:grid-cols-[1.08fr_0.92fr] lg:items-end">
           <div>
-            <span className="eyebrow border-emerald-300/20 bg-emerald-300/10 text-emerald-300">Alkanalyze</span>
+            <span className="eyebrow border-emerald-300/20 bg-emerald-300/10 text-emerald-300">YieldBoost</span>
             <h1 className="mt-6 max-w-4xl text-4xl font-black tracking-tight text-white sm:text-5xl md:text-7xl leading-[1.02]">
               The process intelligence layer for consistent circular fuel.
             </h1>
@@ -28,17 +28,17 @@ export default function AlkanalyzePage() {
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <Button size="lg" variant="secondary" asChild>
                 <Link href="/contact">
-                  Discuss Alkanalyze
+                  Discuss YieldBoost
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </Button>
               <Button size="lg" variant="light" asChild>
-                <Link href="/technology/oleum-v1">See Oleum V1</Link>
+                <Link href="/technology/magnet">See Magnet</Link>
               </Button>
             </div>
           </div>
           <div className="border-y border-white/10 py-6">
-            <h2 className="text-sm font-black uppercase tracking-[0.24em] text-emerald-300">System status</h2>
+            <h2 className="text-sm font-black uppercase tracking-[0.24em] text-emerald-300">Technology focus</h2>
             <div className="mt-6 divide-y divide-white/10">
               {technology.specs.map((spec) => (
                 <div key={spec.label} className="grid gap-2 py-4 sm:grid-cols-[0.42fr_0.58fr]">
@@ -56,7 +56,7 @@ export default function AlkanalyzePage() {
           <SectionHeader
             label="Built around variability"
             title="The missing layer in waste-to-fuel is measured control."
-            subtitle="Alkanalyze connects feedstock, reactor and output data so operational learning compounds over time."
+            subtitle="YieldBoost connects feedstock, reactor and output data so operational learning compounds over time."
           />
           <div className="divide-y divide-emerald-900/10 border-y border-emerald-900/10">
             {technology.features.map((feature, i) => (
@@ -72,8 +72,8 @@ export default function AlkanalyzePage() {
       </section>
 
       <CTASection
-        headline="Want to understand how process data can make waste-derived fuel reliable?"
-        description="We can walk through the Alkanalyze roadmap and how it integrates with Oleum V1 operations."
+        headline="Want to optimise valuable hydrocarbon yield with process intelligence?"
+        description="We can walk through the YieldBoost roadmap and how it integrates with Magnet operations."
         primaryCTA={{ label: "Partner With Us", href: "/contact" }}
         secondaryCTA={{ label: "Back to Technology", href: "/technology" }}
       />

@@ -3,12 +3,22 @@
 import { useState } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
-import { Beaker, Fuel, ShieldCheck, Sparkles } from "lucide-react";
+import { Beaker, BrainCircuit, Fuel, ShieldCheck, Sparkles } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const slides = [
   {
-    title: "Oleum V1 efficiency",
+    title: "YieldBoost optimisation",
+    kicker: "Physics-informed process value",
+    metric: "C5–C20",
+    unit: "hydrocarbon vapour selectivity target",
+    description: "YieldBoost combines kinetic modelling, process measurements and soft-sensor estimates to recommend operating conditions that favour valuable hydrocarbon vapour fractions. This is an optimisation objective, not a measured uplift claim.",
+    icon: BrainCircuit,
+    image: "/intelligence-ml.jpg",
+    bullets: ["Kinetics + measured reactor variables", "Heating-zone and auger recommendations", "Direct composition validation pathway"],
+  },
+  {
+    title: "Magnet efficiency",
     kicker: "Before / after upgrading",
     metric: "76.2%",
     unit: "chloride reduction",
@@ -22,7 +32,7 @@ const slides = [
     kicker: "Circular industrial fuel pathway",
     metric: "10,870",
     unit: "kcal/kg GCV",
-    description: "Upgraded plastic oil positioned for industrial and marine fuel-blending validation, with partner-specific approvals handled separately.",
+    description: "Upgraded plastic oil intended for industrial thermal applications and selected marine fuel pathways, subject to site-specific testing and approval.",
     icon: Fuel,
     image: "/heavy-industry.jpg",
     bullets: ["Flash point 62°C", "Sulphur 0.02%", "Carbon residue 0.18%"],
@@ -32,7 +42,7 @@ const slides = [
     kicker: "Circular naphtha pathway",
     metric: "140°C",
     unit: "final boiling point",
-    description: "A naphtha-range stream with ASTM D86 distillation data for future petrochemical qualification and circular feedstock discussions.",
+    description: "A naphtha-range stream with ASTM D86 distillation data for future petrochemical qualification and refinery coprocessing discussions.",
     icon: Sparkles,
     image: "/circular-economy.jpg",
     bullets: ["IBP 38°C", "50% recovery 94°C", "95% recovery 135°C"],
@@ -42,7 +52,7 @@ const slides = [
     kicker: "Careful claims only",
     metric: "3rd",
     unit: "party lab source",
-    description: "Certification, application approval, marine blending and cracker acceptance remain separate validation steps with relevant partners.",
+    description: "Certification, application approval, marine-fuel acceptance and cracker qualification remain separate partner-specific steps.",
     icon: ShieldCheck,
     image: "/ship-marine.jpg",
     bullets: ["Macana Labs source language", "No certification overclaiming", "Application-specific validation"],
@@ -88,7 +98,7 @@ export default function OutputCarousel() {
             <motion.div
               key={slide.title}
               className="absolute inset-0"
-              initial={{ opacity: 0, scale: 1.04 }}
+              initial={false}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.98 }}
               transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
@@ -102,7 +112,7 @@ export default function OutputCarousel() {
             <AnimatePresence mode="wait">
               <motion.div
                 key={slide.title}
-                initial={{ opacity: 0, y: 18 }}
+                initial={false}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.35 }}

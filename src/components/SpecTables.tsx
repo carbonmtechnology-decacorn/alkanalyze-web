@@ -1,5 +1,5 @@
 import ScrollReveal from "@/components/ui/ScrollReveal";
-import { fuelMaxComparisonRows, labSource, novaNaphDistillation, novaNaphHighlights, oleumEfficiencyRows } from "@/data/specs";
+import { fuelMaxComparisonRows, labSource, novaNaphDistillation, novaNaphHighlights, magnetEfficiencyRows } from "@/data/specs";
 
 export function LabSourceNote({ dark = false }: { dark?: boolean }) {
   return (
@@ -12,7 +12,7 @@ export function LabSourceNote({ dark = false }: { dark?: boolean }) {
   );
 }
 
-export function OleumEfficiencyTable() {
+export function MagnetEfficiencyTable() {
   return (
     <ScrollReveal>
       <div className="overflow-hidden rounded-[1.75rem] border border-emerald-900/10 bg-white shadow-sm">
@@ -23,7 +23,7 @@ export function OleumEfficiencyTable() {
             </div>
           ))}
         </div>
-        {oleumEfficiencyRows.map((row) => (
+        {magnetEfficiencyRows.map((row) => (
           <div key={row.parameter} className="grid grid-cols-1 border-b border-emerald-900/10 last:border-b-0 md:grid-cols-[1.05fr_1fr_1fr_1fr]">
             <div className="bg-emerald-50/70 px-5 py-4 text-sm font-black text-emerald-950">{row.parameter}</div>
             <div className="px-5 py-4 text-sm leading-relaxed text-foreground/80">{row.raw}</div>
@@ -75,7 +75,7 @@ export function NovaNaphSpecTable() {
           <div className="text-xs font-bold uppercase tracking-[0.2em] text-emerald-700">NovaNaph highlights</div>
           <h3 className="mt-3 text-2xl font-black tracking-tight text-foreground">Naphtha-range distillation profile.</h3>
           <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-            ASTM D86 profile from Macana Labs for the NovaNaph naphtha oil sample. Final cracker or blending acceptance requires partner-specific qualification.
+            ASTM D86 profile from Macana Labs for the NovaNaph naphtha oil sample. Final cracker acceptance or refinery coprocessing requires partner-specific qualification.
           </p>
           <div className="mt-6 grid gap-3">
             {novaNaphHighlights.map((item) => (

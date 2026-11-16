@@ -23,7 +23,7 @@ export default function ImpactPage() {
               Circular carbon for a world that cannot afford to waste it.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300 md:text-xl">
-              CarbonM's impact model is based on landfill diversion potential, fossil displacement potential, traceability and new value from low-value plastic-rich waste.
+              CarbonM&apos;s impact model is based on landfill diversion potential, fossil displacement potential, traceability and new value from low-value plastic-rich waste.
             </p>
           </div>
         </div>

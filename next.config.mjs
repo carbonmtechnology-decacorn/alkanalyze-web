@@ -1,12 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  // Allows previewing the dev server from the LAN IP shown by Next.js.
-  // If your local IP changes, add the new IP here or remove this line for localhost-only use.
-  allowedDevOrigins: ["10.204.43.93"],
-  images: {
-    formats: ["image/avif", "image/webp"]
-  }
+  // Permit this explicitly named private-network host to request dev-only assets.
+  // Additional hosts can be supplied with CARBONM_DEV_ORIGIN at runtime.
+  allowedDevOrigins: ["172.20.29.171", ...(process.env.CARBONM_DEV_ORIGIN ? [process.env.CARBONM_DEV_ORIGIN] : [])],
+  images:{formats:["image/avif","image/webp"]},
+  async redirects(){return [
+    {source:"/technology/alkanalyze",destination:"/technology/yieldboost",permanent:true},
+    {source:"/technology/oleum-v1",destination:"/technology/magnet",permanent:true}
+  ];}
 };
-
 export default nextConfig;

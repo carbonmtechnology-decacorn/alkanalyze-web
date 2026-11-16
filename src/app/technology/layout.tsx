@@ -1,0 +1,3 @@
+import type { Metadata } from "next";
+export const metadata:Metadata={title:"YieldBoost and Magnet | CarbonM Technology",description:"Explore CarbonM's proprietary YieldBoost physics-informed process optimisation and Magnet contaminant-reduction oil upgrading technologies.",alternates:{canonical:"/technology"}};
+export default function TechnologyLayout({children}:{children:React.ReactNode}){return children;}
