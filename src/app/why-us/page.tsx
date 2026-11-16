@@ -22,9 +22,9 @@ const benefits = [
     icon: Factory,
     subtitle: "Industrial productivity",
     title: "Fuel can influence more than the energy bill.",
-    body: "When boiler or furnace availability is a production bottleneck, fewer fuel-related stoppages can enable additional output and sales. Approximately 0.25% sales uplift is an illustrative scenario, not a validated customer result; actual outcomes depend on utilisation, baseline downtime and market demand.",
-    metric: "0.25%",
-    metricLabel: "illustrative, conditional sales uplift",
+    body: "When boiler or furnace availability constrains production, reducing fuel-related stoppages can support more operating hours, more output and higher sales. Actual benefits depend on baseline downtime, utilisation and market demand; they are not guaranteed revenue results.",
+    metric: "UPTIME",
+    metricLabel: "claimed potential for increased sales through higher equipment availability",
   },
   {
     icon: TrendingDown,

@@ -4,7 +4,7 @@ const questions=[
 {q:"How does YieldBoost work?",a:"YieldBoost combines reaction kinetics, process sensors and soft-sensor estimates to recommend operating conditions that improve valuable C5-C20 hydrocarbon vapour selectivity."},
 {q:"What does Magnet do?",a:"Magnet is CarbonM's proprietary downstream oil-upgrading process, designed to reduce contaminants and improve hydrocarbon product consistency."},
 {q:"Can FuelMax reduce industrial downtime?",a:"CarbonM targets 20–30% less fuel-related burner and furnace downtime where appropriate. The outcome requires comparative industrial testing and depends on the customer's equipment, maintenance and fuel baseline."},
-{q:"Does CarbonM fuel automatically qualify for carbon credits or EU ETS exemptions?",a:"No. Regulatory treatment depends on the applicable scheme, product classification, greenhouse-gas lifecycle accounting, traceability, certification and customer facility."}
+{q:"What is the status of CarbonM's recycled-carbon fuel (RCF) claim?",a:"Based on CarbonM's internal LCA and third-party assessment, we consider our recycled-carbon fuel (RCF) claim valid in principle. Official certification and scheme-specific recognition remain pending and depend on applicable lifecycle greenhouse-gas savings, traceability and product-classification rules. No automatic EU ETS exemption or carbon-credit entitlement is claimed."}
 ];
 const faqSchema={"@context":"https://schema.org","@type":"FAQPage",mainEntity:questions.map(x=>({"@type":"Question",name:x.q,acceptedAnswer:{"@type":"Answer",text:x.a}}))};
 export default function CarbonFAQ() {

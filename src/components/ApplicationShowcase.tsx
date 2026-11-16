@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { Anchor, ArrowUpRight, Factory, Flame, Fuel, Landmark, Ship, Truck, Warehouse } from "lucide-react";
 import type { ApplicationData, ApplicationIconName } from "@/data/applications";
 import { cn } from "@/lib/utils";
@@ -37,9 +38,9 @@ export default function ApplicationShowcase({ applications }: { applications: Ap
               <p className="text-xs font-black uppercase tracking-[0.22em] text-emerald-700">Application 0{index + 1}</p>
               <h3 className="mt-5 max-w-xl text-3xl font-black leading-[1.08] tracking-[-0.04em] text-[#0c241b] md:text-5xl">{app.title}</h3>
               <p className="mt-6 max-w-xl text-base leading-8 text-[#486057] md:text-lg">{app.description}</p>
-              <p className="mt-8 inline-flex items-center gap-3 text-xs font-black uppercase tracking-[0.17em] text-emerald-800">
-                Application-specific qualification <ArrowUpRight className="h-5 w-5" />
-              </p>
+              <Link href="/contact" className="mt-8 inline-flex w-fit items-center gap-3 border-b border-emerald-900 pb-2 text-xs font-black uppercase tracking-[0.17em] text-emerald-800 transition-colors hover:text-emerald-600">
+                Discuss qualification pathway <ArrowUpRight className="h-5 w-5" />
+              </Link>
             </div>
           </article>
         );

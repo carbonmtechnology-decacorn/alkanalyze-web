@@ -75,7 +75,7 @@ export function NovaNaphSpecTable() {
           <div className="text-xs font-bold uppercase tracking-[0.2em] text-emerald-700">NovaNaph highlights</div>
           <h3 className="mt-3 text-2xl font-black tracking-tight text-foreground">Naphtha-range distillation profile.</h3>
           <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-            ASTM D86 profile from Macana Labs for the NovaNaph naphtha oil sample. Final cracker or blending acceptance requires partner-specific qualification.
+            ASTM D86 profile from Macana Labs for the NovaNaph naphtha oil sample. Final cracker acceptance or refinery coprocessing requires partner-specific qualification.
           </p>
           <div className="mt-6 grid gap-3">
             {novaNaphHighlights.map((item) => (

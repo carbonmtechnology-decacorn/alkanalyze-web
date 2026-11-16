@@ -2,7 +2,7 @@ export const labSource = {
   shortName: "Macana Labs",
   legalName: "Macana Analytical Laboratory Private Limited",
   accreditation: "NABL accredited laboratory",
-  note: "Selected results are based on third-party testing shared by CarbonM. Application approval still requires partner-specific validation, blending trials and regulatory review.",
+  note: "Selected results are based on third-party testing shared by CarbonM. Application approval still requires partner-specific validation, refinery coprocessing studies where relevant and regulatory review.",
 };
 
 export interface MagnetEfficiencyRow {
@@ -161,6 +161,12 @@ export const novaNaphDistillation: NovaNaphDistillationPoint[] = [
 ];
 
 export const outputHighlights = [
+  {
+    title: "YieldBoost optimisation objective",
+    metric: "C5–C20",
+    label: "target vapour fraction",
+    description: "Physics-informed conversion selectivity objective; not a measured performance increase.",
+  },
   {
     title: "Magnet upgrading efficiency",
     metric: "76.2%",
