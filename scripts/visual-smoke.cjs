@@ -50,6 +50,19 @@ const check = (name, value, detail) => {
     }).observe({ type: "largest-contentful-paint", buffered: true });
   });
   const shot = async (name) => {
+    await page.waitForFunction(
+      () =>
+        [...document.images]
+          .filter((i) => {
+            const r = i.getBoundingClientRect();
+            return (
+              r.width > 0 && r.height > 0 && r.top < innerHeight && r.bottom > 0
+            );
+          })
+          .every((i) => i.complete && i.naturalWidth > 0),
+      null,
+      { timeout: 20000 },
+    );
     await page.screenshot({ path: `${out}/${name}.png` });
   };
   const goto = async (route) => {
@@ -63,6 +76,19 @@ const check = (name, value, detail) => {
     const size = await page.evaluate(() => ({
       width: innerWidth,
       scroll: document.documentElement.scrollWidth,
+      overflowing: [...document.querySelectorAll("body *")]
+        .filter(
+          (e) =>
+            e.getBoundingClientRect().right > innerWidth + 1 &&
+            getComputedStyle(e).display !== "none",
+        )
+        .slice(-12)
+        .map((e) => ({
+          tag: e.tagName,
+          class: e.className,
+          text: e.textContent.slice(0, 80),
+          right: e.getBoundingClientRect().right,
+        })),
     }));
     check("No overflow " + name, size.scroll <= size.width + 1, size);
   };
@@ -126,6 +152,16 @@ const check = (name, value, detail) => {
       await page.waitForURL(base + "/pathways/" + slug);
       await page.waitForLoadState("networkidle");
       check("Pathway route " + slug, page.url().endsWith("/pathways/" + slug));
+      check(
+        "Pathway begins at heading " + slug,
+        await page
+          .locator(".route-hero h1")
+          .evaluate(
+            (e) =>
+              e.getBoundingClientRect().top >= 0 &&
+              e.getBoundingClientRect().top < innerHeight,
+          ),
+      );
       await shot("desktop-" + slug);
       await noOverflow(slug);
       check(
@@ -262,8 +298,8 @@ const check = (name, value, detail) => {
     for (const width of [1024, 768, 390, 320]) {
       await page.setViewportSize({ width, height: width < 768 ? 844 : 900 });
       await goto("/");
-      await noOverflow(width + " home");
       await shot(width + "-hero");
+      await noOverflow(width + " home");
       if (width === 390) {
         await page.getByRole("button", { name: "Open navigation" }).click();
         check(

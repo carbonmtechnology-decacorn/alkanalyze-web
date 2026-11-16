@@ -1696,4 +1696,24 @@ article[id] {
   }
 }
 
-.hero-photo figcaption { color: var(--paper); }
+.hero-photo figcaption {
+  color: var(--paper);
+}
+@media (max-width: 767px) {
+  .pathway-tabs {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .pathway-tabs button {
+    min-width: 0;
+  }
+  .pathway-tabs strong {
+    font-size: clamp(22px, 7.5vw, 31px);
+  }
+  .field-button {
+    max-width: 100%;
+    gap: 20px;
+  }
+  footer a[href^="mailto:"] {
+    overflow-wrap: anywhere;
+  }
+}

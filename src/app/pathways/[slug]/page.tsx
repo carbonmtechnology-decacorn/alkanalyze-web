@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowUpRight } from "lucide-react";
 import { pathways } from "@/data/pathways";
+import PathwayArrival from "@/components/PathwayArrival";
 import PathwayVisual from "@/components/PathwayVisual";
 type Props = { params: Promise<{ slug: string }> };
 export const dynamicParams = false;
@@ -57,6 +58,7 @@ export default async function PathwayPage({ params }: Props) {
   };
   return (
     <div className={`route-page route-${p.slug}`}>
+      <PathwayArrival slug={p.slug} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
