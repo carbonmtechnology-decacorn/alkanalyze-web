@@ -11,3 +11,10 @@ Customer value: https://carbonmfuel.com/why-us
 Operations: Shamirpet, Hyderabad, Telangana, India. Registered office: W-54 Rakesh Kapoor Innovation Centre, BITS Pilani, Pilani Campus, Rajasthan 333031, India.
 Potential fuel-related downtime reductions are targets requiring customer-site validation. Regulatory benefits depend on eligibility, lifecycle accounting, applicable jurisdiction and certifications.
 Contact: https://carbonmfuel.com/contact
+
+Carbon pathways:
+P2P: https://carbonmfuel.com/pathways/p2p — circular chemical feedstock, subject to technical and regulatory qualification.
+P2Jet: https://carbonmfuel.com/pathways/p2jet — aviation precursor research; not certified jet fuel or SAF.
+P2Marine: https://carbonmfuel.com/pathways/p2marine — marine fuel and blending qualification.
+P2Naphtha: https://carbonmfuel.com/pathways/p2naphtha — NovaNaph petrochemical feedstock and refinery coprocessing qualification.
+Energy-recovery routes do not create recycled plastic content. Official RCF certification and scheme-specific recognition remain pending.

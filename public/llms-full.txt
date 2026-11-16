@@ -14,3 +14,10 @@ https://carbonmfuel.com/outputs
 https://carbonmfuel.com/technology
 https://carbonmfuel.com/about
 https://carbonmfuel.com/contact
+
+Carbon pathways:
+P2P: https://carbonmfuel.com/pathways/p2p — circular chemical feedstock, subject to technical and regulatory qualification.
+P2Jet: https://carbonmfuel.com/pathways/p2jet — aviation precursor research; not certified jet fuel or SAF.
+P2Marine: https://carbonmfuel.com/pathways/p2marine — marine fuel and blending qualification.
+P2Naphtha: https://carbonmfuel.com/pathways/p2naphtha — NovaNaph petrochemical feedstock and refinery coprocessing qualification.
+Energy-recovery routes do not create recycled plastic content. Official RCF certification and scheme-specific recognition remain pending.
