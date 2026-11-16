@@ -26,6 +26,7 @@ function ProfileCard({ member, compact = false, delay = 0 }: { member: TeamMembe
         </div>
         <div className="p-5 md:p-6">
           <p className="text-xs font-bold uppercase tracking-[0.18em] text-emerald-700">{member.education}</p>
+          {member.advisoryFocus && <p className="mt-3 text-xs font-semibold leading-6 text-emerald-800">Focus: {member.advisoryFocus}</p>}
           <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{compact ? member.shortBio : member.bio}</p>
           {member.linkedin && (
             <Link
@@ -138,7 +139,7 @@ export default function AboutPage() {
 
       <CTASection
         headline="Help us build the circular carbon infrastructure layer."
-        description="CarbonM is open to partners across waste supply, industrial fuel demand, marine blending, testing and investment."
+        description="CarbonM is open to partners across waste supply, industrial fuel demand, marine fuel qualification, testing and investment."
         primaryCTA={{ label: "Partner With Us", href: "/contact" }}
         secondaryCTA={{ label: "Explore Technology", href: "/technology" }}
       />

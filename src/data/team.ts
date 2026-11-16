@@ -2,6 +2,7 @@ export interface TeamMember {
   name: string;
   role: string;
   education: string;
+  advisoryFocus?: string;
   bio: string;
   shortBio: string;
   image: string;
@@ -79,43 +80,49 @@ export const advisors: TeamMember[] = [
   {
     name:"Dr. Satyapaul Singh",role:"Advisor — Chemical Engineering & Process Control",
     education:"BITS Pilani, Hyderabad Campus",
-    bio:"Advises CarbonM on chemical engineering, reaction systems, process control and the scientific foundations of reactor optimisation.",
+    advisoryFocus:"Reaction engineering, kinetics and process control",
+    bio:"Provides scientific guidance on reaction engineering, dynamic reactor modelling and process-control considerations for YieldBoost.",
     shortBio:"Guidance on process control, reaction engineering and modelling.",
     image:"/team/satyapaul-singh-profile.jpg",linkedin:"https://www.linkedin.com/in/satyapaul-singh-b4583343/"
   },
   {
     name:"Dr. B. V. Venugopal",role:"Advisor — Petrochemicals & Polymers",
     education:"IIT Madras",
-    bio:"Advises CarbonM on petrochemical processing, polymer-derived feedstocks and downstream hydrocarbon quality requirements.",
+    advisoryFocus:"Petrochemicals, polymer feedstocks and product qualification",
+    bio:"Provides technical guidance on petrochemical processing, polymer-derived feedstocks and downstream hydrocarbon quality requirements for NovaNaph.",
     shortBio:"Technical guidance on petrochemical feedstocks, polymers and hydrocarbon processing.",
     image:"/team/venugopal-profile.jpg",linkedin:"https://www.linkedin.com/in/bvve1234nu/"
   },
   {
     name:"Sagar Girase",role:"Advisor",
     education:"Industry advisory",
-    bio:"Supports CarbonM's development through strategic and technical advisory discussions.",
-    shortBio:"Strategic and technical advisor.",
+    advisoryFocus:"Industrial strategy and scale-up considerations",
+    bio:"Supports CarbonM's industrial strategy through discussion of scale-up priorities, partnerships and technology-market fit.",
+    shortBio:"Advisory focus: industrial strategy, scale-up priorities and partner development.",
     image:"/carbonm-logo.png"
   },
   {
     name:"Christoph Gahn",role:"Advisor",
     education:"Industry advisory",
-    bio:"Supports CarbonM through specialist advisory discussions as its technology and market strategy develop.",
-    shortBio:"Technology and industry advisor.",
+    advisoryFocus:"Circular fuels and European market considerations",
+    bio:"Contributes an industry perspective to CarbonM's discussions around circular fuels, technical qualification and potential European market pathways.",
+    shortBio:"Advisory focus: circular fuels, qualification and European market pathways.",
     image:"/carbonm-logo.png"
   },
   {
     name:"Abhishek Deo",role:"Advisor",
     education:"Industry advisory",
-    bio:"Supports CarbonM's technical and commercial development through advisory discussions.",
-    shortBio:"Technical and commercial advisor.",
+    advisoryFocus:"Commercial development and partner qualification",
+    bio:"Contributes to CarbonM's commercial and partner development discussions, including industry requirements for product qualification.",
+    shortBio:"Advisory focus: commercial strategy, partnerships and qualification.",
     image:"/carbonm-logo.png"
   },
   {
     name:"Dr. Sandeep Patil",role:"Advisor",
     education:"Technical advisory",
-    bio:"Supports CarbonM's development through technical and strategic advisory discussions.",
-    shortBio:"Technical and strategic advisor.",
+    advisoryFocus:"Process development and technical scale-up",
+    bio:"Supports technical review discussions on process development, operating discipline and the transition from experimental workflows to scale-up planning.",
+    shortBio:"Advisory focus: process development and technical scale-up.",
     image:"/carbonm-logo.png"
   }
 ];

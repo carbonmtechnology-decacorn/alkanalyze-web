@@ -59,7 +59,7 @@ export default function ResourcesPage() {
 
       <CTASection
         headline="Have a technical question or partnership idea?"
-        description="Reach out to discuss waste streams, testing, blending pathways or investment."
+        description="Reach out to discuss waste streams, testing, refinery coprocessing pathways or investment."
         primaryCTA={{ label: "Partner With Us", href: "/contact" }}
         secondaryCTA={{ label: "Explore Technology", href: "/technology" }}
       />

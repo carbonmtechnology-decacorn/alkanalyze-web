@@ -6,19 +6,19 @@ const reasons = [
     number: "01",
     label: "Operational reliability",
     title: "Less time lost to fuel-related problems.",
-    description: "Cleaner hydrocarbon specifications support a case for lower burner fouling and maintenance. CarbonM targets 20–30% lower fuel-related downtime, subject to validation on the customer's equipment."
+    description: "Cleaner fuel specifications can reduce contaminant-related burner fouling and maintenance exposure. Explore the customer-specific uptime case behind FuelMax."
   },
   {
     number: "02",
     label: "Commercial resilience",
     title: "Built for fossil-price volatility.",
-    description: "Feedstock flexibility, yield optimisation and downstream upgrading form the basis for resilient fuel economics. Actual cost advantages depend on industrial operating conditions."
+    description: "The price-risk argument combines alternative feedstock sourcing with controllable conversion and downstream quality—not a promise that every delivered litre will be cheaper."
   },
   {
     number: "03",
     label: "Circular-market demand",
     title: "A route back to petrochemicals.",
-    description: "Plastic EPR and European recycled-content policy create opportunities for qualified circular feedstocks. NovaNaph targets those value chains alongside FuelMax's industrial fuel applications."
+    description: "India's EPR framework and Europe's packaging rules make traceable recycled-content pathways strategically relevant. NovaNaph targets petrochemical qualification, separate from FuelMax's fuel applications."
   }
 ];
 

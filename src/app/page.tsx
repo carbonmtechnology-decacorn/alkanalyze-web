@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Award, BookOpen, FlaskConical, Map, ShieldCheck, Users } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import SectionHeader from "@/components/ui/SectionHeader";
@@ -16,15 +16,6 @@ import OutputCarousel from "@/components/OutputCarousel";
 import { technologies } from "@/data/technologies";
 import { applications } from "@/data/applications";
 import { labSource } from "@/data/specs";
-
-const validationItems = [
-  { icon: FlaskConical, title: "Product quality", status: "Lab-tested", description: "FuelMax and NovaNaph quality properties are evaluated against product-specific downstream requirements." },
-  { icon: ShieldCheck, title: "Industrial qualification", status: "Application-specific", description: "Burner compatibility, handling and fuel-system suitability are assessed for each industrial application." },
-  { icon: Users, title: "Target industries", status: "Commercial focus", description: "Industrial boilers, furnaces, refineries, petrochemicals and marine blending partners." },
-  { icon: BookOpen, title: "Circular feedstock pathways", status: "Qualification", description: "Recycled-content and chain-of-custody claims depend on the applicable regulations and certification." },
-  { icon: Award, title: "Process advantage", status: "Technology", description: "YieldBoost supports hydrocarbon yield optimisation; Magnet targets lower contaminants and improved output consistency." },
-  { icon: Map, title: "Operating presence", status: "India", description: "Registered office in Pilani and operating activities in Shamirpet, Hyderabad." },
-];
 
 export default function Home() {
   return (
@@ -165,36 +156,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-background py-24 md:py-32" id="validation">
-        <div className="container mx-auto px-4 md:px-6">
-          <SectionHeader
-            label="Validation and roadmap"
-            title="Quality, suitability and industrial collaboration."
-            subtitle="Product testing and application-specific engineering guide each partnership, while our technology focuses on better hydrocarbon yield and quality."
-          />
-          <div className="divide-y divide-emerald-900/10 border-y border-emerald-900/10">
-            {validationItems.map((item, i) => {
-              const Icon = item.icon;
-              return (
-                <ScrollReveal key={item.title} delay={i * 0.04}>
-                  <div className="group grid gap-5 py-7 transition-colors md:grid-cols-[3.5rem_0.28fr_0.22fr_0.5fr] md:items-center">
-                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-emerald-900/10 bg-white text-emerald-700 transition-transform group-hover:scale-105">
-                      <Icon className="h-5 w-5" strokeWidth={1.7} />
-                    </div>
-                    <h3 className="font-black text-foreground">{item.title}</h3>
-                    <span className="w-fit rounded-full bg-emerald-50 px-3 py-1 text-[10px] font-black uppercase tracking-[0.18em] text-emerald-700">{item.status}</span>
-                    <p className="text-sm leading-7 text-muted-foreground">{item.description}</p>
-                  </div>
-                </ScrollReveal>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
       <CTASection
         headline="Discuss industrial FuelMax and circular NovaNaph solutions with CarbonM."
-        description="Whether you are an industrial fuel buyer, petrochemical partner, waste supplier, or marine blender, we welcome applications-focused technical discussions."
+        description="Whether you are an industrial fuel buyer, petrochemical partner, waste supplier, or marine fuel partner, we welcome applications-focused technical discussions."
         primaryCTA={{ label: "Partner With Us", href: "/contact" }}
         secondaryCTA={{ label: "Explore the Technology", href: "/technology" }}
       />
